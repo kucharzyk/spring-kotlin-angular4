@@ -4,8 +4,11 @@ import org.springframework.boot.SpringApplication
 import org.springframework.boot.autoconfigure.SpringBootApplication
 
 @SpringBootApplication
-open class ShardisApplication
+open class ShardisApplication {
 
-fun main(args: Array<String>) {
-    SpringApplication.run(ShardisApplication::class.java, *args)
+    companion object {
+        @JvmStatic fun main(args: Array<String>) {
+            SpringApplication.run(ShardisApplication::class.java, *args)
+        }
+    }
 }
