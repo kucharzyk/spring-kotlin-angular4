@@ -1,0 +1,44 @@
+# Handle line endings automatically for files detected as text
+# and leave all files detected as binary untouched.
+* text=lf
+
+# Force the following filetypes to have unix eols, so Windows does not break them
+*.* text eol=lf
+
+#
+# The above will handle all files NOT found below
+#
+# These files are text and should be normalized (Convert crlf => lf)
+*.css           text
+*.df            text
+*.htm           text
+*.html          text
+*.java          text
+*.kt            text
+*.kts           text
+*.js            text
+*.json          text
+*.jsp           text
+*.jspf          text
+*.properties    text
+*.sh            text
+*.tld           text
+*.ts            text
+*.txt           text
+*.xml           text
+
+# These files are binary and should be left untouched
+# (binary is a macro for -text -diff)
+*.class         binary
+*.dll           binary
+*.ear           binary
+*.gif           binary
+*.ico           binary
+*.jar           binary
+*.jks           binary
+*.jpg           binary
+*.jpeg          binary
+*.png           binary
+*.p12           binary
+*.so            binary
+*.war           binary
