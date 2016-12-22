@@ -1,8 +1,6 @@
-import org.jetbrains.kotlin.noarg.gradle.NoArgExtension
-import java.util.concurrent.TimeUnit
 
 buildscript {
-    val kotlinVersion = "1.0.6-eap-112"
+    val kotlinVersion = "1.0.5-3"
     val springBootVersion = "1.4.2.RELEASE"
 
     extra["kotlinVersion"] = kotlinVersion
@@ -12,20 +10,17 @@ buildscript {
         mavenCentral()
         jcenter()
         maven{ setUrl("https://plugins.gradle.org/m2") }
-        maven{ setUrl("https://dl.bintray.com/kotlin/kotlin-eap") }
     }
 
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:$springBootVersion")
         classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion")
-        classpath("org.jetbrains.kotlin:kotlin-noarg:$kotlinVersion")
     }
 }
 
 apply {
     plugin("idea")
     plugin("kotlin")
-    plugin("kotlin-noarg")
     plugin("application")
     plugin("org.springframework.boot")
     plugin("jacoco")
@@ -35,9 +30,6 @@ version = "0.0.1-SNAPSHOT"
 
 repositories {
     mavenCentral()
-    maven { setUrl("https://dl.bintray.com/kotlin/kotlin-eap") }
-    maven { setUrl("https://repo.spring.io/snapshot") }
-    maven { setUrl("https://repo.spring.io/milestone") }
 }
 
 configure<JavaPluginConvention> {
@@ -47,14 +39,6 @@ configure<JavaPluginConvention> {
 
 configure<ApplicationPluginConvention> {
     mainClassName = "com.shardis.ShardisApplication"
-}
-
-configure<NoArgExtension> {
-    annotation("org.springframework.stereotype.Service")
-}
-
-configurations.all {
-    it.resolutionStrategy.cacheChangingModulesFor(0, TimeUnit.SECONDS)
 }
 
 val kotlinVersion = extra["kotlinVersion"] as String
@@ -72,6 +56,8 @@ dependencies {
     compile("org.springframework.boot:spring-boot-starter-web")
     compile("org.springframework.boot:spring-boot-configuration-processor")
 
+    kapt("org.springframework.boot:spring-boot-configuration-processor")
+
     compile("io.jsonwebtoken:jjwt:${jjwtVersion}")
 
     compile("com.fasterxml.jackson.datatype:jackson-datatype-jsr310")
@@ -82,7 +68,5 @@ dependencies {
     runtime("org.postgresql:postgresql")
 
     testCompile("org.springframework.boot:spring-boot-starter-test")
-    testCompile("org.springframework.security:spring-security-test")
-    testCompile("org.springframework.restdocs:spring-restdocs-mockmvc")
     testCompile("org.reflections:reflections:${reflectionsVersion}")
 }
