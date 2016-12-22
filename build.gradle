@@ -1,0 +1,86 @@
+buildscript {
+
+    ext {
+        kotlinVersion = "1.0.5-3"
+        springBootVersion = "1.4.2.RELEASE"
+        jacksonVersion = "2.8.4"
+        jjwtVersion = "0.7.0"
+        reflectionsVersion = "0.9.10"
+    }
+
+    repositories {
+        mavenCentral()
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+    }
+
+    dependencies {
+        classpath "org.springframework.boot:spring-boot-gradle-plugin:$springBootVersion"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+apply plugin: "idea"
+apply plugin: "eclipse"
+apply plugin: "java"
+apply plugin: "kotlin"
+apply plugin: "org.springframework.boot"
+apply plugin: "jacoco"
+
+group = "com.shardis"
+version = "0.0.1-SNAPSHOT"
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+
+jar {
+    baseName = "shardis"
+}
+
+jacocoTestReport {
+    dependsOn "test"
+    reports {
+        html.enabled = true
+        xml.enabled = true
+        html.destination = "${project.buildDir}/jacocoHtml"
+    }
+}
+
+test {
+    testLogging {
+        events "passed", "skipped", "failed", "standardOut", "standardError"
+    }
+}
+
+check.finalizedBy "jacocoTestReport"
+
+dependencies {
+    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion"
+    compile "org.jetbrains.kotlin:kotlin-reflect:$kotlinVersion"
+
+    compile "org.springframework.boot:spring-boot-starter-actuator"
+    compile "org.springframework.boot:spring-boot-starter-cache"
+    compile "org.springframework.boot:spring-boot-devtools"
+    compile "org.springframework.boot:spring-boot-starter-web"
+    compile "org.springframework.boot:spring-boot-configuration-processor"
+
+    kapt "org.springframework.boot:spring-boot-configuration-processor"
+
+    compile "io.jsonwebtoken:jjwt:${jjwtVersion}"
+
+    compile "com.fasterxml.jackson.datatype:jackson-datatype-jsr310"
+    compile "com.fasterxml.jackson.core:jackson-databind:$jacksonVersion"
+    compile "com.fasterxml.jackson.module:jackson-module-kotlin:$jacksonVersion"
+
+    runtime("com.h2database:h2")
+    runtime("org.postgresql:postgresql")
+
+    testCompile "org.springframework.boot:spring-boot-starter-test"
+    testCompile "org.reflections:reflections:${reflectionsVersion}"
+}
