@@ -1,0 +1,28 @@
+sudo: false
+language: java
+node_js:
+  - "6"
+jdk:
+  - oraclejdk8
+env:
+  - CXX=g++-4.8
+before_cache:
+  - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
+  - rm -rf $HOME/.gradle/caches/*/plugin-resolution/
+cache:
+  apt: true
+  yarn: true
+  directories:
+  - build/nodejs
+  - build/npm
+  - build/yarn
+  - $HOME/.gradle/caches/
+  - $HOME/.gradle/wrapper/
+addons:
+  apt:
+    sources:
+    - ubuntu-toolchain-r-test
+    packages:
+    - g++-4.8
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
