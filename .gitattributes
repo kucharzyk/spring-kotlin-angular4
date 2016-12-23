@@ -25,6 +25,7 @@
 *.tld           text
 *.ts            text
 *.txt           text
+*.yml           text
 *.xml           text
 
 # These files are binary and should be left untouched
