@@ -1,0 +1,59 @@
+{
+    "name": "shardis",
+    "version": "0.0.1",
+    "description": "shardis project",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/shardis/shardis.git"
+    },
+    "author": "Shardis",
+    "license": "Apache-2",
+    "bugs": {
+        "url": "https://github.com/shardis/shardis/issues"
+    },
+    "private": true,
+    "dependencies": {
+
+    },
+    "devDependencies": {
+        "conventional-changelog-cli": "1.2.0",
+        "rimraf": "2.5.4",
+        "yarn": "0.18.1"
+    },
+    "scripts": {
+        "clean": "yarn cache clean && rimraf coverage src/main/resources/static/*",
+        "clean:dist": "rimraf typings src/main/resources/static/*",
+        "preclean:install": "yarn run clean",
+        "clean:install": "yarn upgrade",
+        "preclean:start": "yarn run clean",
+        "clean:start": "yarn start",
+
+        "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
+
+        "lint": "echo \"lint\"",
+
+        "pretest": "rimraf coverage && yarn run lint",
+        "test": "echo \"test\"",
+
+        "pretest:phantom": "rimraf coverage && yarn run lint",
+        "test:phantom": "echo \"test:phantom\"",
+
+        "build": "yarn run build:dev",
+
+        "prebuild:dev": "yarn run clean:dist",
+        "build:dev": "echo \"build:dev\"",
+
+        "prebuild:prod": "yarn run clean:dist",
+        "build:prod": "echo \"build:prod\"",
+
+        "server": "yarn run server:dev",
+        "server:dev": "echo \"server:dev\"",
+        "server:prod": "echo \"server:prod\""
+
+    },
+    "engines": {
+        "node": ">= 7.0.0",
+        "npm": ">= 4.0.0",
+        "yarn": ">= 0.18.0"
+    }
+}

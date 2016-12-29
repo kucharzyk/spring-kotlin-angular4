@@ -5,6 +5,7 @@ buildscript {
         springBootVersion = "1.4.3.RELEASE"
         jacksonVersion = "2.8.5"
         jjwtVersion = "0.7.0"
+        gradleNodePluginVersion = "1.0.1"
         reflectionsVersion = "0.9.10"
     }
 
@@ -16,8 +17,9 @@ buildscript {
     }
 
     dependencies {
-        classpath "org.springframework.boot:spring-boot-gradle-plugin:$springBootVersion"
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
+        classpath "org.springframework.boot:spring-boot-gradle-plugin:$springBootVersion"
+        classpath "com.moowork.gradle:gradle-node-plugin:${gradleNodePluginVersion}"
         classpath "org.jetbrains.kotlin:kotlin-noarg:$kotlinVersion"
         classpath "org.jetbrains.kotlin:kotlin-allopen:$kotlinVersion"
     }
@@ -37,6 +39,7 @@ apply plugin: "kotlin-spring"
 apply plugin: "kotlin-noarg"
 apply plugin: "kotlin-jpa"
 apply plugin: "org.springframework.boot"
+apply plugin: "com.moowork.node"
 apply plugin: "jacoco"
 
 group = "com.shardis"
@@ -45,6 +48,16 @@ version = "0.0.1-SNAPSHOT"
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
+node {
+    version = "7.3.0"
+    npmVersion = "4.0.5"
+    yarnVersion = "0.18.1"
+    download = true
+    workDir = file("${project.buildDir}/nodejs")
+    npmWorkDir = file("${project.buildDir}/npm")
+    yarnWorkDir = file("${project.buildDir}/yarn")
+    nodeModulesDir = file("${project.projectDir}")
+}
 
 jar {
     baseName = "shardis"
@@ -66,6 +79,33 @@ test {
 }
 
 check.finalizedBy "jacocoTestReport"
+
+task nodeBuild(type: YarnTask) {
+    args = ["run", "build"]
+}
+
+task nodeTest(type: YarnTask) {
+    args = ["run", "test:phantom"]
+}
+
+task nodeServer(type: YarnTask) {
+    args = ["run", "server:dev"]
+}
+
+task changelog(type: YarnTask) {
+    args = ["run", "changelog"]
+}
+
+yarn_install.dependsOn yarnSetup
+
+nodeBuild.dependsOn yarn_install
+nodeTest.dependsOn yarn_install
+
+processResources.dependsOn nodeBuild
+
+test.dependsOn nodeTest
+
+clean.delete << file("node_modules")
 
 dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion"
