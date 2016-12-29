@@ -1,3 +1,4 @@
+### Gradle ###
 .gradle
 /build/
 !gradle/wrapper/gradle-wrapper.jar
@@ -29,11 +30,8 @@ node/
 node_modules/
 npm-debug.log*
 
-### coverage
+### coverage ###
 coverage/
 
-### dist
+### dist ###
 src/main/resources/static/
-
-### docs
-documentation/
