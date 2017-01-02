@@ -1,32 +1,32 @@
 buildscript {
 
-    ext {
-        kotlinVersion = "1.0.6"
-        springBootVersion = "1.4.3.RELEASE"
-        jacksonVersion = "2.8.5"
-        jjwtVersion = "0.7.0"
-        gradleNodePluginVersion = "1.0.1"
-        reflectionsVersion = "0.9.10"
-    }
+  ext {
+    kotlinVersion = "1.0.6"
+    springBootVersion = "1.4.3.RELEASE"
+    jacksonVersion = "2.8.5"
+    jjwtVersion = "0.7.0"
+    gradleNodePluginVersion = "1.0.1"
+    reflectionsVersion = "0.9.10"
+  }
 
-    repositories {
-        mavenCentral()
-        maven {
-            url "https://plugins.gradle.org/m2/"
-        }
+  repositories {
+    mavenCentral()
+    maven {
+      url "https://plugins.gradle.org/m2/"
     }
+  }
 
-    dependencies {
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
-        classpath "org.springframework.boot:spring-boot-gradle-plugin:$springBootVersion"
-        classpath "com.moowork.gradle:gradle-node-plugin:${gradleNodePluginVersion}"
-        classpath "org.jetbrains.kotlin:kotlin-noarg:$kotlinVersion"
-        classpath "org.jetbrains.kotlin:kotlin-allopen:$kotlinVersion"
-    }
+  dependencies {
+    classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
+    classpath "org.springframework.boot:spring-boot-gradle-plugin:$springBootVersion"
+    classpath "com.moowork.gradle:gradle-node-plugin:${gradleNodePluginVersion}"
+    classpath "org.jetbrains.kotlin:kotlin-noarg:$kotlinVersion"
+    classpath "org.jetbrains.kotlin:kotlin-allopen:$kotlinVersion"
+  }
 }
 
 repositories {
-    mavenCentral()
+  mavenCentral()
 }
 
 apply plugin: "idea"
@@ -49,39 +49,39 @@ sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
 node {
-    version = "7.3.0"
-    npmVersion = "4.0.5"
-    yarnVersion = "0.18.1"
-    download = true
-    workDir = file("${project.buildDir}/nodejs")
-    npmWorkDir = file("${project.buildDir}/npm")
-    yarnWorkDir = file("${project.buildDir}/yarn")
-    nodeModulesDir = file("${project.projectDir}")
+  version = "7.3.0"
+  npmVersion = "4.0.5"
+  yarnVersion = "0.18.1"
+  download = true
+  workDir = file("${project.buildDir}/nodejs")
+  npmWorkDir = file("${project.buildDir}/npm")
+  yarnWorkDir = file("${project.buildDir}/yarn")
+  nodeModulesDir = file("${project.projectDir}")
 }
 
 jar {
-    baseName = "shardis"
+  baseName = "shardis"
 }
 
 jacocoTestReport {
-    dependsOn "test"
-    reports {
-        html.enabled = true
-        xml.enabled = true
-        html.destination = "${project.buildDir}/jacocoHtml"
-    }
+  dependsOn "test"
+  reports {
+    html.enabled = true
+    xml.enabled = true
+    html.destination = "${project.buildDir}/jacocoHtml"
+  }
 }
 
 test {
-    testLogging {
-        events "passed", "skipped", "failed", "standardOut", "standardError"
-    }
+  testLogging {
+    events "passed", "skipped", "failed", "standardOut", "standardError"
+  }
 }
 
 check.finalizedBy "jacocoTestReport"
 
 task ngBuild(type: YarnTask) {
-    args = ["run", "build:prod"]
+  args = ["run", "build:prod"]
 }
 
 task ngDocs(type: YarnTask) {
@@ -89,7 +89,7 @@ task ngDocs(type: YarnTask) {
 }
 
 task ngTestPhantom(type: YarnTask) {
-    args = ["run", "test:phantom"]
+  args = ["run", "test:phantom"]
 }
 
 task ngTest(type: YarnTask) {
@@ -101,11 +101,11 @@ task ngTestLive(type: YarnTask) {
 }
 
 task ngServer(type: YarnTask) {
-    args = ["run", "server:dev"]
+  args = ["run", "server:dev"]
 }
 
 task changelog(type: YarnTask) {
-    args = ["run", "changelog"]
+  args = ["run", "changelog"]
 }
 
 yarn_install.dependsOn yarnSetup
@@ -120,26 +120,26 @@ test.dependsOn ngTestPhantom
 clean.delete << file("node_modules")
 
 dependencies {
-    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion"
-    compile "org.jetbrains.kotlin:kotlin-reflect:$kotlinVersion"
+  compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion"
+  compile "org.jetbrains.kotlin:kotlin-reflect:$kotlinVersion"
 
-    compile "org.springframework.boot:spring-boot-starter-actuator"
-    compile "org.springframework.boot:spring-boot-starter-cache"
-    compile "org.springframework.boot:spring-boot-devtools"
-    compile "org.springframework.boot:spring-boot-starter-web"
-    compile "org.springframework.boot:spring-boot-configuration-processor"
+  compile "org.springframework.boot:spring-boot-starter-actuator"
+  compile "org.springframework.boot:spring-boot-starter-cache"
+  compile "org.springframework.boot:spring-boot-devtools"
+  compile "org.springframework.boot:spring-boot-starter-web"
+  compile "org.springframework.boot:spring-boot-configuration-processor"
 
-    kapt "org.springframework.boot:spring-boot-configuration-processor"
+  kapt "org.springframework.boot:spring-boot-configuration-processor"
 
-    compile "io.jsonwebtoken:jjwt:${jjwtVersion}"
+  compile "io.jsonwebtoken:jjwt:${jjwtVersion}"
 
-    compile "com.fasterxml.jackson.datatype:jackson-datatype-jsr310"
-    compile "com.fasterxml.jackson.core:jackson-databind:$jacksonVersion"
-    compile "com.fasterxml.jackson.module:jackson-module-kotlin:$jacksonVersion"
+  compile "com.fasterxml.jackson.datatype:jackson-datatype-jsr310"
+  compile "com.fasterxml.jackson.core:jackson-databind:$jacksonVersion"
+  compile "com.fasterxml.jackson.module:jackson-module-kotlin:$jacksonVersion"
 
-    runtime("com.h2database:h2")
-    runtime("org.postgresql:postgresql")
+  runtime("com.h2database:h2")
+  runtime("org.postgresql:postgresql")
 
-    testCompile "org.springframework.boot:spring-boot-starter-test"
-    testCompile "org.reflections:reflections:${reflectionsVersion}"
+  testCompile "org.springframework.boot:spring-boot-starter-test"
+  testCompile "org.reflections:reflections:${reflectionsVersion}"
 }

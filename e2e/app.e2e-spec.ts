@@ -1,6 +1,6 @@
-import { ShardisPage } from './app.po';
+import {ShardisPage} from './app.po';
 
-describe('shardis App', function() {
+describe('shardis App', function () {
   let page: ShardisPage;
 
   beforeEach(() => {

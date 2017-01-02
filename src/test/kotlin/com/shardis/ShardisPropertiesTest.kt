@@ -13,25 +13,25 @@ import org.springframework.test.context.junit4.SpringRunner
 @SpringBootTest
 class ShardisPropertiesTest {
 
-    @Autowired
-    lateinit var shardisProperties: ShardisProperties
+  @Autowired
+  lateinit var shardisProperties: ShardisProperties
 
-    @Before
-    fun setUp() {
+  @Before
+  fun setUp() {
 
-    }
+  }
 
-    @After
-    fun tearDown() {
+  @After
+  fun tearDown() {
 
-    }
+  }
 
-    @Test
-    fun propertiesAreSet() {
-        assertNotNull("properties must be autowired", shardisProperties)
-        assertNotNull("version can't be null", shardisProperties.version)
-        assertNotEquals("version must be defined", "unknown", shardisProperties.version)
-        assertTrue("version should contains three parts separated by dots", shardisProperties.version.split('.').size == 3)
-    }
+  @Test
+  fun propertiesAreSet() {
+    assertNotNull("properties must be autowired", shardisProperties)
+    assertNotNull("version can't be null", shardisProperties.version)
+    assertNotEquals("version must be defined", "unknown", shardisProperties.version)
+    assertTrue("version should contains three parts separated by dots", shardisProperties.version.split('.').size == 3)
+  }
 
 }
