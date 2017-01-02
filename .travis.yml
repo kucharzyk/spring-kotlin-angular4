@@ -9,8 +9,6 @@ env:
 before_cache:
   - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
   - rm -rf $HOME/.gradle/caches/*/plugin-resolution/
-before_install:
-  - yarn cache clean
 cache:
   apt: true
   yarn: true
