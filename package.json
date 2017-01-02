@@ -1,59 +1,88 @@
 {
-    "name": "shardis",
-    "version": "0.0.1",
-    "description": "shardis project",
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/shardis/shardis.git"
-    },
-    "author": "Shardis",
-    "license": "Apache-2",
-    "bugs": {
-        "url": "https://github.com/shardis/shardis/issues"
-    },
-    "private": true,
-    "dependencies": {
-
-    },
-    "devDependencies": {
-        "conventional-changelog-cli": "1.2.0",
-        "rimraf": "2.5.4",
-        "yarn": "0.18.1"
-    },
-    "scripts": {
-        "clean": "yarn cache clean && rimraf coverage src/main/resources/static/*",
-        "clean:dist": "rimraf typings src/main/resources/static/*",
-        "preclean:install": "yarn run clean",
-        "clean:install": "yarn upgrade",
-        "preclean:start": "yarn run clean",
-        "clean:start": "yarn start",
-
-        "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
-
-        "lint": "echo \"lint\"",
-
-        "pretest": "rimraf coverage && yarn run lint",
-        "test": "echo \"test\"",
-
-        "pretest:phantom": "rimraf coverage && yarn run lint",
-        "test:phantom": "echo \"test:phantom\"",
-
-        "build": "yarn run build:dev",
-
-        "prebuild:dev": "yarn run clean:dist",
-        "build:dev": "echo \"build:dev\"",
-
-        "prebuild:prod": "yarn run clean:dist",
-        "build:prod": "echo \"build:prod\"",
-
-        "server": "yarn run server:dev",
-        "server:dev": "echo \"server:dev\"",
-        "server:prod": "echo \"server:prod\""
-
-    },
-    "engines": {
-        "node": ">= 7.0.0",
-        "npm": ">= 4.0.0",
-        "yarn": ">= 0.18.0"
-    }
+  "name": "shardis",
+  "version": "0.0.1",
+  "description": "shardis project",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shardis/shardis.git"
+  },
+  "author": "Shardis",
+  "license": "Apache-2",
+  "bugs": {
+    "url": "https://github.com/shardis/shardis/issues"
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/common": "2.4.1",
+    "@angular/compiler": "2.4.1",
+    "@angular/core": "2.4.1",
+    "@angular/forms": "2.4.1",
+    "@angular/http": "2.4.1",
+    "@angular/platform-browser": "2.4.1",
+    "@angular/platform-browser-dynamic": "2.4.1",
+    "@angular/router": "3.4.1",
+    "core-js": "2.4.1",
+    "rxjs": "5.0.2",
+    "ts-helpers": "1.1.2",
+    "zone.js": "0.7.4"
+  },
+  "devDependencies": {
+    "@angular/compiler-cli": "2.4.1",
+    "@types/jasmine": "2.5.40",
+    "@types/node": "6.0.55",
+    "angular-cli": "1.0.0-beta.24",
+    "angular2-dependencies-graph": "1.0.0-alpha.12",
+    "codelyzer": "2.0.0-beta.4",
+    "compodoc": "0.0.26",
+    "conventional-changelog-cli": "1.2.0",
+    "jasmine-core": "2.5.2",
+    "jasmine-spec-reporter": "2.7.0",
+    "karma": "1.3.0",
+    "karma-chrome-launcher": "2.0.0",
+    "karma-cli": "1.0.1",
+    "karma-jasmine": "1.1.0",
+    "karma-phantomjs-launcher": "1.0.2",
+    "karma-remap-istanbul": "0.4.0",
+    "protractor": "4.0.14",
+    "rimraf": "2.5.4",
+    "ts-node": "2.0.0",
+    "tslint": "4.2.0",
+    "typescript": "2.1.4",
+    "yarn": "0.18.1"
+  },
+  "scripts": {
+    "clean": "yarn cache clean && rimraf coverage src/main/resources/static/*",
+    "clean:dist": "rimraf src/main/resources/static/*",
+    "preclean:install": "yarn run clean",
+    "clean:install": "yarn upgrade",
+    "preclean:start": "yarn run clean",
+    "clean:start": "yarn start",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
+    "docs": "compodoc -n Shardis -b / -s -r 9999 -p src/main/typescript/tsconfig.json",
+    "pree2e": "webdriver-manager update --standalone false --gecko false",
+    "e2e": "protractor",
+    "e2e:live": "protractor --elementExplorer",
+    "lint": "tslint --fix \"src/main/typescript/**/*.ts\"",
+    "pretest": "rimraf coverage && yarn run lint",
+    "test": "ng test -w false --code-coverage",
+    "test:live": "ng test",
+    "pretest:phantom": "rimraf coverage && yarn run lint",
+    "test:phantom": "ng test -w false --browsers PhantomJS --code-coverage",
+    "build": "yarn run build:dev",
+    "prebuild:dev": "yarn run clean:dist",
+    "build:dev": "ng build -dev",
+    "prebuild:prod": "yarn run clean:dist",
+    "build:prod": "ng build -prod -aot",
+    "server": "yarn run server:dev",
+    "server:dev": "ng serve --p 4200 -pc proxy.json --watcher=events",
+    "server:prod": "ng serve --p 4200 -pc proxy.json --watcher=events -prod -aot",
+    "ng": "ng",
+    "ng:upgrade": "ng init -n shardis -sd src/main/typescript --style scss --prefix shardis --routing",
+    "start": "yarn run server:dev"
+  },
+  "engines": {
+    "node": ">= 7.0.0",
+    "npm": ">= 4.0.0",
+    "yarn": ">= 0.18.0"
+  }
 }

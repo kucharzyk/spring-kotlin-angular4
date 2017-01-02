@@ -1,7 +1,7 @@
 sudo: false
 language: java
 node_js:
-  - "6"
+  - "7"
 jdk:
   - oraclejdk8
 env:
@@ -9,6 +9,8 @@ env:
 before_cache:
   - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
   - rm -rf $HOME/.gradle/caches/*/plugin-resolution/
+before_install:
+  - yarn cache clean
 cache:
   apt: true
   yarn: true

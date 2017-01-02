@@ -12,7 +12,7 @@
 .springBeans
 
 ### IntelliJ IDEA ###
-.idea
+.idea/
 *.iws
 *.iml
 *.ipr
@@ -35,3 +35,6 @@ coverage/
 
 ### dist ###
 src/main/resources/static/
+
+### docs ###
+documentation/

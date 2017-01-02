@@ -80,15 +80,27 @@ test {
 
 check.finalizedBy "jacocoTestReport"
 
-task nodeBuild(type: YarnTask) {
-    args = ["run", "build"]
+task ngBuild(type: YarnTask) {
+    args = ["run", "build:prod"]
 }
 
-task nodeTest(type: YarnTask) {
+task ngDocs(type: YarnTask) {
+  args = ["run", "docs"]
+}
+
+task ngTestPhantom(type: YarnTask) {
     args = ["run", "test:phantom"]
 }
 
-task nodeServer(type: YarnTask) {
+task ngTest(type: YarnTask) {
+  args = ["run", "test"]
+}
+
+task ngTestLive(type: YarnTask) {
+  args = ["run", "test:live"]
+}
+
+task ngServer(type: YarnTask) {
     args = ["run", "server:dev"]
 }
 
@@ -98,12 +110,12 @@ task changelog(type: YarnTask) {
 
 yarn_install.dependsOn yarnSetup
 
-nodeBuild.dependsOn yarn_install
-nodeTest.dependsOn yarn_install
+ngBuild.dependsOn yarn_install
+ngTestPhantom.dependsOn yarn_install
 
-processResources.dependsOn nodeBuild
+processResources.dependsOn ngBuild
 
-test.dependsOn nodeTest
+test.dependsOn ngTestPhantom
 
 clean.delete << file("node_modules")
 

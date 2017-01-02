@@ -8,9 +8,9 @@ import org.springframework.boot.context.properties.EnableConfigurationProperties
 @EnableConfigurationProperties(ShardisProperties::class)
 open class ShardisApplication {
 
-    companion object {
-        @JvmStatic fun main(args: Array<String>) {
-            SpringApplication.run(ShardisApplication::class.java, *args)
-        }
+  companion object {
+    @JvmStatic fun main(args: Array<String>) {
+      SpringApplication.run(ShardisApplication::class.java, *args)
     }
+  }
 }

@@ -7,6 +7,6 @@ import org.springframework.stereotype.Component
 @ConfigurationProperties(prefix = "shardis")
 open class ShardisProperties {
 
-    var version = "unknown"
+  var version = "unknown"
 
 }
