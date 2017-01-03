@@ -1,5 +1,5 @@
 <a name="0.0.1"></a>
-## 0.0.1 (2017-01-03)
+## [0.0.1](https://github.com/shardis/shardis/compare/46c7d6a...v0.0.1) (2017-01-03)
 
 
 ### Features
