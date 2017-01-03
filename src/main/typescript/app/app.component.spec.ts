@@ -3,6 +3,7 @@ import {TestBed, async, ComponentFixture} from '@angular/core/testing';
 import {AppComponent} from './app.component';
 import {ClarityModule} from 'clarity-angular';
 import {RouterTestingModule} from '@angular/router/testing';
+import {ReactiveFormsModule, FormsModule} from '@angular/forms';
 
 
 describe('AppComponent', () => {
@@ -17,6 +18,8 @@ describe('AppComponent', () => {
         AppComponent,
       ],
       imports: [
+        FormsModule,
+        ReactiveFormsModule,
         ClarityModule.forRoot(),
         RouterTestingModule
       ]
