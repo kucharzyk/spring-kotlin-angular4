@@ -55,9 +55,9 @@ This project is still a work in progress
 ./gradle ngTestPhantom
 ```
 
-### Angular compdoc
+### Run compdoc
 ```
-./gradle ngTest 
+./gradle ngDocs
 ```
 
 
