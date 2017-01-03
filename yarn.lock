@@ -61,6 +61,10 @@
   dependencies:
     tsickle "^0.2"
 
+"@angularclass/hmr@^1.2.2":
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/@angularclass/hmr/-/hmr-1.2.2.tgz#46a18f89a1e94d05c268b83c9480e005f73fc265"
+
 "@ngtools/webpack@^1.0.0":
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/@ngtools/webpack/-/webpack-1.2.1.tgz#b32a2cda4aabb14518b3a16840b30d6a0e2f131e"

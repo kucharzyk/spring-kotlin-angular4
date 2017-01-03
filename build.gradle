@@ -101,7 +101,7 @@ task ngTestLive(type: YarnTask) {
 }
 
 task ngServer(type: YarnTask) {
-  args = ["run", "server:dev"]
+  args = ["run", "server:hmr"]
 }
 
 task changelog(type: YarnTask) {
