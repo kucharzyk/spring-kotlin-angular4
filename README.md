@@ -27,37 +27,38 @@ This project is still a work in progress
 
 ### Running Spring Boot app
 ```
-./gradle bootRun 
+./gradlew bootRun 
 ```
 
 ### Production build
 ```
-./gradle build 
+./gradlew build 
 ```
 
 ### Angular development server with hmr and proxy
 ```
-./gradle ngServer 
+./gradlew ngServer 
 ```
 
 ### Angular unit tests (chrome)
 ```
-./gradle ngTestLive
+./gradlew ngTestLive
 ```
 
 ### Angular unit tests (chrome - single run)
 ```
-./gradle ngTest 
+./gradlew ngTest 
 ```
 
 ### Angular unit tests (phantom - single run)
 ```
-./gradle ngTestPhantom
+./gradlew ngTestPhantom
 ```
 
 ### Run compdoc
 ```
-./gradle ngDocs
+./gradlew ngDocs
 ```
 
-
+## Changelog
+[CHANGELOG.md](CHANGELOG.md)
