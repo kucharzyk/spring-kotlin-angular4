@@ -49,12 +49,10 @@ sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
 node {
-  version = "7.3.0"
-  npmVersion = "4.0.5"
+  version = "6.9.3"
   yarnVersion = "0.18.1"
   download = true
   workDir = file("${project.buildDir}/nodejs")
-  npmWorkDir = file("${project.buildDir}/npm")
   yarnWorkDir = file("${project.buildDir}/yarn")
   nodeModulesDir = file("${project.projectDir}")
 }

@@ -89,8 +89,7 @@
     "start": "yarn run server:dev"
   },
   "engines": {
-    "node": ">= 7.0.0",
-    "npm": ">= 4.0.0",
+    "node": ">= 6.0.0",
     "yarn": ">= 0.18.0"
   }
 }
