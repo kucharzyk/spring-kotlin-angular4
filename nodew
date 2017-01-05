@@ -1,0 +1,9 @@
+#!/bin/bash
+
+NODE_HOME=`find ./build -wholename "*/bin/node" -type f | sed  's|/bin/node||g'`
+if [ ! -f $NODE_HOME/bin/node ]; then
+    echo "Node not found! Run gradle build first!"
+else
+    PATH="$NODE_HOME/bin":$PATH
+    $NODE_HOME/bin/node "$@"
+fi

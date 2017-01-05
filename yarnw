@@ -1,0 +1,10 @@
+#!/bin/bash
+
+YARN_SCRIPT="./build/yarn/node_modules/yarn/bin/yarn.js"
+
+if [ ! -f $YARN_SCRIPT ]; then
+    echo "Yarn not found! Run gradle build first!"
+else
+    ./nodew $YARN_SCRIPT "$@"
+fi
+
