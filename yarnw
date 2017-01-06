@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 YARN_SCRIPT="./build/yarn/node_modules/yarn/bin/yarn.js"
 

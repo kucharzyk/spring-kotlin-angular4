@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 NODE_HOME=`find ./build -wholename "*/bin/node" -type f | sed  's|/bin/node||g'`
 if [ ! -f $NODE_HOME/bin/node ]; then
