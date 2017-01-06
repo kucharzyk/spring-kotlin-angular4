@@ -82,38 +82,17 @@ task ngBuild(type: YarnTask) {
   args = ["run", "build:prod"]
 }
 
-task ngDocs(type: YarnTask) {
-  args = ["run", "docs"]
-}
-
-task ngTestPhantom(type: YarnTask) {
-  args = ["run", "test:phantom"]
-}
-
 task ngTest(type: YarnTask) {
-  args = ["run", "test"]
-}
-
-task ngTestLive(type: YarnTask) {
-  args = ["run", "test:live"]
-}
-
-task ngServer(type: YarnTask) {
-  args = ["run", "server:hmr"]
-}
-
-task changelog(type: YarnTask) {
-  args = ["run", "changelog"]
+  args = ["run", "test:phantom"]
 }
 
 yarn_install.dependsOn yarnSetup
 
 ngBuild.dependsOn yarn_install
-ngTestPhantom.dependsOn yarn_install
+ngTest.dependsOn yarn_install
 
 processResources.dependsOn ngBuild
-
-test.dependsOn ngTestPhantom
+test.dependsOn ngTest
 
 clean.delete << file("node_modules")
 

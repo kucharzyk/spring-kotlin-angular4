@@ -35,29 +35,31 @@ This project is still a work in progress
 ./gradlew build 
 ```
 
+## Yarn tasks
+
 ### Angular development server with hmr and proxy
 ```
-./gradlew ngServer 
+./yarnw run server 
 ```
 
 ### Angular unit tests (chrome)
 ```
-./gradlew ngTestLive
+./yarnw run test:live 
 ```
 
 ### Angular unit tests (chrome - single run)
 ```
-./gradlew ngTest 
+./yarnw run test
 ```
 
 ### Angular unit tests (phantom - single run)
 ```
-./gradlew ngTestPhantom
+./yarnw run test:phantom
 ```
 
 ### Run compdoc
 ```
-./gradlew ngDocs
+./yarnw run docs
 ```
 
 ## Changelog
