@@ -37,7 +37,7 @@ This project is still a work in progress
 
 ## Yarn tasks
 
-### Angular development server with hmr and proxy
+### Angular development server with proxy to spring application
 ```
 ./yarnw run server 
 ```
