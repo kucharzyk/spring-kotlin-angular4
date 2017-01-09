@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController
 @RequestMapping(path = arrayOf("/api"))
 class RestController {
 
-  @ResponseStatus(HttpStatus.OK)
-  @GetMapping(path = arrayOf("/test"))
-  fun testEndpoint() = "WORKING"
+    @ResponseStatus(HttpStatus.OK)
+    @GetMapping(path = arrayOf("/test"))
+    fun testEndpoint() = "WORKING"
 }

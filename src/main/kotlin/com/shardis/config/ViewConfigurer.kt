@@ -9,12 +9,12 @@ import java.util.concurrent.TimeUnit
 @Configuration
 open class ViewConfigurer : WebMvcConfigurerAdapter() {
 
-  override fun addResourceHandlers(registry: ResourceHandlerRegistry) {
-    registry
-      .addResourceHandler("/**")
-      .addResourceLocations("classpath:/static/")
-      .setCachePeriod(TimeUnit.HOURS.toSeconds(24L).toInt())
-      .resourceChain(true)
-      .addResolver(PushStateResourceResolver())
-  }
+    override fun addResourceHandlers(registry: ResourceHandlerRegistry) {
+        registry
+            .addResourceHandler("/**")
+            .addResourceLocations("classpath:/static/")
+            .setCachePeriod(TimeUnit.HOURS.toSeconds(24L).toInt())
+            .resourceChain(true)
+            .addResolver(PushStateResourceResolver())
+    }
 }
