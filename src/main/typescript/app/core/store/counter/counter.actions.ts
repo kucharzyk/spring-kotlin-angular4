@@ -1,9 +1,9 @@
 import {Action} from '@ngrx/store';
-import {type} from '../shared/type';
+import {uniqueActionType} from '../shared/unique-action-type';
 
 export const ActionTypes = {
-  INCREMENT_COUNTER: type('[Counter] Increment Counter'),
-  DECREMENT_COUNTER: type('[Counter] Decrement Counter')
+  INCREMENT_COUNTER: uniqueActionType('[Counter] Increment Counter'),
+  DECREMENT_COUNTER: uniqueActionType('[Counter] Decrement Counter')
 };
 
 export class IncrementCounterAction implements Action {
