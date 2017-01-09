@@ -30,16 +30,15 @@ class PushStateResourceResolver : ResourceResolver {
     }
 
     private fun resolve(requestPath: String, locations: List<Resource>): Resource? {
-        if (isIgnored(requestPath)) {
-            return null
-        }
-        if (isHandled(requestPath)) {
-            return locations
+        return when {
+            isIgnored(requestPath) -> null
+            isHandled(requestPath) -> locations
                 .map { loc -> createRelative(loc, requestPath) }
                 .filter { resource -> resource != null && resource.exists() }
                 .firstOrNull()
+            else -> index
         }
-        return index
+
     }
 
     private fun createRelative(resource: Resource, relativePath: String): Resource? {
@@ -51,9 +50,7 @@ class PushStateResourceResolver : ResourceResolver {
 
     }
 
-    private fun isIgnored(path: String): Boolean {
-        return ignoredPaths.contains(path)
-    }
+    private fun isIgnored(path: String): Boolean = ignoredPaths.contains(path)
 
     private fun isHandled(path: String): Boolean {
         val extension = StringUtils.getFilenameExtension(path)
