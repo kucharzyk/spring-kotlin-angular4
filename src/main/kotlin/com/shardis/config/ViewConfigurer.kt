@@ -14,5 +14,7 @@ open class ViewConfigurer : WebMvcConfigurerAdapter() {
       .addResourceHandler("/**")
       .addResourceLocations("classpath:/static/")
       .setCachePeriod(TimeUnit.HOURS.toSeconds(24L).toInt())
+      .resourceChain(true)
+      .addResolver(PushStateResourceResolver())
   }
 }
