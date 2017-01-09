@@ -21,7 +21,12 @@
         {{title}}
       </h1>
       <div>
-        <input type="text" [(ngModel)]="title"/>
+        <label>
+          <input type="text" [(ngModel)]="title"/>
+        </label>
+      </div>
+      <div>
+        <shardis-counter-page></shardis-counter-page>
       </div>
       <router-outlet></router-outlet>
     </div>

@@ -5,6 +5,8 @@ import {HttpModule} from '@angular/http';
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {ClarityModule} from 'clarity-angular';
+import {CoreModule} from './core/core.module';
+import {CounterModule} from './counter/counter.module';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import {ClarityModule} from 'clarity-angular';
     ReactiveFormsModule,
     HttpModule,
     ClarityModule.forRoot(),
-    AppRoutingModule
+    AppRoutingModule,
+    CoreModule,
+    CounterModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -4,7 +4,8 @@ import {AppComponent} from './app.component';
 import {ClarityModule} from 'clarity-angular';
 import {RouterTestingModule} from '@angular/router/testing';
 import {ReactiveFormsModule, FormsModule} from '@angular/forms';
-
+import {CoreModule} from './core/core.module';
+import {CounterModule} from './counter/counter.module';
 
 describe('AppComponent', () => {
 
@@ -15,10 +16,12 @@ describe('AppComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [
-        AppComponent,
+        AppComponent
       ],
       imports: [
         FormsModule,
+        CoreModule,
+        CounterModule,
         ReactiveFormsModule,
         ClarityModule.forRoot(),
         RouterTestingModule
