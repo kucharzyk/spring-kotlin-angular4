@@ -70,6 +70,15 @@ jacocoTestReport {
   }
 }
 
+processResources {
+  filesMatching("**/application.yml") {
+    expand(project.properties)
+  }
+  filesMatching("**/bootstrap.yml") {
+    expand(project.properties)
+  }
+}
+
 test {
   testLogging {
     events "passed", "skipped", "failed", "standardOut", "standardError"

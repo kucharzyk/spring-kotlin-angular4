@@ -1,5 +1,12 @@
 shardis:
-  version: 0.0.2-SNAPSHOT
+  version: ${version}
+  security:
+    header: Authorization
+    parameter: auth_token
+    jwtSecret: secret
+    passwordSecret: secret
+    tokenValidityInSeconds: 3600
+    tokenValidityInSecondsForRememberMe: 3600
 server:
   port: 8080
   context-path: /

@@ -8,5 +8,14 @@ import org.springframework.stereotype.Component
 open class ShardisProperties {
 
     var version = "unknown"
+    var security = Security()
 
+    open class Security {
+        var header = "Authorization"
+        var parameter = "auth_token"
+        var jwtSecret: String = "secret"
+        var passwordSecret: String = "secret"
+        var tokenValidityInSeconds: Long = 3600L
+        var tokenValidityInSecondsForRememberMe: Long = 3600L
+    }
 }
