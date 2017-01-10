@@ -1,2 +1,33 @@
 shardis:
-  version: 0.0.1-SNAPSHOT
+  version: 0.0.2-SNAPSHOT
+server:
+  port: 8080
+  context-path: /
+  error.whitelabel.enabled: true
+  compression:
+    enabled: true
+    min-response-size: 1024
+    mime-types:
+      - text/html
+      - text/xml
+      - text/plain
+      - text/css
+      - application/javascript
+      - application/json
+spring:
+  application:
+    name: shardis
+  aop:
+    proxy-target-class: true
+  jackson:
+    serialization:
+      write-dates-as-timestamps: false
+  jpa:
+    hibernate:
+      use-new-id-generator-mappings: true
+      ddl-auto: create-drop
+      naming:
+        implicit-strategy: org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy
+        physical-strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
+logging.level:
+  org.springframework.security: DEBUG

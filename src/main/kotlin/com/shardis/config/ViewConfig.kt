@@ -1,5 +1,6 @@
 package com.shardis.config
 
+import com.shardis.config.resolvers.PushStateResourceResolver
 import org.springframework.context.annotation.Configuration
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
@@ -7,7 +8,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 import java.util.concurrent.TimeUnit
 
 @Configuration
-open class ViewConfigurer : WebMvcConfigurerAdapter() {
+open class ViewConfig : WebMvcConfigurerAdapter() {
 
     override fun addResourceHandlers(registry: ResourceHandlerRegistry) {
         registry

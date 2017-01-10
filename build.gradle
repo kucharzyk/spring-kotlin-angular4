@@ -96,15 +96,22 @@ test.dependsOn ngTest
 
 clean.delete << file("node_modules")
 
+
 dependencies {
   compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion"
   compile "org.jetbrains.kotlin:kotlin-reflect:$kotlinVersion"
 
+  compile "org.springframework.boot:spring-boot-devtools"
   compile "org.springframework.boot:spring-boot-starter-actuator"
   compile "org.springframework.boot:spring-boot-starter-cache"
-  compile "org.springframework.boot:spring-boot-devtools"
+  compile "org.springframework.boot:spring-boot-starter-data-jpa"
+  compile "org.springframework.boot:spring-boot-starter-security"
+  compile "org.springframework.boot:spring-boot-starter-validation"
   compile "org.springframework.boot:spring-boot-starter-web"
   compile "org.springframework.boot:spring-boot-configuration-processor"
+
+  compile "org.hibernate:hibernate-java8"
+  compile "org.hibernate:hibernate-envers"
 
   kapt "org.springframework.boot:spring-boot-configuration-processor"
 
@@ -118,5 +125,6 @@ dependencies {
   runtime("org.postgresql:postgresql")
 
   testCompile "org.springframework.boot:spring-boot-starter-test"
+  testCompile "org.springframework.security:spring-security-test"
   testCompile "org.reflections:reflections:${reflectionsVersion}"
 }
