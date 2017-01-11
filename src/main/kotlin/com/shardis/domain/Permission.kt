@@ -8,9 +8,9 @@ import javax.persistence.Table
 
 @Entity
 @Table(name = "permissions")
-@SequenceGenerator(allocationSize = 1, name = "sequenceIdGenerator", sequenceName = "sequence_permission")
+@SequenceGenerator(allocationSize = 1, name = "sequenceIdGenerator", sequenceName = "sequence_permissions")
 class Permission(
     @Column(nullable = false, length = 64, unique = true) val name: String
 ) : BaseEntity(), GrantedAuthority {
-    override fun getAuthority() = name;
+    override fun getAuthority() = name
 }
