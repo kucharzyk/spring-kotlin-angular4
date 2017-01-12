@@ -85,6 +85,14 @@ test {
   }
 }
 
+sourceSets.main.java.srcDir file("$buildDir/generated/source/kapt/")
+
+idea {
+  module {
+    generatedSourceDirs += file("$buildDir/generated/source/kapt/")
+  }
+}
+
 check.finalizedBy "jacocoTestReport"
 
 task ngBuild(type: YarnTask) {
@@ -127,6 +135,7 @@ dependencies {
   compile "org.hibernate:hibernate-envers"
 
   kapt "org.springframework.boot:spring-boot-configuration-processor"
+  kapt "org.hibernate:hibernate-jpamodelgen"
 
   compile "io.jsonwebtoken:jjwt:${jjwtVersion}"
 
