@@ -4,7 +4,7 @@ import java.util.*
 import javax.persistence.*
 
 @MappedSuperclass
-open class BaseEntity {
+abstract class BaseEntity {
 
     @Id
     @GeneratedValue(strategy = javax.persistence.GenerationType.SEQUENCE, generator = "sequenceIdGenerator")
