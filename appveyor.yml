@@ -1,0 +1,5 @@
+version: "#{build}"
+build:
+  verbosity: detailed
+build_script:
+  - gradlew build
