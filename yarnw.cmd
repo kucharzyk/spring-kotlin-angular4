@@ -1,8 +1,15 @@
 @echo off
 setlocal
-set YARN_SCRIPT=%~dp0build\yarn\node_modules\yarn\bin\yarn.js
+
+set BUILD_DIR=%~dp0build
+set YARN_SCRIPT=""
+
+for /r %BUILD_DIR% %%x in (*yarn.js) do (
+  set YARN_SCRIPT=%%x
+) 
+
 if not exist %YARN_SCRIPT% (
-  echo Node not found! Run gradle build first!
+  echo Yarn not found! Run gradle build first!
 ) else (
   nodew.cmd %YARN_SCRIPT% %*
 )
