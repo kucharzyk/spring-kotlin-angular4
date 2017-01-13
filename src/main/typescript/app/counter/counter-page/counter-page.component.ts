@@ -1,8 +1,8 @@
 import {Component, OnInit} from '@angular/core';
-import {Observable} from 'rxjs';
 import {Store} from '@ngrx/store';
 import * as fromRoot from '../../core/store';
 import * as counter from '../../core/store/counter/counter.actions';
+import {Observable} from 'rxjs/Observable';
 
 
 @Component({

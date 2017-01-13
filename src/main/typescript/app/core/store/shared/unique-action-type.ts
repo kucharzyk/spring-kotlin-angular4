@@ -8,7 +8,7 @@
  * are unique.
  */
 
-let uniqueActionTypeCache: {[label: string]: boolean} = {};
+const uniqueActionTypeCache: {[label: string]: boolean} = {};
 
 export function uniqueActionType<T>(label: T | ''): T {
   if (uniqueActionTypeCache[<string>label]) {
