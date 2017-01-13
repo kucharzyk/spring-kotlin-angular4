@@ -96,7 +96,7 @@
     "start": "yarn run server:dev"
   },
   "engines": {
-    "node": ">= 6.0.0",
+    "node": ">= 7.0.0",
     "yarn": ">= 0.18.0"
   }
 }
