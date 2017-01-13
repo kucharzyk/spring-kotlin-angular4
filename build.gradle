@@ -5,7 +5,7 @@ buildscript {
     springBootVersion = "1.4.3.RELEASE"
     jacksonVersion = "2.8.5"
     jjwtVersion = "0.7.0"
-    gradleNodePluginVersion = "1.0.1"
+    gradleNodePluginVersion = "1.1.0"
     reflectionsVersion = "0.9.10"
   }
 
