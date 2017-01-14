@@ -29,8 +29,8 @@ class AuthController(val jwtTokenAuthService: JwtTokenAuthService) {
 
 
     @RequestMapping(path = arrayOf("/principal"), method = arrayOf(RequestMethod.GET))
-    fun principal(): String {
-        return SecurityUtils.getLoggedUserName()
+    fun principal(): String? {
+        return SecurityUtils.getLoggedUser()?.username
     }
 
 }

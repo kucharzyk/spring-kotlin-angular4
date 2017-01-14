@@ -1,16 +1,16 @@
 package com.shardis.security.support
 
 import org.springframework.security.core.context.SecurityContextHolder
-import org.springframework.security.core.userdetails.UserDetails
 
 object SecurityUtils {
 
-    fun getLoggedUserName(): String {
+    fun getLoggedUser(): ShardisUserDetails? {
         val principal: Any = SecurityContextHolder.getContext().authentication.principal
-        if (principal is UserDetails) {
-            return principal.username
+        if (principal is ShardisUserDetails) {
+            return principal
         } else {
-            return principal.toString()
+            return null
         }
     }
+
 }
