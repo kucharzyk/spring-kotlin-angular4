@@ -22,7 +22,7 @@ const routes: Routes = [
     component: ForgetPassComponent
   },
   {
-    path: 'login',
+    path: 'register',
     pathMatch: 'prefix',
     component: RegisterComponent
   }
