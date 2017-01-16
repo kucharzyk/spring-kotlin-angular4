@@ -1,5 +1,5 @@
 /* tslint:disable:no-unused-variable */
-import {ComponentFixture, TestBed} from '@angular/core/testing';
+import {ComponentFixture, TestBed, async} from '@angular/core/testing';
 import {CoreModule} from '../../core/core.module';
 import {CounterPageComponent} from './counter-page.component';
 import {CounterComponent} from '../counter/counter.component';
@@ -31,7 +31,7 @@ describe('CounterPageComponent', () => {
     fixture.destroy();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
+  it('should create', async(() => {
+    expect(element).toBeTruthy();
+  }));
 });
