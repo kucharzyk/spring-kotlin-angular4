@@ -3,7 +3,6 @@ import {CommonModule} from '@angular/common';
 import {RouterStoreModule} from '@ngrx/router-store';
 import {StoreDevtoolsModule} from '@ngrx/store-devtools';
 import {StoreModule} from '@ngrx/store';
-import {CoreRoutingModule} from './core-routing.module';
 import {reducer} from './store/index';
 
 const store = StoreModule.provideStore(reducer);
@@ -12,7 +11,6 @@ const store = StoreModule.provideStore(reducer);
   imports: [
     CommonModule,
     store,
-    CoreRoutingModule,
     RouterStoreModule.connectRouter(),
     StoreDevtoolsModule.instrumentOnlyWithExtension(),
   ],

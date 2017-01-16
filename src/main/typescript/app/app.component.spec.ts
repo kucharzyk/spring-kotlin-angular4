@@ -42,11 +42,4 @@ describe('AppComponent', () => {
     expect(element).toBeTruthy();
   }));
 
-  it(`should have as title 'shardis works!'`, async(() => {
-    expect(component.title).toEqual('shardis works!');
-  }));
-
-  it('should render title in a h1 tag', async(() => {
-    expect(element.querySelector('h1').textContent).toContain('shardis works!');
-  }));
 });

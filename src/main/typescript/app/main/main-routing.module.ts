@@ -1,10 +1,12 @@
 import {NgModule} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
+import {MainViewComponent} from './main-view/main-view.component';
 
 const routes: Routes = [
   {
     path: '',
-    children: []
+    pathMatch: 'prefix',
+    component: MainViewComponent
   }
 ];
 
@@ -13,5 +15,5 @@ const routes: Routes = [
   exports: [RouterModule],
   providers: []
 })
-export class CoreRoutingModule {
+export class MainRoutingModule {
 }

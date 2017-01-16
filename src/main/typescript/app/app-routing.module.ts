@@ -1,10 +1,26 @@
 import {NgModule} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
+import {MainModule} from './main/main.module';
+import {AuthModule} from './auth/auth.module';
 
-const routes: Routes = [
+export function loadMainModule() {
+  return MainModule;
+}
+
+export function loadAuthModule() {
+  return AuthModule;
+}
+
+export const routes: Routes = [
   {
     path: '',
-    children: []
+    pathMatch: 'prefix',
+    loadChildren: loadMainModule
+  },
+  {
+    path: '',
+    pathMatch: 'prefix',
+    loadChildren: loadAuthModule
   }
 ];
 
