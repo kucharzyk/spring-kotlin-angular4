@@ -5,7 +5,7 @@ buildscript {
     springBootVersion = "1.4.3.RELEASE"
     jacksonVersion = "2.8.5"
     jjwtVersion = "0.7.0"
-    gradleNodePluginVersion = "1.1.0"
+    gradleNodePluginVersion = "1.1.1"
     reflectionsVersion = "0.9.10"
   }
 
@@ -17,11 +17,11 @@ buildscript {
   }
 
   dependencies {
-    classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
-    classpath "org.springframework.boot:spring-boot-gradle-plugin:$springBootVersion"
+    classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:${kotlinVersion}"
+    classpath "org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}"
     classpath "com.moowork.gradle:gradle-node-plugin:${gradleNodePluginVersion}"
-    classpath "org.jetbrains.kotlin:kotlin-noarg:$kotlinVersion"
-    classpath "org.jetbrains.kotlin:kotlin-allopen:$kotlinVersion"
+    classpath "org.jetbrains.kotlin:kotlin-noarg:${kotlinVersion}"
+    classpath "org.jetbrains.kotlin:kotlin-allopen:${kotlinVersion}"
   }
 }
 
@@ -118,8 +118,8 @@ configurations {
 }
 
 dependencies {
-  compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion"
-  compile "org.jetbrains.kotlin:kotlin-reflect:$kotlinVersion"
+  compile "org.jetbrains.kotlin:kotlin-stdlib:${kotlinVersion}"
+  compile "org.jetbrains.kotlin:kotlin-reflect:${kotlinVersion}"
 
   compile "org.springframework.boot:spring-boot-devtools"
   compile "org.springframework.boot:spring-boot-starter-actuator"
@@ -140,8 +140,8 @@ dependencies {
   compile "io.jsonwebtoken:jjwt:${jjwtVersion}"
 
   compile "com.fasterxml.jackson.datatype:jackson-datatype-jsr310"
-  compile "com.fasterxml.jackson.core:jackson-databind:$jacksonVersion"
-  compile "com.fasterxml.jackson.module:jackson-module-kotlin:$jacksonVersion"
+  compile "com.fasterxml.jackson.core:jackson-databind:${jacksonVersion}"
+  compile "com.fasterxml.jackson.module:jackson-module-kotlin:${jacksonVersion}"
 
   runtime("com.h2database:h2")
   runtime("org.postgresql:postgresql")
