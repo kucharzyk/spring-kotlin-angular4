@@ -47,7 +47,7 @@
     "angular-cli": "1.0.0-beta.25.5",
     "angular2-dependencies-graph": "1.0.0-alpha.12",
     "codelyzer": "2.0.0-beta.4",
-    "compodoc": "0.0.32",
+    "compodoc": "0.0.33",
     "conventional-changelog-cli": "1.2.0",
     "jasmine-core": "2.5.2",
     "jasmine-spec-reporter": "3.2.0",
@@ -62,7 +62,7 @@
     "ts-node": "2.0.0",
     "tslint": "4.3.1",
     "typescript": "2.1.5",
-    "yarn": "0.18.1"
+    "yarn": "0.19.1"
   },
   "scripts": {
     "clean": "yarn cache clean && rimraf coverage src/main/resources/static/*",
