@@ -42,7 +42,7 @@
   },
   "devDependencies": {
     "@angular/compiler-cli": "2.4.3",
-    "@types/jasmine": "2.5.40",
+    "@types/jasmine": "2.5.41",
     "@types/node": "7.0.0",
     "angular-cli": "1.0.0-beta.25.5",
     "angular2-dependencies-graph": "1.0.0-alpha.12",
