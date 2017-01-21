@@ -6,7 +6,6 @@ import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {ClarityModule} from 'clarity-angular';
 import {CoreModule} from './core/core.module';
-import {CounterModule} from './counter/counter.module';
 import {MainModule} from './main/main.module';
 
 @NgModule({
