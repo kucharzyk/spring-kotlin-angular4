@@ -98,9 +98,9 @@
   version "2.5.41"
   resolved "https://registry.yarnpkg.com/@types/jasmine/-/jasmine-2.5.41.tgz#d5e86161a0af80d52062b310a33ed65b051a0713"
 
-"@types/node@7.0.0":
-  version "7.0.0"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-7.0.0.tgz#c081147b109da5f9c57af70571771be97ce9c0ba"
+"@types/node@7.0.2":
+  version "7.0.2"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-7.0.2.tgz#f318fcda63543ac076316cb91653d8e89aa7bfce"
 
 "@types/node@^6.0.46":
   version "6.0.59"
@@ -276,7 +276,7 @@ angular-cli@1.0.0-beta.26:
     webpack-sources "^0.1.3"
     zone.js "^0.7.2"
 
-angular2-dependencies-graph@1.0.0-alpha.12, angular2-dependencies-graph@^1.0.0-alpha.12:
+angular2-dependencies-graph@1.0.0-alpha.12:
   version "1.0.0-alpha.12"
   resolved "https://registry.yarnpkg.com/angular2-dependencies-graph/-/angular2-dependencies-graph-1.0.0-alpha.12.tgz#89867412949eff146f2ddea7c35123920e34c0d2"
   dependencies:
@@ -1049,11 +1049,11 @@ compare-func@^1.3.1:
     array-ify "^1.0.0"
     dot-prop "^3.0.0"
 
-compodoc@0.0.35:
-  version "0.0.35"
-  resolved "https://registry.yarnpkg.com/compodoc/-/compodoc-0.0.35.tgz#56d7b6a7d62617f79eafed748396b82fdcb7f21c"
+compodoc@0.0.36:
+  version "0.0.36"
+  resolved "https://registry.yarnpkg.com/compodoc/-/compodoc-0.0.36.tgz#f1f084b3dec93e7a6aca38092ff53d159f4db2cf"
   dependencies:
-    angular2-dependencies-graph "^1.0.0-alpha.12"
+    angular2-dependencies-graph "1.0.0-alpha.12"
     cheerio "^0.22.0"
     colors "^1.1.2"
     commander "^2.9.0"
