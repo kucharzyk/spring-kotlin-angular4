@@ -15,7 +15,7 @@ export class CounterPageComponent implements OnInit {
   value$: Observable<number>;
 
   constructor(private store: Store<fromRoot.RootState>) {
-    this.value$ = store.select(fromRoot.getCounterValue);
+    this.value$ = store.select(s => s.counter.value);
   }
 
   increment() {

@@ -4,7 +4,6 @@ import {combineReducers, ActionReducer} from '@ngrx/store';
 import * as fromCounter from './counter/counter.reducer';
 import {CounterState} from './counter/counter.state';
 import {environment} from '../../../environments/environment';
-import {createSelector} from 'reselect';
 import {localStorageSync} from 'ngrx-store-localstorage';
 import {RouterState, routerReducer} from '@ngrx/router-store';
 
@@ -34,5 +33,3 @@ export function reducer(state: any, action: any) {
   }
 }
 
-export const getCounterState = (state: RootState) => state.counter;
-export const getCounterValue = createSelector(getCounterState, fromCounter.getValue);
