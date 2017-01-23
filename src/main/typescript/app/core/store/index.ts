@@ -6,23 +6,25 @@ import {CounterState} from './counter/counter.state';
 import {environment} from '../../../environments/environment';
 import {createSelector} from 'reselect';
 import {localStorageSync} from 'ngrx-store-localstorage';
+import {RouterState, routerReducer} from '@ngrx/router-store';
 
 
 export interface RootState {
   counter: CounterState;
+  router: RouterState;
 }
 
 const reducers = {
-  counter: fromCounter.reducer
+  counter: fromCounter.reducer,
+  router: routerReducer
 };
 
 const developmentReducer: ActionReducer<RootState> = compose(
   storeFreeze,
   localStorageSync(['counter'], true),
   combineReducers)(reducers);
-const productionReducer: ActionReducer<RootState> = compose(
-  combineReducers
-)(reducers);
+
+const productionReducer: ActionReducer<RootState> = compose(combineReducers)(reducers);
 
 export function reducer(state: any, action: any) {
   if (environment.production) {
