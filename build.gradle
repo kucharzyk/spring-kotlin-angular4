@@ -25,9 +25,6 @@ buildscript {
   }
 }
 
-repositories {
-  mavenCentral()
-}
 
 apply plugin: "idea"
 apply plugin: "eclipse"
@@ -42,6 +39,10 @@ apply plugin: "org.springframework.boot"
 apply plugin: "com.moowork.node"
 apply plugin: "jacoco"
 
+jar {
+  baseName = "shardis"
+}
+
 group = "com.shardis"
 version = "0.0.3-SNAPSHOT"
 
@@ -55,10 +56,6 @@ node {
   workDir = file("${project.buildDir}/nodejs")
   yarnWorkDir = file("${project.buildDir}/yarn")
   nodeModulesDir = file("${project.projectDir}")
-}
-
-jar {
-  baseName = "shardis"
 }
 
 jacocoTestReport {
@@ -93,28 +90,12 @@ idea {
   }
 }
 
-check.finalizedBy "jacocoTestReport"
-
-task ngBuild(type: YarnTask) {
-  args = ["run", "build:prod"]
-}
-
-task ngTest(type: YarnTask) {
-  args = ["run", "test:phantom"]
-}
-
-yarn_install.dependsOn yarnSetup
-
-ngBuild.dependsOn yarn_install
-ngTest.dependsOn yarn_install
-
-processResources.dependsOn ngBuild
-test.dependsOn ngTest
-
-clean.delete << file("node_modules")
-
 configurations {
   compile.exclude group: "org.springframework.boot", module: "spring-boot-starter-tomcat"
+}
+
+repositories {
+  mavenCentral()
 }
 
 dependencies {
@@ -150,3 +131,25 @@ dependencies {
   testCompile "org.springframework.security:spring-security-test"
   testCompile "org.reflections:reflections:${reflectionsVersion}"
 }
+
+
+check.finalizedBy "jacocoTestReport"
+
+task ngBuild(type: YarnTask) {
+  args = ["run", "build:prod"]
+}
+
+task ngTest(type: YarnTask) {
+  args = ["run", "test:phantom"]
+}
+
+yarn_install.dependsOn yarnSetup
+
+ngBuild.dependsOn yarn_install
+ngTest.dependsOn yarn_install
+
+processResources.dependsOn ngBuild
+test.dependsOn ngTest
+
+clean.delete << file("node_modules")
+
