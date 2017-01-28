@@ -15,11 +15,19 @@
   version "1.0.14"
   resolved "https://registry.yarnpkg.com/@angular-cli/base-href-webpack/-/base-href-webpack-1.0.14.tgz#575f604f55f4c171608d3c377dc40d26858b49d6"
 
-"@angular/common@2.4.4":
-  version "2.4.4"
-  resolved "https://registry.yarnpkg.com/@angular/common/-/common-2.4.4.tgz#039520c6395476d7f35ca250973dfef946c62831"
+"@angular/common@2.4.5":
+  version "2.4.5"
+  resolved "https://registry.yarnpkg.com/@angular/common/-/common-2.4.5.tgz#ada1a22b7ba01d1fdeb300115584478e031e9a4f"
 
-"@angular/compiler-cli@2.4.4", "@angular/compiler-cli@^2.3.1":
+"@angular/compiler-cli@2.4.5":
+  version "2.4.5"
+  resolved "https://registry.yarnpkg.com/@angular/compiler-cli/-/compiler-cli-2.4.5.tgz#efabbe10558b233dcdfe985af2bd2e84f1414c97"
+  dependencies:
+    "@angular/tsc-wrapped" "0.5.1"
+    minimist "^1.2.0"
+    reflect-metadata "^0.1.2"
+
+"@angular/compiler-cli@^2.3.1":
   version "2.4.4"
   resolved "https://registry.yarnpkg.com/@angular/compiler-cli/-/compiler-cli-2.4.4.tgz#726598f850e599677fa1638d1728096384665a63"
   dependencies:
@@ -27,33 +35,41 @@
     minimist "^1.2.0"
     reflect-metadata "^0.1.2"
 
-"@angular/compiler@2.4.4", "@angular/compiler@^2.3.1":
+"@angular/compiler@2.4.5":
+  version "2.4.5"
+  resolved "https://registry.yarnpkg.com/@angular/compiler/-/compiler-2.4.5.tgz#521da325e2e002398e8f9de52cfb03d303729e72"
+
+"@angular/compiler@^2.3.1":
   version "2.4.4"
   resolved "https://registry.yarnpkg.com/@angular/compiler/-/compiler-2.4.4.tgz#86b861685ebc4c7b19b1133bf8c5bf4d28c71475"
 
-"@angular/core@2.4.4", "@angular/core@^2.3.1":
+"@angular/core@2.4.5":
+  version "2.4.5"
+  resolved "https://registry.yarnpkg.com/@angular/core/-/core-2.4.5.tgz#8b05156398afde9636e65527ffb61fc74236af5a"
+
+"@angular/core@^2.3.1":
   version "2.4.4"
   resolved "https://registry.yarnpkg.com/@angular/core/-/core-2.4.4.tgz#eafef7bbdefea321fa5e79998bb2f6707c70729d"
 
-"@angular/forms@2.4.4":
-  version "2.4.4"
-  resolved "https://registry.yarnpkg.com/@angular/forms/-/forms-2.4.4.tgz#9679ca369d5bc2968ee1a67634ac221d75487364"
+"@angular/forms@2.4.5":
+  version "2.4.5"
+  resolved "https://registry.yarnpkg.com/@angular/forms/-/forms-2.4.5.tgz#468bd040518595c3598742ac1a22c506a7f1ab0f"
 
-"@angular/http@2.4.4":
-  version "2.4.4"
-  resolved "https://registry.yarnpkg.com/@angular/http/-/http-2.4.4.tgz#e41a9808eeec9cfdf3d5f9f92d0041b5c041fd60"
+"@angular/http@2.4.5":
+  version "2.4.5"
+  resolved "https://registry.yarnpkg.com/@angular/http/-/http-2.4.5.tgz#de94b2daa4ff24e8b6c8839ffaf8089b62d4430b"
 
-"@angular/platform-browser-dynamic@2.4.4":
-  version "2.4.4"
-  resolved "https://registry.yarnpkg.com/@angular/platform-browser-dynamic/-/platform-browser-dynamic-2.4.4.tgz#b5948cf2cac33c9634a400a7ece8fb5600f83107"
+"@angular/platform-browser-dynamic@2.4.5":
+  version "2.4.5"
+  resolved "https://registry.yarnpkg.com/@angular/platform-browser-dynamic/-/platform-browser-dynamic-2.4.5.tgz#36fa975a8ee2dfe3f60bab561143974e6bdb1eff"
 
-"@angular/platform-browser@2.4.4":
-  version "2.4.4"
-  resolved "https://registry.yarnpkg.com/@angular/platform-browser/-/platform-browser-2.4.4.tgz#0bff3512d00b199211ff28df0aa5c6841718a19c"
+"@angular/platform-browser@2.4.5":
+  version "2.4.5"
+  resolved "https://registry.yarnpkg.com/@angular/platform-browser/-/platform-browser-2.4.5.tgz#fa1bc891b1309bca83845787b9a08db36a787fee"
 
-"@angular/router@3.4.4":
-  version "3.4.4"
-  resolved "https://registry.yarnpkg.com/@angular/router/-/router-3.4.4.tgz#8564889d5bf322a1a4b679bd82c053df03eabb72"
+"@angular/router@3.4.5":
+  version "3.4.5"
+  resolved "https://registry.yarnpkg.com/@angular/router/-/router-3.4.5.tgz#5a471a4e49a7eba6a460761129c0684a4b730a1a"
 
 "@angular/tsc-wrapped@0.5.1", "@angular/tsc-wrapped@^0.5.0":
   version "0.5.1"
