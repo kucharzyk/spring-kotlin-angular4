@@ -11,6 +11,8 @@
     "mapRoot": "./",
     "module": "es6",
     "moduleResolution": "node",
+    "noImplicitAny": true,
+    "suppressImplicitAnyIndexErrors": true,
     "outDir": "../../../src/main/resources/static/out-tsc",
     "sourceMap": true,
     "target": "es5",

@@ -10,6 +10,8 @@
     ],
     "module": "commonjs",
     "moduleResolution": "node",
+    "noImplicitAny": true,
+    "suppressImplicitAnyIndexErrors": true,
     "outDir": "../src/main/resources/static/out-tsc-e2e",
     "sourceMap": true,
     "target": "es5",
