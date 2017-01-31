@@ -2,7 +2,7 @@ buildscript {
 
   ext {
     kotlinVersion = "1.0.6"
-    springBootVersion = "1.4.4.RELEASE"
+    springBootVersion = "1.5.1.RELEASE"
     jacksonVersion = "2.8.6"
     jjwtVersion = "0.7.0"
     gradleNodePluginVersion = "1.1.1"
