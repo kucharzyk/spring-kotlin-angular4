@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-NG_SCRIPT="./node_modules/angular-cli/bin/ng"
+NG_SCRIPT="./node_modules/@angular/cli/bin/ng"
 
 if [ ! -f $YARN_SCRIPT ]; then
     echo "Angular cli not found! Run gradle build first!"
