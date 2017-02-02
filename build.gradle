@@ -44,7 +44,7 @@ jar {
 }
 
 group = "com.shardis"
-version = "0.0.3-SNAPSHOT"
+version = "0.0.3"
 
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
