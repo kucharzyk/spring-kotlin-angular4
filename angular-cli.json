@@ -23,9 +23,6 @@
         "styles.scss"
       ],
       "scripts": [
-        "../../../node_modules/mutationobserver-shim/dist/mutationobserver.min.js",
-        "../../../node_modules/@webcomponents/custom-elements/custom-elements.min.js",
-        "../../../node_modules/clarity-icons/clarity-icons.min.js",
         "../../../node_modules/web-animations-js/web-animations.min.js"
       ],
       "environments": {
