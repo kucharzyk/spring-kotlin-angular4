@@ -1,6 +1,6 @@
 {
   "project": {
-    "version": "1.0.0-beta.29",
+    "version": "1.0.0-beta.30",
     "name": "shardis"
   },
   "apps": [
@@ -22,9 +22,7 @@
         "../../../node_modules/clarity-ui/clarity-ui.min.css",
         "styles.scss"
       ],
-      "scripts": [
-        "../../../node_modules/web-animations-js/web-animations.min.js"
-      ],
+      "scripts": [],
       "environments": {
         "source": "environments/environment.ts",
         "dev": "environments/environment.ts",
