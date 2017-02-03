@@ -140,7 +140,7 @@ task ngBuild(type: YarnTask) {
 }
 
 task ngTest(type: YarnTask) {
-  args = ["run", "test:phantom"]
+  args = ["run", "test"]
 }
 
 yarn_install.dependsOn yarnSetup

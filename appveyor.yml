@@ -1,4 +1,6 @@
 version: "#{build}"
+install:
+ - choco install googlechrome
 build:
   verbosity: detailed
 build_script:
