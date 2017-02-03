@@ -53,11 +53,6 @@ This project is still a work in progress
 ./yarnw run test
 ```
 
-### Angular unit tests (phantom - single run)
-```
-./yarnw run test:phantom
-```
-
 ### Run compdoc
 ```
 ./yarnw run docs

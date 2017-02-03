@@ -8,7 +8,6 @@ module.exports = function (config) {
     plugins: [
       require('karma-jasmine'),
       require('karma-chrome-launcher'),
-      require('karma-phantomjs-launcher'),
       require('karma-remap-istanbul'),
       require('@angular/cli/plugins/karma')
     ],
@@ -39,10 +38,6 @@ module.exports = function (config) {
     logLevel: config.LOG_INFO,
     autoWatch: true,
     browsers: ['Chrome'],
-    singleRun: false,
-    captureTimeout: 60000,
-    browserDisconnectTimeout : 10000,
-    browserDisconnectTolerance : 1,
-    browserNoActivityTimeout : 60000
+    singleRun: false
   });
 };
