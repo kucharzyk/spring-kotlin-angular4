@@ -44,7 +44,6 @@ version = "0.0.4-SNAPSHOT"
 
 repositories {
   mavenCentral()
-  maven { setUrl("https://dl.bintray.com/jetbrains/spek") }
   maven { setUrl("http://dl.bintray.com/kotlin/kotlin-eap-1.1") }
 }
 
