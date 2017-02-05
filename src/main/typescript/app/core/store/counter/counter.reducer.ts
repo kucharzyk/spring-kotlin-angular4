@@ -4,7 +4,7 @@ import 'rxjs/add/operator/let';
 import * as counter from './counter.actions';
 import {CounterState, initialCounter} from './counter.state';
 
-export function reducer(state = initialCounter, action: counter.Actions): CounterState {
+export function counterReducer(state = initialCounter, action: counter.Actions): CounterState {
   switch (action.type) {
     case counter.ActionTypes.INCREMENT_COUNTER:
       return {value: state.value + 1};
@@ -15,5 +15,3 @@ export function reducer(state = initialCounter, action: counter.Actions): Counte
   }
 }
 
-
-export const getValue = (state: CounterState) => state.value;

@@ -76,6 +76,7 @@
     "e2e": "protractor",
     "e2e:live": "protractor --elementExplorer",
     "lint": "ng lint",
+    "lint:fix": "tslint --fix \"src/main/typescript/**/*.ts\" --project src/main/typescript/tsconfig.json --type-check  && tslint --fix \"e2e/**/*.ts\" --project e2e/tsconfig.json --type-check",
     "pretest": "rimraf coverage && yarn run lint",
     "test": "ng test -w false --code-coverage --progress false",
     "test:live": "ng test --progress false",

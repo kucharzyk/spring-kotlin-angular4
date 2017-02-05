@@ -4,6 +4,7 @@ import {RouterStoreModule} from '@ngrx/router-store';
 import {StoreDevtoolsModule} from '@ngrx/store-devtools';
 import {StoreModule} from '@ngrx/store';
 import {reducer} from './store/index';
+import {AuthService} from './store/auth/auth.service';
 
 const store = StoreModule.provideStore(reducer);
 
@@ -14,7 +15,9 @@ const store = StoreModule.provideStore(reducer);
     RouterStoreModule.connectRouter(),
     StoreDevtoolsModule.instrumentOnlyWithExtension(),
   ],
-  declarations: []
+  providers: [
+    AuthService
+  ]
 })
 export class CoreModule {
   constructor(@Optional() @SkipSelf() parentModule: CoreModule) {
