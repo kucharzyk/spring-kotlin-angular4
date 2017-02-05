@@ -85,8 +85,8 @@
     "prebuild:prod": "yarn run clean:dist",
     "build:prod": "ng build -prod --aot --sourcemap=false --progress=false --extract-css",
     "server": "yarn run server:dev",
-    "server:dev": "ng serve --p 4200 -pc proxy.json -dev --open --progress=false --extract-css=false",
-    "server:prod": "ng serve --p 4200 -pc proxy.json -prod --aot --open --progress=false --extract-css",
+    "server:dev": "ng serve --p 4200 -pc proxy.json -dev --open --progress=false --extract-css=false --sourcemap",
+    "server:prod": "ng serve --p 4200 -pc proxy.json -prod --aot --open --progress=false --extract-css --sourcemap",
     "ng": "ng",
     "ng:upgrade": "ng init -n shardis -sd src/main/typescript --style scss --prefix shardis --routing",
     "start": "yarn run server:dev"
