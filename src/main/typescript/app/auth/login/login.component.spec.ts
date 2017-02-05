@@ -5,6 +5,9 @@ import {RouterTestingModule} from '@angular/router/testing';
 import {CoreModule} from '../../core/core.module';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {ClarityModule} from 'clarity-angular';
+import {AuthService} from '../../core/store/auth/auth.service';
+import {MockBackend} from '@angular/http/testing';
+import {Http, ConnectionBackend, RequestOptions, BaseRequestOptions} from '@angular/http';
 
 describe('LoginComponent', () => {
   let fixture: ComponentFixture<LoginComponent>;
@@ -20,6 +23,18 @@ describe('LoginComponent', () => {
         ReactiveFormsModule,
         ClarityModule.forRoot(),
         RouterTestingModule
+      ],
+      providers: [
+        BaseRequestOptions,
+        MockBackend,
+        {
+          provide: Http,
+          useFactory: function (backend: ConnectionBackend, defaultOptions: RequestOptions) {
+            return new Http(backend, defaultOptions);
+          },
+          deps: [MockBackend, BaseRequestOptions]
+        },
+        AuthService
       ]
     })
       .compileComponents();

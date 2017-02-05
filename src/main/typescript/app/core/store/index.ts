@@ -24,7 +24,7 @@ const reducers = {
 
 const developmentReducer: ActionReducer<RootState> = compose(
   storeFreeze,
-  localStorageSync(['counter', 'auth'], true),
+  localStorageSync(['counter', 'auth', 'router'], true),
   combineReducers)(reducers);
 
 const productionReducer: ActionReducer<RootState> = compose(combineReducers)(reducers);
