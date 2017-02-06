@@ -11,7 +11,7 @@ import javax.persistence.*
 @SequenceGenerator(allocationSize = 1, name = "sequenceIdGenerator", sequenceName = "sequence_roles")
 class Role(
     @Column(nullable = false, length = 64, unique = true) val name: String,
-    @OneToMany(fetch = FetchType.LAZY) val permissions: MutableSet<Role> = mutableSetOf()
+    @ManyToMany(fetch = FetchType.LAZY) val permissions: MutableSet<Permission> = mutableSetOf()
 ) : AuditedEntity(), Serializable, GrantedAuthority {
     override fun getAuthority() = name
 }

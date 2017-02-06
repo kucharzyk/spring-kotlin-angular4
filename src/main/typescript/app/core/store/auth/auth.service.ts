@@ -4,6 +4,7 @@ import {Store} from '@ngrx/store';
 import {RootState} from '../index';
 import {Observable} from 'rxjs/Observable';
 import {LogoutAction, ProcessTokenAction, AuthErrorAction} from './auth.actions';
+import {go} from '@ngrx/router-store';
 
 
 @Injectable()
@@ -48,6 +49,7 @@ export class AuthService {
           const jwtToken = data.text();
           localStorage.setItem('tokenData', jwtToken);
           this.store.dispatch(new ProcessTokenAction(jwtToken));
+          this.store.dispatch(go('/'));
         },
         err => {
           console.log(err);

@@ -4,6 +4,7 @@ import {uniqueActionType} from '../shared/unique-action-type';
 export const ActionTypes = {
   LOGOUT: uniqueActionType('[Auth] Logout'),
   PROCESS_TOKEN: uniqueActionType('[Auth] Process token'),
+  CLEAR_AUTH_ERROR: uniqueActionType('[Auth] Clear auth error'),
   AUTH_ERROR: uniqueActionType('[Auth] Auth error')
 };
 
@@ -28,8 +29,17 @@ export class AuthErrorAction implements Action {
   }
 }
 
+export class ClearAuthErrorAction implements Action {
+  type = ActionTypes.CLEAR_AUTH_ERROR;
+
+  constructor() {
+  }
+}
+
+
 
 export type Actions
   = LogoutAction
   | ProcessTokenAction
-  | AuthErrorAction;
+  | AuthErrorAction
+  | ClearAuthErrorAction;

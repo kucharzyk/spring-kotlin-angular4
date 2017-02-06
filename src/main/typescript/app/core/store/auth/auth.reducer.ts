@@ -23,6 +23,9 @@ export function authReducer(state = initialState, action: Actions): AuthState {
     case ActionTypes.AUTH_ERROR:
       return Object.assign({}, userData, {error: action.error});
 
+    case ActionTypes.CLEAR_AUTH_ERROR:
+      return Object.assign({}, userData, {error: null});
+
     default:
       return state;
   }

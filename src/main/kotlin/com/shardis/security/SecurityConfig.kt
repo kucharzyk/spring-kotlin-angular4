@@ -2,7 +2,6 @@ package com.shardis.security
 
 import com.shardis.ShardisProperties
 import com.shardis.security.jwt.*
-import org.springframework.beans.factory.BeanInitializationException
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
@@ -43,13 +42,9 @@ open class SecurityConfig(
 
     @Autowired
     open fun configureGlobal(auth: AuthenticationManagerBuilder) {
-        try {
-            auth
-                .userDetailsService(shardisUserDetailsService)
-                .passwordEncoder(passwordEncoder())
-        } catch (e: Exception) {
-            throw BeanInitializationException("Security configuration failed", e)
-        }
+        auth
+            .userDetailsService(shardisUserDetailsService)
+            .passwordEncoder(passwordEncoder())
     }
 
     override fun configure(httpSecurity: HttpSecurity) {

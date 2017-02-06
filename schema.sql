@@ -12,7 +12,7 @@
         drop constraint FKt0mnl3rej2p0h9gxnbalf2kdd;
 
     alter table roles_permissions 
-        drop constraint FKeqt383nibym26cjj8we4uar8h;
+        drop constraint FK570wuy6sacdnrw8wdqjfh7j0q;
 
     alter table roles_permissions 
         drop constraint FKqi9odri6c1o81vjox54eedwyh;
@@ -197,7 +197,7 @@
         first_name varchar(120) not null,
         last_name varchar(120) not null,
         locked boolean not null,
-        password varchar(64) not null,
+        password varchar(120) not null,
         username varchar(250) not null,
         primary key (id)
     );
@@ -217,7 +217,7 @@
         first_name varchar(120),
         last_name varchar(120),
         locked boolean,
-        password varchar(64),
+        password varchar(120),
         username varchar(250),
         primary key (id, rev)
     );
@@ -242,14 +242,8 @@
     alter table roles 
         add constraint UK_ofx66keruapi6vyqpv6f2or37 unique (name);
 
-    alter table roles_permissions 
-        add constraint UK_oll9subcln0cdjt31bp72a3uv unique (permissions_id);
-
     alter table users 
         add constraint UK_r43af9ap4edm43mmtq01oddj6 unique (username);
-
-    alter table users_roles 
-        add constraint UK_60loxav507l5mreo05v0im1lq unique (roles_id);
 
     alter table jwt_tokens 
         add constraint FKhy6n4wirmw0ryw2wdmy9cx2mn 
@@ -272,9 +266,9 @@
         references revinfo;
 
     alter table roles_permissions 
-        add constraint FKeqt383nibym26cjj8we4uar8h 
+        add constraint FK570wuy6sacdnrw8wdqjfh7j0q 
         foreign key (permissions_id) 
-        references roles;
+        references permissions;
 
     alter table roles_permissions 
         add constraint FKqi9odri6c1o81vjox54eedwyh 

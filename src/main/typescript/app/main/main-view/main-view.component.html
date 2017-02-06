@@ -29,6 +29,9 @@
         </label>
       </div>
       <div>
+        <pre>{{ userData$ | async | json}}</pre>
+      </div>
+      <div>
         <shardis-counter-page></shardis-counter-page>
       </div>
       <router-outlet></router-outlet>

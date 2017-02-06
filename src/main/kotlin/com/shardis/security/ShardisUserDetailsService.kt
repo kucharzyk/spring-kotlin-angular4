@@ -7,6 +7,7 @@ import com.shardis.security.support.ShardisUserDetails
 import org.springframework.security.core.GrantedAuthority
 import org.springframework.security.core.userdetails.UserDetails
 import org.springframework.security.core.userdetails.UserDetailsService
+import org.springframework.security.core.userdetails.UsernameNotFoundException
 import org.springframework.stereotype.Service
 import org.springframework.transaction.annotation.Transactional
 
@@ -17,16 +18,14 @@ open class ShardisUserDetailsService(val userRepository: UserRepository) : UserD
 
     override fun loadUserByUsername(username: String): UserDetails? {
 
-        val user: User? = userRepository.findByUsername(username)
+        val user: User = userRepository.findByUsername(username) ?: throw UsernameNotFoundException("User $username not found")
 
-        user?.let {
-            val authorities = mutableSetOf<GrantedAuthority>()
-            authorities.addAll(user.roles)
-            authorities.addAll(user.roles.flatMap(Role::permissions))
-            return ShardisUserDetails(user.id!!, user.username, user.password, authorities)
-        }
+        val authorities = mutableSetOf<GrantedAuthority>()
+        authorities.addAll(user.roles)
+        authorities.addAll(user.roles.flatMap(Role::permissions))
+        return ShardisUserDetails(user.id!!, user.username, user.password, authorities)
 
-        return null
+
     }
 
 }
