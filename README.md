@@ -53,7 +53,7 @@ This project is still a work in progress
 ./yarnw run test
 ```
 
-### Run compdoc
+### Build documentation
 ```
 ./yarnw run docs
 ```
