@@ -170,7 +170,7 @@ task<YarnTask>("ngTest") {
 
 tasks.getByName("processResources").dependsOn("ngBuild")
 tasks.getByName("test").dependsOn("ngTest")
-tasks.getByName("build").dependsOn("jacocoTestReport")
+tasks.getByName("check").finalizedBy("jacocoTestReport")
 tasks.getByName("clean").doLast {
   delete("node_modules")
 }
