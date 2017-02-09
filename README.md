@@ -22,6 +22,7 @@ This project is still a work in progress
 ## Prerequisites
 
 * Java 8 is required
+* Google Chrome is required for tests
 * Gradle and Node.js and not required
 
 ## Gradle tasks
@@ -60,27 +61,28 @@ This project is still a work in progress
 
 ## Changelog
 
-<a name="0.0.3"></a>
-## [0.0.3](https://github.com/shardis/shardis/compare/v0.0.2...v0.0.3) (2017-02-02)
+<a name="0.0.4"></a>
+## [0.0.4](https://github.com/shardis/shardis/compare/v0.0.3...v0.0.4) (2017-02-09)
 
 
 ### Bug Fixes
 
-* **phantomjs:** set DEFAULT_TIMEOUT_INTERVAL for jasmine ([ce30d62](https://github.com/shardis/shardis/commit/ce30d62))
+* **frontend:** temporary use lazy loaded routes with aot (fixes [#1](https://github.com/shardis/shardis/issues/1)) ([a24eed8](https://github.com/shardis/shardis/commit/a24eed8))
 
 
 ### Features
 
-* **core:** update spring boot to 1.4.4.RELEASE ([8018c93](https://github.com/shardis/shardis/commit/8018c93))
-* **core:** update spring boot to 1.5.1.RELEASE ([0b13c03](https://github.com/shardis/shardis/commit/0b13c03))
-* **frontend:** add auth module and refacor app structure ([c3c23d5](https://github.com/shardis/shardis/commit/c3c23d5))
-* **frontend:** add clarity login page component ([b34e635](https://github.com/shardis/shardis/commit/b34e635))
-* **frontend:** connect [@ngrx](https://github.com/ngrx)/router-store to application ([dfeb3c9](https://github.com/shardis/shardis/commit/dfeb3c9))
-* **frontend:** turn on noImplicitAny option ([4ecab3f](https://github.com/shardis/shardis/commit/4ecab3f))
-* **frontend:** update angular to 2.4.4. ([fd44edb](https://github.com/shardis/shardis/commit/fd44edb))
-* **frontend:** update angular to 2.4.5 ([af3ef09](https://github.com/shardis/shardis/commit/af3ef09))
-* **frontend:** update angular-cli to 1.0.0-beta26 ([f69a203](https://github.com/shardis/shardis/commit/f69a203))
-* **frontend:** update node to 7.5.0 ([198b281](https://github.com/shardis/shardis/commit/198b281))
+* **ci:** use chrome instead of phantomjs for ci testing ([548a0e7](https://github.com/shardis/shardis/commit/548a0e7))
+* **core:** add simple jwt authentication ([787dcef](https://github.com/shardis/shardis/commit/787dcef))
+* **core:** add spring dependency management plugin for gradle ([3433e96](https://github.com/shardis/shardis/commit/3433e96))
+* **core:** specify kotlin api version ([089ebcb](https://github.com/shardis/shardis/commit/089ebcb))
+* **core:** update angular to 2.4.6 ([0e2d996](https://github.com/shardis/shardis/commit/0e2d996))
+* **core:** update angular to 2.4.7 and clarity to 0.8.6 ([da070bc](https://github.com/shardis/shardis/commit/da070bc))
+* **core:** use gradle script kotlin and kotlin 1.1.0-beta-38 ([8eaf9f1](https://github.com/shardis/shardis/commit/8eaf9f1))
+* **frontend:** add store for authorization (basic stub) ([df83f9a](https://github.com/shardis/shardis/commit/df83f9a))
+* **frontend:** login form (work in progress) ([c5f9418](https://github.com/shardis/shardis/commit/c5f9418))
+* **frontend:** update angular-cli to 1.0.0-beta.30 ([ea88357](https://github.com/shardis/shardis/commit/ea88357))
+* **tests:** remove phantomjs ([2565d5a](https://github.com/shardis/shardis/commit/2565d5a))
 
 
 
