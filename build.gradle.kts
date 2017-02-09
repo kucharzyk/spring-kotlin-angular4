@@ -1,15 +1,24 @@
 import com.moowork.gradle.node.NodeExtension
 import com.moowork.gradle.node.yarn.YarnTask
+import io.spring.gradle.dependencymanagement.dsl.DependencyManagementExtension
 import org.gradle.api.tasks.bundling.Jar
 import org.gradle.api.tasks.testing.Test
 import org.gradle.language.jvm.tasks.ProcessResources
 import org.gradle.testing.jacoco.tasks.JacocoReport
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
+group = "com.shardis"
+version = "0.0.4-SNAPSHOT"
+
 buildscript {
+
   val kotlinVersion = "1.1.0-beta-38"
   val springBootVersion = "1.5.1.RELEASE"
   val gradleNodePluginVersion = "1.1.1"
+  val dependencyManagementVersion = "1.0.0.RELEASE"
+
+  extra["kotlinVersion"] = kotlinVersion
+  extra["springBootVersion"] = springBootVersion
 
   repositories {
     mavenCentral()
@@ -18,6 +27,7 @@ buildscript {
   }
 
   dependencies {
+    classpath("io.spring.gradle:dependency-management-plugin:$dependencyManagementVersion")
     classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion")
     classpath("org.springframework.boot:spring-boot-gradle-plugin:$springBootVersion")
     classpath("com.moowork.gradle:gradle-node-plugin:$gradleNodePluginVersion")
@@ -27,6 +37,7 @@ buildscript {
 }
 
 apply {
+  plugin("io.spring.dependency-management")
   plugin("java")
   plugin("kotlin")
   plugin("kotlin-kapt")
@@ -37,10 +48,9 @@ apply {
   plugin("org.springframework.boot")
   plugin("com.moowork.node")
   plugin("jacoco")
+  plugin("idea")
+  plugin("eclipse")
 }
-
-group = "com.shardis"
-version = "0.0.4-SNAPSHOT"
 
 repositories {
   mavenCentral()
@@ -64,7 +74,6 @@ configure<JavaPluginConvention> {
   setTargetCompatibility(1.8)
   sourceSets.getByName("main").resources.srcDirs("$buildDir/generated/source/kapt/")
 }
-
 
 configure<NodeExtension> {
   version = "7.5.0"
@@ -99,13 +108,20 @@ tasks.withType<Test> {
   }
 }
 
+val kotlinVersion = extra["kotlinVersion"]
+val springBootVersion = extra["springBootVersion"]
+val jacksonVersion = the<DependencyManagementExtension>().importedProperties["jackson.version"]
+val querydslVersion = the<DependencyManagementExtension>().importedProperties["querydsl.version"]
+val jjwtVersion = "0.7.0"
+val reflectionsVersion = "0.9.10"
+
+configure<DependencyManagementExtension> {
+  imports {
+    it.mavenBom("org.springframework.boot:spring-boot-dependencies:$springBootVersion")
+  }
+}
 
 dependencies {
-
-  val kotlinVersion = "1.1.0-beta-38"
-  val jacksonVersion = "2.8.6"
-  val jjwtVersion = "0.7.0"
-  val reflectionsVersion = "0.9.10"
 
   configurations.compile.exclude(group = "org.springframework.boot", module = "spring-boot-starter-tomcat")
 
@@ -152,11 +168,9 @@ task<YarnTask>("ngTest") {
   args = listOf("run", "test")
 }
 
-tasks.getByName("jacocoTestReport").dependsOn("test")
-tasks.getByName("yarn_install").dependsOn("yarnSetup")
 tasks.getByName("processResources").dependsOn("ngBuild")
 tasks.getByName("test").dependsOn("ngTest")
-tasks.getByName("check").finalizedBy("jacocoTestReport")
+tasks.getByName("build").dependsOn("jacocoTestReport")
 tasks.getByName("clean").doLast {
   delete("node_modules")
 }
