@@ -4,6 +4,8 @@ import io.spring.gradle.dependencymanagement.dsl.DependencyManagementExtension
 import org.gradle.api.tasks.bundling.Jar
 import org.gradle.api.tasks.testing.Test
 import org.gradle.language.jvm.tasks.ProcessResources
+import org.gradle.plugins.ide.idea.model.IdeaModel
+import org.gradle.plugins.ide.idea.model.IdeaModule
 import org.gradle.testing.jacoco.tasks.JacocoReport
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
@@ -72,7 +74,13 @@ tasks.withType<Jar> {
 configure<JavaPluginConvention> {
   setSourceCompatibility(1.8)
   setTargetCompatibility(1.8)
-  sourceSets.getByName("main").resources.srcDirs("$buildDir/generated/source/kapt/")
+  sourceSets.getByName("main").java.srcDirs("$buildDir/generated/source/kapt/")
+}
+
+configure<IdeaModel>{
+  module.apply {
+    sourceDirs.add(file("$buildDir/generated/"))
+  }
 }
 
 configure<NodeExtension> {
@@ -141,6 +149,9 @@ dependencies {
   compile("org.hibernate:hibernate-java8")
   compile("org.hibernate:hibernate-envers")
 
+  compile("com.querydsl:querydsl-jpa:$querydslVersion")
+
+  kapt("com.querydsl:querydsl-apt:$querydslVersion:jpa")
   kapt("org.springframework.boot:spring-boot-configuration-processor")
   kapt("org.hibernate:hibernate-jpamodelgen")
 
