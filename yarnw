@@ -2,7 +2,7 @@
 
 YARN_SCRIPT=`find ./build -wholename "*/bin/yarn" -type l`
 
-if [ ! -f $YARN_SCRIPT ]; then
+if [ ! -f "$YARN_SCRIPT" ]; then
     echo "Yarn not found! Run gradle build first!"
 else
     ./nodew $YARN_SCRIPT "$@"
