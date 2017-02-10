@@ -41,7 +41,7 @@
     "zone.js": "0.7.6"
   },
   "devDependencies": {
-    "@angular/cli": "1.0.0-beta.30",
+    "@angular/cli": "1.0.0-beta.31",
     "@angular/compiler-cli": "2.4.7",
     "@types/jasmine": "2.5.41",
     "@types/node": "7.0.5",
@@ -55,13 +55,13 @@
     "karma-chrome-launcher": "2.0.0",
     "karma-cli": "1.0.1",
     "karma-jasmine": "1.1.0",
-    "karma-remap-istanbul": "0.6.0",
+    "karma-coverage-istanbul-reporter": "0.2.0",
     "protractor": "5.1.1",
     "rimraf": "2.5.4",
     "ts-node": "2.1.0",
     "tslint": "4.4.2",
     "typescript": "2.1.6",
-    "yarn": "0.19.1"
+    "yarn": "0.20.0"
   },
   "scripts": {
     "clean": "yarn cache clean && rimraf coverage src/main/resources/static/*",
@@ -93,6 +93,6 @@
   },
   "engines": {
     "node": ">= 7.0.0",
-    "yarn": ">= 0.18.0"
+    "yarn": ">= 0.20.0"
   }
 }
