@@ -43,7 +43,7 @@
   "devDependencies": {
     "@angular/cli": "1.0.0-beta.31",
     "@angular/compiler-cli": "2.4.7",
-    "@types/jasmine": "2.5.41",
+    "@types/jasmine": "2.5.42",
     "@types/node": "7.0.5",
     "angular2-dependencies-graph": "1.0.0-alpha.12",
     "codelyzer": "2.0.0",
@@ -54,8 +54,8 @@
     "karma": "1.4.1",
     "karma-chrome-launcher": "2.0.0",
     "karma-cli": "1.0.1",
-    "karma-jasmine": "1.1.0",
     "karma-coverage-istanbul-reporter": "0.2.0",
+    "karma-jasmine": "1.1.0",
     "protractor": "5.1.1",
     "rimraf": "2.5.4",
     "ts-node": "2.1.0",
