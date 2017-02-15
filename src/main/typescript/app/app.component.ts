@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {AuthService} from './core/store/auth/auth.service';
+import {RootState} from './core/store/index';
+import {Store} from '@ngrx/store';
+import {LoadAndProcessTokenAction} from './core/store/auth/auth.actions';
 
 @Component({
   selector: 'shardis-root',
@@ -8,11 +10,11 @@ import {AuthService} from './core/store/auth/auth.service';
 })
 export class AppComponent implements OnInit {
 
-  constructor(private authService: AuthService) {
+  constructor(private store: Store<RootState>) {
   }
 
   ngOnInit() {
-    this.authService.dispatchToken();
+    this.store.dispatch(new LoadAndProcessTokenAction());
   }
 
 }

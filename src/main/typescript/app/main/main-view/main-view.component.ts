@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {Store} from '@ngrx/store';
 import {RootState} from '../../core/store/index';
 import {Observable} from 'rxjs/Observable';
-import {AuthService} from '../../core/store/auth/auth.service';
+import {LogoutAction} from '../../core/store/auth/auth.actions';
 
 @Component({
   selector: 'shardis-main-view',
@@ -15,7 +15,7 @@ export class MainViewComponent implements OnInit {
   authenticated$: Observable<boolean>;
   userData$: Observable<any>;
 
-  constructor(private store: Store<RootState>, private authService: AuthService) {
+  constructor(private store: Store<RootState>) {
     this.authenticated$ = store.select(s => s.auth.authenticated);
     this.userData$ = store.select(s => s.auth.userData);
   }
@@ -24,7 +24,7 @@ export class MainViewComponent implements OnInit {
   }
 
   public logout() {
-    this.authService.logout();
+    this.store.dispatch(new LogoutAction());
   }
 
 }

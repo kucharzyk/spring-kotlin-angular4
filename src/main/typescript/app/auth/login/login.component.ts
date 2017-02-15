@@ -1,9 +1,8 @@
 import {Component, OnInit} from '@angular/core';
-import {AuthService} from '../../core/store/auth/auth.service';
 import {Observable} from 'rxjs/Observable';
 import {Store} from '@ngrx/store';
 import {RootState} from '../../core/store/index';
-import {ClearAuthErrorAction} from '../../core/store/auth/auth.actions';
+import {ClearAuthErrorAction, AuthenticateAction, AuthenticateActionPayload} from '../../core/store/auth/auth.actions';
 
 @Component({
   selector: 'shardis-login',
@@ -16,14 +15,14 @@ export class LoginComponent implements OnInit {
   password = 'xxxxxx';
   authError$: Observable<string>;
 
-  constructor(private authService: AuthService, private store: Store<RootState>) {
+  constructor(private store: Store<RootState>) {
     this.authError$ = store.select(s => s.auth.error);
   }
 
   authenticate() {
     console.log('authenticate');
     this.store.dispatch(new ClearAuthErrorAction());
-    this.authService.authenticate(this.username, this.password);
+    this.store.dispatch(new AuthenticateAction(new AuthenticateActionPayload(this.username, this.password)));
   }
 
   ngOnInit() {

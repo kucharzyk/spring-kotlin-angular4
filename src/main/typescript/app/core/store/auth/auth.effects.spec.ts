@@ -1,11 +1,11 @@
 /* tslint:disable:no-unused-variable */
 import {TestBed, inject} from '@angular/core/testing';
-import {AuthService} from './auth.service';
 import {Http, BaseRequestOptions, ConnectionBackend, RequestOptions} from '@angular/http';
 import {MockBackend} from '@angular/http/testing';
 import {CoreModule} from '../../core.module';
+import {AuthEffects} from './auth.effects';
 
-describe('Service: Auth', () => {
+describe('Effects: Auth', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
@@ -22,12 +22,12 @@ describe('Service: Auth', () => {
           },
           deps: [MockBackend, BaseRequestOptions]
         },
-        AuthService
+        AuthEffects
       ]
     });
   });
 
-  it('should exist', inject([AuthService], (service: AuthService) => {
+  it('should exist', inject([AuthEffects], (service: AuthEffects) => {
     expect(service).toBeTruthy();
   }));
 

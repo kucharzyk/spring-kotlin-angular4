@@ -3,6 +3,8 @@ import {ComponentFixture, TestBed, async} from '@angular/core/testing';
 import {CoreModule} from '../../core/core.module';
 import {CounterPageComponent} from './counter-page.component';
 import {CounterComponent} from '../counter/counter.component';
+import {BaseRequestOptions, Http, ConnectionBackend, RequestOptions} from '@angular/http';
+import {MockBackend} from '@angular/http/testing';
 
 describe('CounterPageComponent', () => {
 
@@ -18,6 +20,17 @@ describe('CounterPageComponent', () => {
       ],
       imports: [
         CoreModule
+      ],
+      providers: [
+        BaseRequestOptions,
+        MockBackend,
+        {
+          provide: Http,
+          useFactory: function (backend: ConnectionBackend, defaultOptions: RequestOptions) {
+            return new Http(backend, defaultOptions);
+          },
+          deps: [MockBackend, BaseRequestOptions]
+        }
       ]
     });
 

@@ -4,7 +4,8 @@ import {RouterStoreModule} from '@ngrx/router-store';
 import {StoreDevtoolsModule} from '@ngrx/store-devtools';
 import {StoreModule} from '@ngrx/store';
 import {reducer} from './store/index';
-import {AuthService} from './store/auth/auth.service';
+import {EffectsModule} from '@ngrx/effects';
+import {AuthEffects} from './store/auth/auth.effects';
 
 const store = StoreModule.provideStore(reducer);
 
@@ -14,9 +15,9 @@ const store = StoreModule.provideStore(reducer);
     store,
     RouterStoreModule.connectRouter(),
     StoreDevtoolsModule.instrumentOnlyWithExtension(),
+    EffectsModule.run(AuthEffects)
   ],
   providers: [
-    AuthService
   ]
 })
 export class CoreModule {

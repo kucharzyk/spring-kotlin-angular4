@@ -8,7 +8,6 @@ import {CounterModule} from '../../counter/counter.module';
 import {ClarityModule} from 'clarity-angular';
 import {BaseRequestOptions, Http, RequestOptions, ConnectionBackend} from '@angular/http';
 import {MockBackend} from '@angular/http/testing';
-import {AuthService} from '../../core/store/auth/auth.service';
 
 describe('MainViewComponent', () => {
   let fixture: ComponentFixture<MainViewComponent>;
@@ -35,8 +34,7 @@ describe('MainViewComponent', () => {
             return new Http(backend, defaultOptions);
           },
           deps: [MockBackend, BaseRequestOptions]
-        },
-        AuthService
+        }
       ]
     })
       .compileComponents();

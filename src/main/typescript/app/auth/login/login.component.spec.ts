@@ -5,7 +5,6 @@ import {RouterTestingModule} from '@angular/router/testing';
 import {CoreModule} from '../../core/core.module';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {ClarityModule} from 'clarity-angular';
-import {AuthService} from '../../core/store/auth/auth.service';
 import {MockBackend} from '@angular/http/testing';
 import {Http, ConnectionBackend, RequestOptions, BaseRequestOptions} from '@angular/http';
 
@@ -33,8 +32,7 @@ describe('LoginComponent', () => {
             return new Http(backend, defaultOptions);
           },
           deps: [MockBackend, BaseRequestOptions]
-        },
-        AuthService
+        }
       ]
     })
       .compileComponents();

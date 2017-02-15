@@ -7,7 +7,6 @@ import {ReactiveFormsModule, FormsModule} from '@angular/forms';
 import {CoreModule} from './core/core.module';
 import {BaseRequestOptions, Http, ConnectionBackend, RequestOptions} from '@angular/http';
 import {MockBackend} from '@angular/http/testing';
-import {AuthService} from './core/store/auth/auth.service';
 
 describe('AppComponent', () => {
 
@@ -36,8 +35,7 @@ describe('AppComponent', () => {
             return new Http(backend, defaultOptions);
           },
           deps: [MockBackend, BaseRequestOptions]
-        },
-        AuthService
+        }
       ]
     });
 
