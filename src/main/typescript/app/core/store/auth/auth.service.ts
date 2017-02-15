@@ -5,10 +5,14 @@ import {RootState} from '../index';
 import {Observable} from 'rxjs/Observable';
 import {LogoutAction, ProcessTokenAction, AuthErrorAction} from './auth.actions';
 import {go} from '@ngrx/router-store';
+import {LocalStorage} from 'ng2-webstorage';
 
 
 @Injectable()
 export class AuthService {
+
+  @LocalStorage("token")
+  private jwtToken: string;
 
   private authenticated$: Observable<boolean>;
 
@@ -20,8 +24,10 @@ export class AuthService {
     this.authenticated$ = store.select(s => s.auth.authenticated);
   }
 
-  public isAuthenticated(): Observable<boolean> {
-    return this.authenticated$;
+  public dispatchToken() {
+    if (!!this.jwtToken) {
+      this.store.dispatch(new ProcessTokenAction(this.jwtToken));
+    }
   }
 
   public authenticate(username: string, password: string): void {
@@ -46,9 +52,8 @@ export class AuthService {
       .post('/api/authentication', payload, {headers: headers})
       .subscribe(
         data => {
-          const jwtToken = data.text();
-          localStorage.setItem('tokenData', jwtToken);
-          this.store.dispatch(new ProcessTokenAction(jwtToken));
+          this.jwtToken = data.text();
+          this.dispatchToken();
           this.store.dispatch(go('/'));
         },
         err => {
@@ -61,7 +66,7 @@ export class AuthService {
   }
 
   public logout(): void {
-    localStorage.removeItem('tokenData');
+    this.jwtToken = null;
     this.store.dispatch(new LogoutAction());
   }
 

@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {AuthService} from './core/store/auth/auth.service';
 
 @Component({
   selector: 'shardis-root',
@@ -7,10 +8,11 @@ import {Component, OnInit} from '@angular/core';
 })
 export class AppComponent implements OnInit {
 
-  constructor() {
+  constructor(private authService: AuthService) {
   }
 
   ngOnInit() {
+    this.authService.dispatchToken();
   }
 
 }

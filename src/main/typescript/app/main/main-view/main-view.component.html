@@ -13,8 +13,11 @@
       <li class="nav-item">
         <a class="nav-link" href="#" [routerLink]="['/']" [routerLinkActive]="'/active'">Home</a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item" *ngIf="!(authenticated$ | async)">
         <a class="nav-link" href="#" [routerLink]="['/login']" [routerLinkActive]="'/login'">Login</a>
+      </li>
+      <li class="nav-item" *ngIf="authenticated$ | async">
+        <a class="nav-link" href="#" (click)="logout()">Logout</a>
       </li>
     </ul>
   </nav>

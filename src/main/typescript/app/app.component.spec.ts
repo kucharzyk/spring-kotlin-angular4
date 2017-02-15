@@ -5,6 +5,9 @@ import {ClarityModule} from 'clarity-angular';
 import {RouterTestingModule} from '@angular/router/testing';
 import {ReactiveFormsModule, FormsModule} from '@angular/forms';
 import {CoreModule} from './core/core.module';
+import {BaseRequestOptions, Http, ConnectionBackend, RequestOptions} from '@angular/http';
+import {MockBackend} from '@angular/http/testing';
+import {AuthService} from './core/store/auth/auth.service';
 
 describe('AppComponent', () => {
 
@@ -23,6 +26,18 @@ describe('AppComponent', () => {
         ReactiveFormsModule,
         ClarityModule.forRoot(),
         RouterTestingModule
+      ],
+      providers: [
+        BaseRequestOptions,
+        MockBackend,
+        {
+          provide: Http,
+          useFactory: function (backend: ConnectionBackend, defaultOptions: RequestOptions) {
+            return new Http(backend, defaultOptions);
+          },
+          deps: [MockBackend, BaseRequestOptions]
+        },
+        AuthService
       ]
     });
 
