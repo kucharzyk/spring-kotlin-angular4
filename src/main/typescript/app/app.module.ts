@@ -7,6 +7,7 @@ import {AppComponent} from './app.component';
 import {ClarityModule} from 'clarity-angular';
 import {CoreModule} from './core/core.module';
 import {MainModule} from './main/main.module';
+import {Ng2Webstorage} from 'ng2-webstorage';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import {MainModule} from './main/main.module';
     ReactiveFormsModule,
     HttpModule,
     ClarityModule.forRoot(),
+    Ng2Webstorage.forRoot({prefix: 'shardis', separator: '.'}),
     AppRoutingModule,
     CoreModule,
     MainModule
