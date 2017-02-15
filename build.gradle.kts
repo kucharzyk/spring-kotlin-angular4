@@ -84,7 +84,7 @@ configure<IdeaModel>{
 
 configure<NodeExtension> {
   version = "7.5.0"
-  yarnVersion = "0.20.0"
+  yarnVersion = "0.20.3"
   download = true
   workDir = file("${project.buildDir}/nodejs")
   yarnWorkDir = file("${project.buildDir}/yarn")

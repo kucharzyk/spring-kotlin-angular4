@@ -6158,9 +6158,9 @@ yargs@~3.10.0:
     decamelize "^1.0.0"
     window-size "0.1.0"
 
-yarn@0.20.0:
-  version "0.20.0"
-  resolved "https://registry.yarnpkg.com/yarn/-/yarn-0.20.0.tgz#1660b0ad49029b874a327fbe832f6504a857ce30"
+yarn@0.20.3:
+  version "0.20.3"
+  resolved "https://registry.yarnpkg.com/yarn/-/yarn-0.20.3.tgz#1031e394721d689ab8c558c67032931bac5b3052"
   dependencies:
     babel-runtime "^6.0.0"
     bytes "^2.4.0"
