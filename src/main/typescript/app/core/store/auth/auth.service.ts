@@ -11,7 +11,7 @@ import {LocalStorage} from 'ng2-webstorage';
 @Injectable()
 export class AuthService {
 
-  @LocalStorage("token")
+  @LocalStorage('token')
   private jwtToken: string;
 
   private authenticated$: Observable<boolean>;
