@@ -71,7 +71,7 @@ export class AuthEffects {
     });
 
   @LocalStorage('token')
-  private jwtToken: string;
+  public jwtToken: string;
 
   constructor(private http: Http, private actions$: Actions) {
   }

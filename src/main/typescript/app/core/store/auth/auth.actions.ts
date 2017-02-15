@@ -62,7 +62,7 @@ export class AuthErrorAction implements Action {
 }
 
 export class ClearAuthErrorAction implements Action {
-  type = ActionTypes.CLEAR_AUTH_STATE;
+  type = ActionTypes.CLEAR_AUTH_ERROR;
 
   constructor() {
   }
@@ -70,7 +70,7 @@ export class ClearAuthErrorAction implements Action {
 
 
 export class ClearAuthStateAction implements Action {
-  type = ActionTypes.CLEAR_AUTH_ERROR;
+  type = ActionTypes.CLEAR_AUTH_STATE;
 
   constructor() {
   }
