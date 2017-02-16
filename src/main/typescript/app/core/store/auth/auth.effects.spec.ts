@@ -1,9 +1,12 @@
-import {Http, BaseRequestOptions, ConnectionBackend, RequestOptions} from '@angular/http';
-import {MockBackend} from '@angular/http/testing';
+import {Http, BaseRequestOptions, ConnectionBackend, RequestOptions, Response, ResponseOptions} from '@angular/http';
+import {MockBackend, MockConnection} from '@angular/http/testing';
 import {AuthEffects} from './auth.effects';
 import {EffectsTestingModule, EffectsRunner} from '@ngrx/effects/testing';
-import {LogoutAction, ActionTypes, LoadAndProcessTokenAction, AuthSuccessAction} from './auth.actions';
-import {TestBed, inject} from '@angular/core/testing';
+import {
+  LogoutAction, ActionTypes, LoadAndProcessTokenAction, AuthSuccessAction,
+  AuthenticateAction, AuthenticateActionPayload
+} from './auth.actions';
+import {TestBed, inject, async} from '@angular/core/testing';
 import {routerActions} from '@ngrx/router-store';
 
 
@@ -47,6 +50,7 @@ describe('Effects: Auth', () => {
     runner.queue(new LogoutAction());
 
     authEffects.logout$.subscribe(result => {
+      console.log(result);
       expect(result.type).toEqual(ActionTypes.CLEAR_AUTH_STATE);
     });
 
@@ -56,6 +60,7 @@ describe('Effects: Auth', () => {
     authEffects.jwtToken = 'NON_EMPTY';
     runner.queue(new LoadAndProcessTokenAction());
     authEffects.loadAndProcessToken$.subscribe(result => {
+      console.log(result);
       expect(result.type).toEqual(ActionTypes.PROCESS_TOKEN);
     });
   });
@@ -65,16 +70,16 @@ describe('Effects: Auth', () => {
     runner.queue(new LoadAndProcessTokenAction());
 
     authEffects.loadAndProcessToken$.subscribe(result => {
+      console.log(result);
       expect(result).toBeFalsy();
-      expect(result).toBeTruthy();
     });
   });
 
   it('should return actions after auth success', () => {
-    authEffects.jwtToken = null;
     runner.queue(new AuthSuccessAction('TOKEN'));
     let eventCount = 0;
     authEffects.authSuccess$.subscribe(result => {
+      console.log(result);
       eventCount++;
       if (eventCount === 1) {
         expect(result.type).toEqual(routerActions.GO);
@@ -86,6 +91,28 @@ describe('Effects: Auth', () => {
 
     });
   });
+
+  it('should return AuthSuccessAction after succesfull authentication', inject([MockBackend], (mockBackend: MockBackend) => {
+
+    const returnedToken = 'HERE.SHOULD.BE.TOKEN';
+
+    mockBackend.connections.subscribe(
+      (connection: MockConnection) => {
+        console.log('connection made');
+        connection.mockRespond(new Response(
+          new ResponseOptions({
+              body: returnedToken
+            }
+          )));
+      });
+
+    runner.queue(new AuthenticateAction(new AuthenticateActionPayload('admin', 'admin')));
+    authEffects.authenticate$.subscribe(result => {
+        console.log(result);
+        expect(result.type).toEqual(ActionTypes.AUTH_SUCCESS);
+        expect(result.payload).toEqual(returnedToken);
+    });
+  }));
 
 
 });
