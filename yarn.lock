@@ -3201,9 +3201,9 @@ karma-cli@1.0.1:
   dependencies:
     resolve "^1.1.6"
 
-karma-coverage-istanbul-reporter@0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/karma-coverage-istanbul-reporter/-/karma-coverage-istanbul-reporter-0.2.0.tgz#5766263338adeb0026f7e4ac7a89a5f056c5642c"
+karma-coverage-istanbul-reporter@^0.2.2:
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/karma-coverage-istanbul-reporter/-/karma-coverage-istanbul-reporter-0.2.2.tgz#d17bb802db4287d3b6a8ef4f10d79c318536e0c4"
   dependencies:
     istanbul-api "^1.1.1"
 
