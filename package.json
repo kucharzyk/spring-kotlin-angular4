@@ -42,7 +42,7 @@
     "zone.js": "0.7.7"
   },
   "devDependencies": {
-    "@angular/cli": "1.0.0-beta.31",
+    "@angular/cli": "1.0.0-beta.32.3",
     "@angular/compiler-cli": "2.4.7",
     "@types/jasmine": "2.5.43",
     "@types/node": "7.0.5",
@@ -89,7 +89,6 @@
     "server:dev": "ng serve --p 4200 -pc proxy.json -dev --open --progress=false --extract-css=false --sourcemap",
     "server:prod": "ng serve --p 4200 -pc proxy.json -prod --aot --open --progress=false --extract-css --sourcemap",
     "ng": "ng",
-    "ng:upgrade": "ng init -n shardis -sd src/main/typescript --style scss --prefix shardis --routing",
     "start": "yarn run server:dev"
   },
   "engines": {
