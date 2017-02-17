@@ -15,7 +15,7 @@ import javax.transaction.Transactional
 
 @Transactional
 @Component
-class DbInitializer(
+open class DbInitializer(
     val permissionRepository: PermissionRepository,
     val roleRepository: RoleRepository,
     val userRepository: UserRepository,
