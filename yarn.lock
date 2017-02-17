@@ -3201,9 +3201,9 @@ karma-cli@1.0.1:
   dependencies:
     resolve "^1.1.6"
 
-karma-coverage-istanbul-reporter@0.2.2:
-  version "0.2.2"
-  resolved "https://registry.yarnpkg.com/karma-coverage-istanbul-reporter/-/karma-coverage-istanbul-reporter-0.2.2.tgz#d17bb802db4287d3b6a8ef4f10d79c318536e0c4"
+karma-coverage-istanbul-reporter@0.2.3:
+  version "0.2.3"
+  resolved "https://registry.yarnpkg.com/karma-coverage-istanbul-reporter/-/karma-coverage-istanbul-reporter-0.2.3.tgz#11f1be9cfa93755a77bac39ab16e315a7100b5c5"
   dependencies:
     istanbul-api "^1.1.1"
 
@@ -3775,9 +3775,9 @@ ng2-webstorage@1.5.0:
   version "1.5.0"
   resolved "https://registry.yarnpkg.com/ng2-webstorage/-/ng2-webstorage-1.5.0.tgz#65c8c1269d2bcff99a14299eaf16ca7a0105ec5e"
 
-ngrx-store-freeze@0.1.7:
-  version "0.1.7"
-  resolved "https://registry.yarnpkg.com/ngrx-store-freeze/-/ngrx-store-freeze-0.1.7.tgz#ea0cefb219f558e91b285c3d7238553d1a372c41"
+ngrx-store-freeze@0.1.9:
+  version "0.1.9"
+  resolved "https://registry.yarnpkg.com/ngrx-store-freeze/-/ngrx-store-freeze-0.1.9.tgz#b20f18f21fd5efc4e1b1e05f6f279674d0f70c81"
   dependencies:
     deep-freeze-strict "^1.1.1"
 
