@@ -78,6 +78,7 @@
     "lint": "ng lint",
     "pretest": "rimraf coverage && npm run lint",
     "test": "ng test -w false --code-coverage --progress false",
+    "posttest": "npm run e2e",
     "test:live": "ng test --progress false",
     "build": "npm run build:dev",
     "prebuild:dev": "npm run clean:dist",
