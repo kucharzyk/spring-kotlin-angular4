@@ -170,6 +170,13 @@ dependencies {
 
 task<NpmTask>("ngBuild") {
   dependsOn("npm_install")
+
+  inputs.file("package.json")
+  inputs.file(".angular-cli.json")
+  inputs.files(fileTree("src/main/typescript"))
+
+  outputs.dir("src/main/resources/static")
+
   args = listOf("run", "build:prod")
 }
 
