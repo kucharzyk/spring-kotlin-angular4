@@ -57,6 +57,7 @@
     "karma-cli": "1.0.1",
     "karma-coverage-istanbul-reporter": "0.2.3",
     "karma-jasmine": "1.1.0",
+    "npm-check": "5.4.0",
     "protractor": "5.1.1",
     "rimraf": "2.6.0",
     "ts-node": "2.1.0",
@@ -88,6 +89,7 @@
     "server:dev": "ng serve --p 4200 -pc proxy.json -dev --open --progress=false --extract-css=false --sourcemap",
     "server:prod": "ng serve --p 4200 -pc proxy.json -prod --aot --open --progress=false --extract-css --sourcemap",
     "ng": "ng",
+    "upgrade-interactive": "npm-check -uE --no-emoji",
     "start": "npm run server:dev"
   },
   "engines": {
