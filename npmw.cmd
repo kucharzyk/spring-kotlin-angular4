@@ -5,7 +5,7 @@ set BUILD_DIR=%~dp0build
 set NPM_SCRIPT=""
 
 for /r %BUILD_DIR% %%x in (*npm-cli.js) do (
-  set NPM_SCRIPT=%%x
+  Echo.%%x | findstr /C:"build\npm">nul && ( set NPM_SCRIPT=%%x ) 
 )
 
 if not exist %NPM_SCRIPT% (
