@@ -17,11 +17,9 @@ before_cache:
   - rm -rf $HOME/.gradle/caches/*/plugin-resolution/
 cache:
   apt: true
-  yarn: true
   directories:
   - build/nodejs
   - build/npm
-  - build/yarn
   - $HOME/.gradle/caches/
   - $HOME/.gradle/wrapper/
 addons:

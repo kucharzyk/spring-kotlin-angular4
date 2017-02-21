@@ -61,38 +61,37 @@
     "rimraf": "2.6.0",
     "ts-node": "2.1.0",
     "tslint": "4.4.2",
-    "typescript": "2.1.6",
-    "yarn": "0.20.3"
+    "typescript": "2.1.6"
   },
   "scripts": {
-    "clean": "yarn cache clean && rimraf coverage src/main/resources/static/*",
+    "clean": "npm cache clean && rimraf coverage src/main/resources/static/*",
     "clean:dist": "rimraf src/main/resources/static/*",
-    "preclean:install": "yarn run clean",
-    "clean:install": "yarn upgrade",
-    "preclean:start": "yarn run clean",
-    "clean:start": "yarn start",
+    "preclean:install": "npm run clean",
+    "clean:install": "npm upgrade",
+    "preclean:start": "npm run clean",
+    "clean:start": "npm start",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
     "docs": "compodoc -n Shardis -n Shardis -r 9999 -p src/main/typescript/tsconfig.json",
     "pree2e": "webdriver-manager update --standalone false --gecko false",
     "e2e": "protractor",
     "e2e:live": "protractor --elementExplorer",
     "lint": "ng lint",
-    "pretest": "rimraf coverage && yarn run lint",
+    "pretest": "rimraf coverage && npm run lint",
     "test": "ng test -w false --code-coverage --progress false",
     "test:live": "ng test --progress false",
-    "build": "yarn run build:dev",
-    "prebuild:dev": "yarn run clean:dist",
+    "build": "npm run build:dev",
+    "prebuild:dev": "npm run clean:dist",
     "build:dev": "ng build -dev --extract-css=false",
-    "prebuild:prod": "yarn run clean:dist",
+    "prebuild:prod": "npm run clean:dist",
     "build:prod": "ng build -prod --aot --sourcemap=false --progress=false --extract-css",
-    "server": "yarn run server:dev",
+    "server": "npm run server:dev",
     "server:dev": "ng serve --p 4200 -pc proxy.json -dev --open --progress=false --extract-css=false --sourcemap",
     "server:prod": "ng serve --p 4200 -pc proxy.json -prod --aot --open --progress=false --extract-css --sourcemap",
     "ng": "ng",
-    "start": "yarn run server:dev"
+    "start": "npm run server:dev"
   },
   "engines": {
-    "node": ">= 7.0.0",
-    "yarn": ">= 0.20.0"
+    "node": ">= 7.5.0",
+    "npm": ">= 4.2.0"
   }
 }

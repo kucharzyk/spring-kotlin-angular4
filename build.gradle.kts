@@ -1,5 +1,5 @@
 import com.moowork.gradle.node.NodeExtension
-import com.moowork.gradle.node.yarn.YarnTask
+import com.moowork.gradle.node.npm.NpmTask
 import io.spring.gradle.dependencymanagement.dsl.DependencyManagementExtension
 import org.gradle.api.tasks.bundling.Jar
 import org.gradle.api.tasks.testing.Test
@@ -84,10 +84,10 @@ configure<IdeaModel>{
 
 configure<NodeExtension> {
   version = "7.5.0"
-  yarnVersion = "0.20.3"
+  npmVersion = "4.2.0"
   download = true
   workDir = file("${project.buildDir}/nodejs")
-  yarnWorkDir = file("${project.buildDir}/yarn")
+  npmWorkDir = file("${project.buildDir}/npm")
   nodeModulesDir = file("${project.projectDir}")
 }
 
@@ -168,13 +168,13 @@ dependencies {
   testCompile("org.reflections:reflections:$reflectionsVersion")
 }
 
-task<YarnTask>("ngBuild") {
-  dependsOn("yarn_install")
+task<NpmTask>("ngBuild") {
+  dependsOn("npm_install")
   args = listOf("run", "build:prod")
 }
 
-task<YarnTask>("ngTest") {
-  dependsOn("yarn_install")
+task<NpmTask>("ngTest") {
+  dependsOn("npm_install")
   args = listOf("run", "test")
 }
 
