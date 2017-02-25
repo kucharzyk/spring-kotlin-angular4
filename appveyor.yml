@@ -1,6 +1,6 @@
 version: "#{build}"
 install:
- - choco install googlechrome
+ - choco install googlechrome --ignore-checksums 
 build:
   verbosity: detailed
 build_script:
