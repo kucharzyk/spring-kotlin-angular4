@@ -84,7 +84,7 @@ configure<IdeaModel>{
 
 configure<NodeExtension> {
   version = "7.6.0"
-  npmVersion = "4.2.0"
+  npmVersion = "4.3.0"
   download = true
   workDir = file("${project.buildDir}/nodejs")
   npmWorkDir = file("${project.buildDir}/npm")
