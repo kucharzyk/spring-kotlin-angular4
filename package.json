@@ -42,7 +42,7 @@
     "zone.js": "0.7.7"
   },
   "devDependencies": {
-    "@angular/cli": "1.0.0-beta.32.3",
+    "@angular/cli": "1.0.0-rc.0",
     "@angular/compiler-cli": "2.4.8",
     "@types/jasmine": "2.5.43",
     "@types/node": "7.0.5",
@@ -57,6 +57,7 @@
     "karma-cli": "1.0.1",
     "karma-coverage-istanbul-reporter": "0.2.3",
     "karma-jasmine": "1.1.0",
+    "karma-jasmine-html-reporter": "0.2.2",
     "npm-check": "5.4.0",
     "protractor": "5.1.1",
     "rimraf": "2.6.1",
@@ -72,7 +73,7 @@
     "preclean:start": "npm run clean",
     "clean:start": "npm start",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
-    "docs": "compodoc -n Shardis -n Shardis -r 9999 -p src/main/typescript/tsconfig.json",
+    "docs": "compodoc -n Shardis -r 9999 -p src/main/typescript/tsconfig.app.json",
     "e2e": "ng e2e",
     "e2e:live": "ng e2e --elementExplorer",
     "lint": "ng lint",

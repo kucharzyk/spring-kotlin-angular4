@@ -1,22 +1,25 @@
 {
-  "compileOnSave": false,
   "compilerOptions": {
+    "sourceMap": true,
     "declaration": false,
+    "moduleResolution": "node",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "lib": [
-      "es6",
+      "es2016",
       "dom"
     ],
-    "module": "commonjs",
-    "moduleResolution": "node",
-    "noImplicitAny": true,
-    "suppressImplicitAnyIndexErrors": true,
     "outDir": "../src/main/resources/static/out-tsc-e2e",
-    "sourceMap": true,
-    "target": "es5",
+    "module": "commonjs",
+    "target": "es6",
+    "types": [
+      "jasmine",
+      "node"
+    ],
     "typeRoots": [
       "../node_modules/@types"
-    ]
+    ],
+    "noImplicitAny": true,
+    "suppressImplicitAnyIndexErrors": true
   }
 }

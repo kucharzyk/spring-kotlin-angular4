@@ -1,23 +1,33 @@
 {
   "compilerOptions": {
-    "baseUrl": "",
+    "sourceMap": true,
     "declaration": false,
+    "moduleResolution": "node",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "lib": [
-      "es6",
+      "es2016",
       "dom"
     ],
+    "outDir": "../out-tsc/spec",
+    "module": "commonjs",
+    "target": "es6",
+    "baseUrl": "",
+    "types": [
+      "jasmine",
+      "node"
+    ],
     "mapRoot": "./",
-    "module": "es6",
-    "moduleResolution": "node",
     "noImplicitAny": true,
     "suppressImplicitAnyIndexErrors": true,
-    "outDir": "../../../src/main/resources/static/out-tsc",
-    "sourceMap": true,
-    "target": "es5",
     "typeRoots": [
       "../../../node_modules/@types"
     ]
-  }
+  },
+  "files": [
+    "test.ts"
+  ],
+  "include": [
+    "**/*.spec.ts"
+  ]
 }
