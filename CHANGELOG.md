@@ -1,3 +1,35 @@
+<a name="0.0.6"></a>
+## [0.0.6](https://github.com/shardis/shardis/compare/v0.0.5...v0.0.6) (2017-02-26)
+
+
+### Bug Fixes
+
+* **ci:** fix appveyor build ([bc6b56a](https://github.com/shardis/shardis/commit/bc6b56a))
+* **scripts:** fixed npmw.cmd script ([7fbf8c7](https://github.com/shardis/shardis/commit/7fbf8c7))
+
+
+### Features
+
+* **core:** avoid rebuilding angular app when no changes ([0eea644](https://github.com/shardis/shardis/commit/0eea644))
+* **core:** update angular-cli to 1.0.0-rc.0 ([6f92500](https://github.com/shardis/shardis/commit/6f92500))
+* **core:** update gradle to 3.4 ([5625708](https://github.com/shardis/shardis/commit/5625708))
+* **fronted:** update node to 7.6.0 ([bb3d312](https://github.com/shardis/shardis/commit/bb3d312))
+* **fronted:** update npm to 4.3.0 ([3a7ef7e](https://github.com/shardis/shardis/commit/3a7ef7e))
+* **frontend:** add npm-check package and upgrade-interactive script ([6c30bfa](https://github.com/shardis/shardis/commit/6c30bfa))
+* **frontend:** replace yarn with npm ([b710c4a](https://github.com/shardis/shardis/commit/b710c4a))
+* **frontend:** run angular e2e tests after unit tests - also as part of ci build ([b32896f](https://github.com/shardis/shardis/commit/b32896f))
+* **frontend:** update angular to 2.4.8 ([b987164](https://github.com/shardis/shardis/commit/b987164))
+* **frontend:** update clarity to 0.8.8 ([23a660b](https://github.com/shardis/shardis/commit/23a660b))
+* **frontend:** update typescript to 2.2.1 ([07b0254](https://github.com/shardis/shardis/commit/07b0254))
+* **frontend:** use ng e2e instead of calling protractor ([97e010f](https://github.com/shardis/shardis/commit/97e010f))
+
+
+### BREAKING CHANGES
+
+* frontend: Yarn is great but have to many compatibility issues. Now project use npm instead.
+
+
+
 <a name="0.0.5"></a>
 ## [0.0.5](https://github.com/shardis/shardis/compare/v0.0.4...v0.0.5) (2017-02-17)
 
