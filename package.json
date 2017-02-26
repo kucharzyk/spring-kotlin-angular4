@@ -73,7 +73,7 @@
     "preclean:start": "npm run clean",
     "clean:start": "npm start",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
-    "docs": "compodoc -n Shardis -r 9999 -p src/main/typescript/tsconfig.app.json",
+    "docs": "compodoc -n Shardis -p src/main/typescript/tsconfig.app.json",
     "e2e": "ng e2e",
     "e2e:live": "ng e2e --elementExplorer",
     "lint": "ng lint",
