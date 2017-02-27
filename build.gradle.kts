@@ -132,7 +132,7 @@ dependencies {
 
   configurations.compile.exclude(group = "org.springframework.boot", module = "spring-boot-starter-tomcat")
 
-  compile("org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion")
+  compile("org.jetbrains.kotlin:kotlin-stdlib-jre8:$kotlinVersion")
   compile("org.jetbrains.kotlin:kotlin-reflect:$kotlinVersion")
 
   compile("org.springframework.boot:spring-boot-devtools")
