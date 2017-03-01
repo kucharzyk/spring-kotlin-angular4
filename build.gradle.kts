@@ -13,7 +13,7 @@ version = "0.0.7-SNAPSHOT"
 
 buildscript {
 
-  val kotlinVersion = "1.1.0-rc-91"
+  val kotlinVersion = "1.1.0"
   val springBootVersion = "1.5.1.RELEASE"
   val gradleNodePluginVersion = "1.1.1"
   val dependencyManagementVersion = "1.0.0.RELEASE"
@@ -24,7 +24,6 @@ buildscript {
   repositories {
     mavenCentral()
     maven { setUrl("https://plugins.gradle.org/m2/") }
-    maven { setUrl("http://dl.bintray.com/kotlin/kotlin-eap-1.1") }
   }
 
   dependencies {
@@ -55,7 +54,6 @@ apply {
 
 repositories {
   mavenCentral()
-  maven { setUrl("http://dl.bintray.com/kotlin/kotlin-eap-1.1") }
 }
 
 tasks.withType<KotlinCompile> {
