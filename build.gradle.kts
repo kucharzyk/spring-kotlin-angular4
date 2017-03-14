@@ -13,7 +13,7 @@ version = "0.0.7-SNAPSHOT"
 
 buildscript {
 
-  val kotlinVersion = "1.1.0"
+  val kotlinVersion = "1.1.1"
   val springBootVersion = "1.5.1.RELEASE"
   val gradleNodePluginVersion = "1.1.1"
   val dependencyManagementVersion = "1.0.0.RELEASE"
@@ -71,7 +71,7 @@ tasks.withType<Jar> {
 configure<JavaPluginConvention> {
   setSourceCompatibility(1.8)
   setTargetCompatibility(1.8)
-  sourceSets.getByName("main").java.srcDirs("$buildDir/generated/source/kapt/")
+  sourceSets.getByName("main").java.srcDirs("${project.buildDir}/generated/source/kapt/")
 }
 
 configure<IdeaModel>{
@@ -161,6 +161,8 @@ dependencies {
   runtime("com.h2database:h2")
   runtime("org.postgresql:postgresql")
 
+  testCompile("org.jetbrains.kotlin:kotlin-test:$kotlinVersion")
+  testCompile("org.jetbrains.kotlin:kotlin-test-junit:$kotlinVersion")
   testCompile("org.springframework.boot:spring-boot-starter-test")
   testCompile("org.springframework.security:spring-security-test")
   testCompile("org.reflections:reflections:$reflectionsVersion")
