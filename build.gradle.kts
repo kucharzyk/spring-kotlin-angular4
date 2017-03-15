@@ -14,7 +14,7 @@ version = "0.0.7-SNAPSHOT"
 buildscript {
 
   val kotlinVersion = "1.1.1"
-  val springBootVersion = "1.5.1.RELEASE"
+  val springBootVersion = "1.5.2.RELEASE"
   val gradleNodePluginVersion = "1.1.1"
   val dependencyManagementVersion = "1.0.1.RELEASE"
 
