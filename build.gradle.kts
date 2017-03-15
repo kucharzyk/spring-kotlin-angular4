@@ -118,7 +118,7 @@ val springBootVersion = extra["springBootVersion"]
 val jacksonVersion = the<DependencyManagementExtension>().importedProperties["jackson.version"]
 val querydslVersion = the<DependencyManagementExtension>().importedProperties["querydsl.version"]
 val jjwtVersion = "0.7.0"
-val reflectionsVersion = "0.9.10"
+val reflectionsVersion = "0.9.11"
 
 configure<DependencyManagementExtension> {
   imports {
