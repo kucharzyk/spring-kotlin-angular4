@@ -94,7 +94,7 @@
     "start": "npm run server:dev"
   },
   "engines": {
-    "node": ">= 7.7.2",
+    "node": ">= 7.7.3",
     "npm": ">= 4.4.1"
   }
 }
