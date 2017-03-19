@@ -63,34 +63,29 @@ This project is still a work in progress
 
 ## Changelog
 
-<a name="0.0.6"></a>
-## [0.0.6](https://github.com/shardis/shardis/compare/v0.0.5...v0.0.6) (2017-02-26)
-
-
-### Bug Fixes
-
-* **ci:** fix appveyor build ([bc6b56a](https://github.com/shardis/shardis/commit/bc6b56a))
-* **scripts:** fixed npmw.cmd script ([7fbf8c7](https://github.com/shardis/shardis/commit/7fbf8c7))
+<a name="0.0.7"></a>
+## [0.0.7](https://github.com/shardis/shardis/compare/v0.0.6...v0.0.7) (2017-03-19)
 
 
 ### Features
 
-* **core:** avoid rebuilding angular app when no changes ([0eea644](https://github.com/shardis/shardis/commit/0eea644))
-* **core:** update angular-cli to 1.0.0-rc.0 ([6f92500](https://github.com/shardis/shardis/commit/6f92500))
-* **core:** update gradle to 3.4 ([5625708](https://github.com/shardis/shardis/commit/5625708))
-* **fronted:** update node to 7.6.0 ([bb3d312](https://github.com/shardis/shardis/commit/bb3d312))
-* **fronted:** update npm to 4.3.0 ([3a7ef7e](https://github.com/shardis/shardis/commit/3a7ef7e))
-* **frontend:** add npm-check package and upgrade-interactive script ([6c30bfa](https://github.com/shardis/shardis/commit/6c30bfa))
-* **frontend:** replace yarn with npm ([b710c4a](https://github.com/shardis/shardis/commit/b710c4a))
-* **frontend:** run angular e2e tests after unit tests - also as part of ci build ([b32896f](https://github.com/shardis/shardis/commit/b32896f))
-* **frontend:** update angular to 2.4.8 ([b987164](https://github.com/shardis/shardis/commit/b987164))
-* **frontend:** update clarity to 0.8.8 ([23a660b](https://github.com/shardis/shardis/commit/23a660b))
-* **frontend:** update typescript to 2.2.1 ([07b0254](https://github.com/shardis/shardis/commit/07b0254))
-* **frontend:** use ng e2e instead of calling protractor ([97e010f](https://github.com/shardis/shardis/commit/97e010f))
-
-
-### BREAKING CHANGES
-
-* frontend: Yarn is great but have to many compatibility issues. Now project use npm instead.
+* **core:** replace kotlin-stdlib with kotlin-stdlib-jre8 ([05dec83](https://github.com/shardis/shardis/commit/05dec83))
+* **core:** update dependency-management-plugin to 1.0.1.RELEASE ([fb5ffe7](https://github.com/shardis/shardis/commit/fb5ffe7))
+* **core:** update gradle to 3.4.1 ([145e416](https://github.com/shardis/shardis/commit/145e416))
+* **core:** update kotlin to 1.1.0 ([2f234ca](https://github.com/shardis/shardis/commit/2f234ca))
+* **core:** update kotlin to 1.1.1 ([68791c0](https://github.com/shardis/shardis/commit/68791c0))
+* **core:** update spring boot to 1.5.2.RELEASE ([a2f2f05](https://github.com/shardis/shardis/commit/a2f2f05))
+* **frontend:** update [@ngrx](https://github.com/ngrx)/effects to 2.0.1 ([75d64e7](https://github.com/shardis/shardis/commit/75d64e7))
+* **frontend:** update angular to 2.4.10 ([64bb02c](https://github.com/shardis/shardis/commit/64bb02c))
+* **frontend:** update angular to 2.4.9 ([2ffa2a7](https://github.com/shardis/shardis/commit/2ffa2a7))
+* **frontend:** update angular-cli to 1.0.0-rc.2 ([7060c40](https://github.com/shardis/shardis/commit/7060c40))
+* **frontend:** update clarity to 0.8.10 ([0161bef](https://github.com/shardis/shardis/commit/0161bef))
+* **frontend:** update clarity to 0.8.11 ([7eda324](https://github.com/shardis/shardis/commit/7eda324))
+* **frontend:** update conventional-changelog-cli to 1.3.1 ([99a29e4](https://github.com/shardis/shardis/commit/99a29e4))
+* **frontend:** update ng2-webstorage to 1.5.1 ([dfca821](https://github.com/shardis/shardis/commit/dfca821))
+* **frontend:** update node to 7.7.0 ([76c1662](https://github.com/shardis/shardis/commit/76c1662))
+* **frontend:** update node to 7.7.1 ([2f85cd7](https://github.com/shardis/shardis/commit/2f85cd7))
+* **frontend:** update node to 7.7.2 and npm to 4.4.1 ([7f197b5](https://github.com/shardis/shardis/commit/7f197b5))
+* **frontend:** update node to 7.7.3 ([b09d30f](https://github.com/shardis/shardis/commit/b09d30f))
 
 [CHANGELOG.md](CHANGELOG.md)
