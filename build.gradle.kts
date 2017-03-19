@@ -9,7 +9,7 @@ import org.gradle.testing.jacoco.tasks.JacocoReport
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 group = "com.shardis"
-version = "0.0.7"
+version = "0.0.8-SNAPSHOT"
 
 buildscript {
 
