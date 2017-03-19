@@ -9,6 +9,6 @@ describe('shardis App', function () {
 
   it('should display message saying app works', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('shardis works!');
+    expect(page.getParagraphText()).toMatch('shardis works!');
   });
 });
