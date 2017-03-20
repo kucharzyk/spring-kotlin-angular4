@@ -37,4 +37,5 @@ spring:
         implicit-strategy: org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy
         physical-strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
 logging.level:
-  org.springframework.security: DEBUG
+  org.springframework.security: INFO
+  org.axonframework: INFO

@@ -6,7 +6,9 @@ import org.gradle.api.tasks.testing.Test
 import org.gradle.language.jvm.tasks.ProcessResources
 import org.gradle.plugins.ide.idea.model.IdeaModel
 import org.gradle.testing.jacoco.tasks.JacocoReport
+import org.jetbrains.kotlin.allopen.gradle.AllOpenExtension
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+import org.jetbrains.kotlin.noarg.gradle.NoArgExtension
 
 group = "com.shardis"
 version = "0.0.8-SNAPSHOT"
@@ -80,6 +82,15 @@ configure<IdeaModel>{
   }
 }
 
+configure<NoArgExtension> {
+  annotation("org.axonframework.spring.stereotype.Aggregate")
+}
+
+
+configure<AllOpenExtension> {
+  annotation("org.axonframework.spring.stereotype.Aggregate")
+}
+
 configure<NodeExtension> {
   version = "7.7.3"
   npmVersion = "4.4.1"
@@ -117,6 +128,7 @@ val kotlinVersion = extra["kotlinVersion"]
 val springBootVersion = extra["springBootVersion"]
 val jacksonVersion = the<DependencyManagementExtension>().importedProperties["jackson.version"]
 val querydslVersion = the<DependencyManagementExtension>().importedProperties["querydsl.version"]
+val axonVersion = "3.0.2"
 val jjwtVersion = "0.7.0"
 val reflectionsVersion = "0.9.11"
 
@@ -143,6 +155,8 @@ dependencies {
   compile("org.springframework.boot:spring-boot-starter-web")
   compile("org.springframework.boot:spring-boot-configuration-processor")
 
+  compile("org.axonframework:axon-spring-boot-starter:$axonVersion")
+
   compile("org.hibernate:hibernate-java8")
   compile("org.hibernate:hibernate-envers")
 
@@ -166,6 +180,7 @@ dependencies {
   testCompile("org.springframework.boot:spring-boot-starter-test")
   testCompile("org.springframework.security:spring-security-test")
   testCompile("org.reflections:reflections:$reflectionsVersion")
+  testCompile("org.axonframework:axon-test:$axonVersion")
 }
 
 task<NpmTask>("ngBuild") {
