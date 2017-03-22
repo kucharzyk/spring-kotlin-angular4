@@ -11,7 +11,7 @@ import java.io.File
 import javax.persistence.Entity
 import javax.persistence.MappedSuperclass
 
-class SchemaExporter(hibernateDialect: String, entityPackage: String, implicitNamingStrategy: String, physicalNamingStrategy: String) {
+class SchemaExporter(hibernateDialect: String, entityPackages: List<String>, implicitNamingStrategy: String, physicalNamingStrategy: String) {
 
 
     val metadataSources: MetadataSources = MetadataSources(
@@ -23,12 +23,14 @@ class SchemaExporter(hibernateDialect: String, entityPackage: String, implicitNa
     )
 
     init {
-        val reflections = Reflections(entityPackage)
-        for (cl in reflections.getTypesAnnotatedWith(MappedSuperclass::class.java)) {
-            metadataSources.addAnnotatedClass(cl)
-        }
-        for (cl in reflections.getTypesAnnotatedWith(Entity::class.java)) {
-            metadataSources.addAnnotatedClass(cl)
+        entityPackages.forEach {
+            val reflections = Reflections(it)
+            for (cl in reflections.getTypesAnnotatedWith(MappedSuperclass::class.java)) {
+                metadataSources.addAnnotatedClass(cl)
+            }
+            for (cl in reflections.getTypesAnnotatedWith(Entity::class.java)) {
+                metadataSources.addAnnotatedClass(cl)
+            }
         }
     }
 

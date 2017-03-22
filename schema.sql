@@ -32,6 +32,10 @@
     alter table users_roles_aud 
         drop constraint FKktxqr55ntd0j2i228uj8sq6j9;
 
+    drop table if exists association_value_entry cascade;
+
+    drop table if exists domain_event_entry cascade;
+
     drop table if exists jwt_tokens cascade;
 
     drop table if exists jwt_tokens_aud cascade;
@@ -49,6 +53,12 @@
     drop table if exists roles_permissions cascade;
 
     drop table if exists roles_permissions_aud cascade;
+
+    drop table if exists saga_entry cascade;
+
+    drop table if exists snapshot_event_entry cascade;
+
+    drop table if exists token_entry cascade;
 
     drop table if exists users cascade;
 
@@ -77,6 +87,29 @@
     create sequence sequence_roles start 1 increment 1;
 
     create sequence sequence_users start 1 increment 1;
+
+    create table association_value_entry (
+        id int8 not null,
+        association_key varchar(255) not null,
+        association_value varchar(255),
+        saga_id varchar(255) not null,
+        saga_type varchar(255),
+        primary key (id)
+    );
+
+    create table domain_event_entry (
+        global_index int8 not null,
+        event_identifier varchar(255) not null,
+        meta_data oid,
+        payload oid not null,
+        payload_revision varchar(255),
+        payload_type varchar(255) not null,
+        time_stamp varchar(255) not null,
+        aggregate_identifier varchar(255) not null,
+        sequence_number int8 not null,
+        type varchar(255),
+        primary key (global_index)
+    );
 
     create table jwt_tokens (
         id int8 not null,
@@ -183,6 +216,37 @@
         primary key (rev, role_id, permissions_id)
     );
 
+    create table saga_entry (
+        saga_id varchar(255) not null,
+        revision varchar(255),
+        saga_type varchar(255),
+        serialized_saga oid,
+        primary key (saga_id)
+    );
+
+    create table snapshot_event_entry (
+        aggregate_identifier varchar(255) not null,
+        sequence_number int8 not null,
+        type varchar(255) not null,
+        event_identifier varchar(255) not null,
+        meta_data oid,
+        payload oid not null,
+        payload_revision varchar(255),
+        payload_type varchar(255) not null,
+        time_stamp varchar(255) not null,
+        primary key (aggregate_identifier, sequence_number, type)
+    );
+
+    create table token_entry (
+        processor_name varchar(255) not null,
+        segment int4 not null,
+        owner varchar(255),
+        timestamp varchar(255) not null,
+        token oid,
+        token_type varchar(255),
+        primary key (processor_name, segment)
+    );
+
     create table users (
         id int8 not null,
         uuid varchar(255) not null,
@@ -236,11 +300,22 @@
         primary key (rev, user_id, roles_id)
     );
 
+    create index IDXs2yi8bobx8dd4ee6t63dufs6d on association_value_entry (saga_id, association_key);
+
+    alter table domain_event_entry 
+        add constraint UK8s1f994p4la2ipb13me2xqm1w unique (aggregate_identifier, sequence_number);
+
+    alter table domain_event_entry 
+        add constraint UK_fwe6lsa8bfo6hyas6ud3m8c7x unique (event_identifier);
+
     alter table permissions 
         add constraint UK_pnvtwliis6p05pn6i3ndjrqt2 unique (name);
 
     alter table roles 
         add constraint UK_ofx66keruapi6vyqpv6f2or37 unique (name);
+
+    alter table snapshot_event_entry 
+        add constraint UK_e1uucjseo68gopmnd0vgdl44h unique (event_identifier);
 
     alter table users 
         add constraint UK_r43af9ap4edm43mmtq01oddj6 unique (username);

@@ -22,7 +22,7 @@ class SchemaExporterTests {
     fun generateDDL() {
         val exporter = SchemaExporter(
             PostgreSQL94Dialect::class.java.canonicalName,
-            "com.shardis",
+            listOf("org.axonframework", "com.shardis"),
             env.getProperty("spring.jpa.hibernate.naming.implicit-strategy"),
             env.getProperty("spring.jpa.hibernate.naming.physical-strategy")
         )
