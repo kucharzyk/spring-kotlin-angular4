@@ -92,7 +92,7 @@ configure<AllOpenExtension> {
 }
 
 configure<NodeExtension> {
-  version = "7.7.3"
+  version = "7.7.4"
   npmVersion = "4.4.1"
   download = true
   workDir = file("${project.buildDir}/nodejs")
