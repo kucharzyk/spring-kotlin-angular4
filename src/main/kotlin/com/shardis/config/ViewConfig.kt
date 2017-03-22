@@ -1,6 +1,6 @@
 package com.shardis.config
 
-import com.shardis.config.resolvers.PushStateResourceResolver
+import com.shardis.support.view.resolvers.PushStateResourceResolver
 import org.springframework.context.annotation.Configuration
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter

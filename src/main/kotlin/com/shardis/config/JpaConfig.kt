@@ -1,6 +1,6 @@
 package com.shardis.config
 
-import com.shardis.security.support.SecurityUtils
+import com.shardis.support.security.SecurityUtils
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 import org.springframework.data.domain.AuditorAware

@@ -1,8 +1,8 @@
 package com.shardis.rest
 
-import com.shardis.security.jwt.JwtTokenAuthService
-import com.shardis.security.support.SecurityUtils
-import com.shardis.security.support.ShardisUserDetails
+import com.shardis.services.jwt.JwtTokenAuthService
+import com.shardis.support.security.SecurityUtils
+import com.shardis.support.security.ShardisUserDetails
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken
 import org.springframework.security.core.authority.SimpleGrantedAuthority
 import org.springframework.web.bind.annotation.RequestMapping

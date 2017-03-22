@@ -1,6 +1,6 @@
 package com.shardis.mocks
 
-import com.shardis.security.support.ShardisUserDetails
+import com.shardis.support.security.ShardisUserDetails
 import org.springframework.security.core.authority.SimpleGrantedAuthority
 import org.springframework.security.core.userdetails.UserDetails
 import org.springframework.security.core.userdetails.UserDetailsService
