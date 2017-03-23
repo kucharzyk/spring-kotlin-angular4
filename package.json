@@ -45,7 +45,7 @@
     "@angular/cli": "1.0.0-rc.4",
     "@angular/compiler-cli": "2.4.10",
     "@types/jasmine": "2.5.46",
-    "@types/node": "7.0.8",
+    "@types/node": "7.0.10",
     "angular2-dependencies-graph": "1.0.0-alpha.12",
     "codelyzer": "2.0.1",
     "compodoc": "0.0.41",
