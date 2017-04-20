@@ -1,5 +1,5 @@
-os:
-  - linux
+sudo: false
+dist: trusty
 language: java
 node_js:
   - "7"
