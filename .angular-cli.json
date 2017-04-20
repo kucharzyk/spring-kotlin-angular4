@@ -1,12 +1,12 @@
 {
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "project": {
-    "version": "1.0.0",
     "name": "shardis"
   },
   "apps": [
     {
       "root": "src/main/typescript",
-      "outDir": "src/main/resources/static",
+      "outDir": "dist",
       "assets": [
         "assets",
         "favicon.ico"
@@ -23,8 +23,7 @@
         "../../../node_modules/clarity-ui/clarity-ui.min.css",
         "styles.scss"
       ],
-      "scripts": [
-      ],
+      "scripts": [],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",
@@ -39,10 +38,10 @@
   },
   "lint": [
     {
-      "project": "src/tsconfig.app.json"
+      "project": "src/main/typescript/tsconfig.app.json"
     },
     {
-      "project": "src/tsconfig.spec.json"
+      "project": "src/main/typescript/tsconfig.spec.json"
     },
     {
       "project": "e2e/tsconfig.e2e.json"
@@ -55,20 +54,6 @@
   },
   "defaults": {
     "styleExt": "scss",
-    "prefixInterfaces": false,
-    "inline": {
-      "style": false,
-      "template": false
-    },
-    "spec": {
-      "class": false,
-      "component": true,
-      "directive": true,
-      "module": false,
-      "pipe": true,
-      "service": true
-    }
-  },
-  "packageManager": "npm",
-  "$schema": "./node_modules/@angular/cli/lib/config/schema.json"
+    "component": {}
+  }
 }

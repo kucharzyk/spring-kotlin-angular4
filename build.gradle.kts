@@ -92,8 +92,8 @@ configure<AllOpenExtension> {
 }
 
 configure<NodeExtension> {
-  version = "7.7.4"
-  npmVersion = "4.4.1"
+  version = "7.9.0"
+  npmVersion = "4.5.0"
   download = true
   workDir = file("${project.buildDir}/nodejs")
   npmWorkDir = file("${project.buildDir}/npm")
@@ -205,5 +205,8 @@ tasks.getByName("test").dependsOn("ngTest")
 tasks.getByName("check").finalizedBy("jacocoTestReport")
 tasks.getByName("clean").doLast {
   delete("node_modules")
+  delete("coverage")
+  delete("documentation")
+  delete("dist")
 }
 

@@ -8,6 +8,7 @@ import {ClarityModule} from 'clarity-angular';
 import {CoreModule} from './core/core.module';
 import {MainModule} from './main/main.module';
 import {Ng2Webstorage} from 'ng2-webstorage';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import {Ng2Webstorage} from 'ng2-webstorage';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
     HttpModule,
