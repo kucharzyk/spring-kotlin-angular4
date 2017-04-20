@@ -1,3 +1,24 @@
+<a name="0.0.8"></a>
+## [0.0.8](https://github.com/shardis/shardis/compare/v0.0.7...v0.0.8) (2017-04-20)
+
+
+### Features
+
+* **axon:** add axon framework dependency ([d055b43](https://github.com/shardis/shardis/commit/d055b43))
+* **axon:** add axon tables to generated schema.sql ([2a5f298](https://github.com/shardis/shardis/commit/2a5f298))
+* **frontend:** downgrade zone.js version to 0.7.2 ([101b541](https://github.com/shardis/shardis/commit/101b541))
+* **frontend:** update angular-cli to 1.0.0 ([4c4bb85](https://github.com/shardis/shardis/commit/4c4bb85))
+* **frontend:** update angular-cli to 1.0.0-rc.4 ([fc3316a](https://github.com/shardis/shardis/commit/fc3316a))
+* **frontend:** update clarity to 0.8.12 ([d282bf3](https://github.com/shardis/shardis/commit/d282bf3))
+* **frontend:** update karma-coverage-istanbul-reporter to 1.0.0 ([e986341](https://github.com/shardis/shardis/commit/e986341))
+* **frontend:** update ngrx effects to 2.0.2 ([145483d](https://github.com/shardis/shardis/commit/145483d))
+* **frontend:** update ngrx store-devtools to 3.2.4 ([4097a76](https://github.com/shardis/shardis/commit/4097a76))
+* **frontend:** update node to 7.7.4 ([cf49980](https://github.com/shardis/shardis/commit/cf49980))
+* **frontend:** update ts-node to 3.0.0 ([afe746d](https://github.com/shardis/shardis/commit/afe746d))
+* **frontend:** update ts-node to 3.0.2 ([566d4be](https://github.com/shardis/shardis/commit/566d4be))
+
+
+
 <a name="0.0.7"></a>
 ## [0.0.7](https://github.com/shardis/shardis/compare/v0.0.6...v0.0.7) (2017-03-19)
 
