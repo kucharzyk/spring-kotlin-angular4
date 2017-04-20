@@ -134,7 +134,7 @@ val reflectionsVersion = "0.9.11"
 
 configure<DependencyManagementExtension> {
   imports {
-    it.mavenBom("org.springframework.boot:spring-boot-dependencies:$springBootVersion")
+    mavenBom("org.springframework.boot:spring-boot-dependencies:$springBootVersion")
   }
 }
 
