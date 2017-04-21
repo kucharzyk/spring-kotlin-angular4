@@ -33,7 +33,7 @@
     "clarity-ui": "0.9.1",
     "core-js": "2.4.1",
     "mutationobserver-shim": "0.3.2",
-    "ng2-webstorage": "1.6.2",
+    "ng2-webstorage": "1.8.0",
     "ngrx-store-freeze": "0.1.9",
     "ngrx-store-localstorage": "0.1.5",
     "reselect": "3.0.0",
