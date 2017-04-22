@@ -1,3 +1,17 @@
+<a name="0.0.9"></a>
+## [0.0.9](https://github.com/shardis/shardis/compare/v0.0.8...v0.0.9) (2017-04-22)
+
+
+### Features
+
+* **core:** update all libraries and switch to Angular 4.0.2 ([1938cb8](https://github.com/shardis/shardis/commit/1938cb8))
+* **core:** update gradle to 3.5 ([75cf40b](https://github.com/shardis/shardis/commit/75cf40b))
+* **core:** update spring boot to 1.5.3.RELEASE ([a772b5a](https://github.com/shardis/shardis/commit/a772b5a))
+* **frontend:** update angular to 4.0.3 ([e81a6f9](https://github.com/shardis/shardis/commit/e81a6f9))
+* **frontend:** update clarity to 0.9.1 ([6d70420](https://github.com/shardis/shardis/commit/6d70420))
+
+
+
 <a name="0.0.8"></a>
 ## [0.0.8](https://github.com/shardis/shardis/compare/v0.0.7...v0.0.8) (2017-04-20)
 
