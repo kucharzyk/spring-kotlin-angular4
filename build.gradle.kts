@@ -11,7 +11,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 import org.jetbrains.kotlin.noarg.gradle.NoArgExtension
 
 group = "com.shardis"
-version = "0.0.9"
+version = "0.1.0-SNAPSHOT"
 
 buildscript {
 
