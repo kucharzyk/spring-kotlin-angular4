@@ -7,7 +7,7 @@ import {AppComponent} from './app.component';
 import {ClarityModule} from 'clarity-angular';
 import {CoreModule} from './core/core.module';
 import {MainModule} from './main/main.module';
-import {Ng2Webstorage} from 'ng2-webstorage';
+import {Ng2Webstorage} from 'ngx-webstorage';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 @NgModule({

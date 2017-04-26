@@ -13,7 +13,7 @@ import {
 import {Effect, Actions} from '@ngrx/effects';
 import {Observable} from 'rxjs/Rx';
 import {go} from '@ngrx/router-store';
-import {LocalStorage} from 'ng2-webstorage';
+import {LocalStorage} from 'ngx-webstorage';
 import {Action} from '@ngrx/store';
 
 
