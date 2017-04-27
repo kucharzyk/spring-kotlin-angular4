@@ -116,9 +116,9 @@
   dependencies:
     tsickle "^0.21.0"
 
-"@compodoc/compodoc@1.0.0-beta.4":
-  version "1.0.0-beta.4"
-  resolved "https://registry.yarnpkg.com/@compodoc/compodoc/-/compodoc-1.0.0-beta.4.tgz#f451465c527a3289e1960d60507323314376268f"
+"@compodoc/compodoc@1.0.0-beta.8":
+  version "1.0.0-beta.8"
+  resolved "https://registry.yarnpkg.com/@compodoc/compodoc/-/compodoc-1.0.0-beta.8.tgz#0efd3fe682b803f69e28f1d2102fe06d741319ab"
   dependencies:
     "@compodoc/ngd-core" "^2.0.0-alpha.1"
     "@compodoc/ngd-transformer" "^2.0.0-alpha.3"
