@@ -39,26 +39,26 @@ This project is still a work in progress
 ./gradlew build 
 ```
 
-## Npm tasks
+## Yarn tasks
 
 ### Angular development server with proxy to spring application
 ```
-./npmw run server 
+./yarnw run server 
 ```
 
 ### Angular unit tests (chrome)
 ```
-./npmw run test:live 
+./yarnw run test:live 
 ```
 
 ### Angular unit tests (chrome - single run)
 ```
-./npmw run test
+./yarnw run test
 ```
 
 ### Build documentation
 ```
-./npmw run docs
+./yarnw run docs
 ```
 
 ## Changelog

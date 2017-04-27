@@ -58,43 +58,41 @@
     "karma-coverage-istanbul-reporter": "1.2.0",
     "karma-jasmine": "1.1.0",
     "karma-jasmine-html-reporter": "0.2.2",
-    "npm-check": "5.4.0",
     "protractor": "5.1.1",
     "rimraf": "2.6.1",
     "ts-node": "3.0.2",
     "tslint": "5.1.0",
-    "typescript": "2.2.2"
+    "typescript": "2.2.2",
+    "yarn": "0.23.2"
   },
   "scripts": {
-    "clean": "npm cache clean && rimraf coverage src/main/resources/static/*",
+    "clean": "yarn cache clean && rimraf coverage src/main/resources/static/*",
     "clean:dist": "rimraf src/main/resources/static/*",
-    "preclean:install": "npm run clean",
-    "clean:install": "npm upgrade",
-    "preclean:start": "npm run clean",
-    "clean:start": "npm start",
+    "preclean:install": "yarn run clean",
+    "clean:install": "yarn upgrade",
+    "preclean:start": "yarn run clean",
+    "clean:start": "yarn start",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
     "docs": "compodoc -n Shardis -p tsconfig.json",
     "e2e": "ng e2e",
     "e2e:live": "ng e2e --elementExplorer",
     "lint": "ng lint",
-    "pretest": "rimraf coverage && npm run lint",
+    "pretest": "rimraf coverage && yarn run lint",
     "test": "ng test -w false --code-coverage --no-progress",
-    "posttest": "npm run e2e",
+    "posttest": "yarn run e2e",
     "test:live": "ng test --no-progress",
-    "build": "npm run build:dev",
-    "prebuild:dev": "npm run clean:dist",
+    "build": "yarn run build:dev",
+    "prebuild:dev": "yarn run clean:dist",
     "build:dev": "ng build -dev --sourcemaps -op src/main/resources/static",
-    "prebuild:prod": "npm run clean:dist",
+    "prebuild:prod": "yarn run clean:dist",
     "build:prod": "ng build -prod --aot --no-progress --extract-css --sourcemaps -op src/main/resources/static",
-    "server": "npm run server:dev",
+    "server": "yarn run server:dev",
     "server:dev": "ng serve --p 4200 -pc proxy.json -dev --open --no-progress --sourcemaps",
     "server:prod": "ng serve --p 4200 -pc proxy.json -prod --aot --open --no-progress --extract-css --sourcemaps",
     "ng": "ng",
-    "upgrade-interactive": "npm-check -uE --no-emoji",
-    "start": "npm run server:dev"
+    "start": "yarn run server:dev"
   },
   "engines": {
-    "node": ">= 7.9.0",
-    "npm": ">= 4.5.0"
+    "node": ">= 7.9.0"
   }
 }

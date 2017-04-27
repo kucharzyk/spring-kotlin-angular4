@@ -1,10 +1,9 @@
 import com.moowork.gradle.node.NodeExtension
-import com.moowork.gradle.node.npm.NpmTask
+import com.moowork.gradle.node.yarn.YarnTask
 import io.spring.gradle.dependencymanagement.dsl.DependencyManagementExtension
 import org.gradle.api.tasks.bundling.Jar
 import org.gradle.api.tasks.testing.Test
 import org.gradle.language.jvm.tasks.ProcessResources
-import org.gradle.plugins.ide.idea.model.IdeaModel
 import org.gradle.testing.jacoco.tasks.JacocoReport
 import org.jetbrains.kotlin.allopen.gradle.AllOpenExtension
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
@@ -63,6 +62,7 @@ tasks.withType<KotlinCompile> {
     jvmTarget = "1.8"
     apiVersion = "1.1"
     languageVersion = "1.1"
+    suppressWarnings = true
   }
 }
 
@@ -76,12 +76,6 @@ configure<JavaPluginConvention> {
   sourceSets.getByName("main").java.srcDirs("${project.buildDir}/generated/source/kapt/")
 }
 
-configure<IdeaModel>{
-  module.apply {
-    sourceDirs.add(file("$buildDir/generated/"))
-  }
-}
-
 configure<NoArgExtension> {
   annotation("org.axonframework.spring.stereotype.Aggregate")
 }
@@ -93,10 +87,10 @@ configure<AllOpenExtension> {
 
 configure<NodeExtension> {
   version = "7.9.0"
-  npmVersion = "4.5.0"
+  yarnVersion = "0.23.2"
   download = true
   workDir = file("${project.buildDir}/nodejs")
-  npmWorkDir = file("${project.buildDir}/npm")
+  yarnWorkDir = file("${project.buildDir}/yarn")
   nodeModulesDir = file("${project.projectDir}")
 }
 
@@ -183,8 +177,8 @@ dependencies {
   testCompile("org.axonframework:axon-test:$axonVersion")
 }
 
-task<NpmTask>("ngBuild") {
-  dependsOn("npm_install")
+task<YarnTask>("ngBuild") {
+  dependsOn("yarn_install")
 
   inputs.file("package.json")
   inputs.file(".angular-cli.json")
@@ -195,8 +189,8 @@ task<NpmTask>("ngBuild") {
   args = listOf("run", "build:prod")
 }
 
-task<NpmTask>("ngTest") {
-  dependsOn("npm_install")
+task<YarnTask>("ngTest") {
+  dependsOn("yarn_install")
   args = listOf("run", "test")
 }
 
