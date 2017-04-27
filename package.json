@@ -76,7 +76,7 @@
     "docs": "compodoc -n Shardis -p tsconfig.json",
     "e2e": "ng e2e",
     "e2e:live": "ng e2e --elementExplorer",
-    "lint": "ng lint",
+    "lint": "ng lint --type-check",
     "pretest": "rimraf coverage && yarn run lint",
     "test": "ng test -w false --code-coverage --no-progress",
     "posttest": "yarn run e2e",
