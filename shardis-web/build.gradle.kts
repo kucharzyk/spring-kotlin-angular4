@@ -18,7 +18,7 @@ tasks.withType<Jar> {
 
 configure<NodeExtension> {
   version = "7.9.0"
-  yarnVersion = "0.23.2"
+  yarnVersion = "0.23.3"
   download = true
   workDir = file("${project.buildDir}/nodejs")
   yarnWorkDir = file("${project.buildDir}/yarn")
