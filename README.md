@@ -31,7 +31,7 @@ This project is still a work in progress
 
 ### Running Spring Boot app
 ```
-./gradlew bootRun 
+./gradlew shardis-web:bootRun 
 ```
 
 ### Production build
@@ -43,21 +43,25 @@ This project is still a work in progress
 
 ### Angular development server with proxy to spring application
 ```
+cd ./shardis-web
 ./yarnw run server 
 ```
 
 ### Angular unit tests (chrome)
 ```
+cd ./shardis-web
 ./yarnw run test:live 
 ```
 
 ### Angular unit tests (chrome - single run)
 ```
+cd ./shardis-web
 ./yarnw run test
 ```
 
 ### Build documentation
 ```
+cd ./shardis-web
 ./yarnw run docs
 ```
 

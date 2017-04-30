@@ -1,2 +1,13 @@
 rootProject.name = 'shardis'
 rootProject.buildFileName = 'build.gradle.kts'
+
+
+def configureGradleScriptKotlinOn(ProjectDescriptor project) {
+  project.buildFileName = 'build.gradle.kts'
+  project.children.each { configureGradleScriptKotlinOn(it) }
+}
+
+include 'shardis-web'
+include 'shardis-common'
+
+configureGradleScriptKotlinOn rootProject

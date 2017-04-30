@@ -25,25 +25,25 @@ dist/
 nbdist/
 .nb-gradle/
 
-### Node ###
-node/
-node_modules/
-npm-debug.log*
-yarn-error.log*
+### shardis-web ###
+/shardis-web/build/
 
-### compiled output ###
-dist/
-out-tsc/
+/shardis-web/node/
+/shardis-web/node_modules/
+/shardis-web/npm-debug.log*
+/shardis-web/yarn-error.log*
 
-### e2e ###
-e2e/*.js
-e2e/*.map
+/shardis-web/dist/
+/shardis-web/out-tsc/
 
-### coverage ###
-coverage/
+/shardis-web/e2e/*.js
+/shardis-web/e2e/*.map
 
-### dist ###
-src/main/resources/static/
+/shardis-web/coverage/
 
-### docs ###
-documentation/
+/shardis-web/src/main/resources/static/
+
+/shardis-web/documentation/
+
+### shardis-common ###
+/shardis-common/build/
