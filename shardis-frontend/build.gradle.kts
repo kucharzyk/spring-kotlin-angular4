@@ -7,7 +7,7 @@ apply {
 }
 
 tasks.withType<Jar> {
-  baseName = "shardis-angular"
+  baseName = "shardis-frontend"
 }
 
 configure<NodeExtension> {

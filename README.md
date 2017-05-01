@@ -41,25 +41,25 @@ This project is still a work in progress
 
 ### Angular development server with proxy to spring application
 ```
-cd ./shardis-angular
+cd shardis-frontend
 ./yarnw run server 
 ```
 
 ### Angular unit tests (chrome)
 ```
-cd ./shardis-angular
+cd shardis-frontend
 ./yarnw run test:live 
 ```
 
 ### Angular unit tests (chrome - single run)
 ```
-cd ./shardis-angular
+cd shardis-frontend
 ./yarnw run test
 ```
 
 ### Build documentation
 ```
-cd ./shardis-angular
+cd shardis-frontend
 ./yarnw run docs
 ```
 

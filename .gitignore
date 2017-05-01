@@ -25,25 +25,25 @@ dist/
 nbdist/
 .nb-gradle/
 
-### shardis-angular ###
-/shardis-angular/build/
+### shardis-frontend ###
+/shardis-frontend/build/
 
-/shardis-angular/node/
-/shardis-angular/node_modules/
-/shardis-angular/npm-debug.log*
-/shardis-angular/yarn-error.log*
+/shardis-frontend/node/
+/shardis-frontend/node_modules/
+/shardis-frontend/npm-debug.log*
+/shardis-frontend/yarn-error.log*
 
-/shardis-angular/dist/
-/shardis-angular/out-tsc/
+/shardis-frontend/dist/
+/shardis-frontend/out-tsc/
 
-/shardis-angular/e2e/*.js
-/shardis-angular/e2e/*.map
+/shardis-frontend/e2e/*.js
+/shardis-frontend/e2e/*.map
 
-/shardis-angular/coverage/
+/shardis-frontend/coverage/
 
-/shardis-angular/src/main/resources/static/
+/shardis-frontend/src/main/resources/static/
 
-/shardis-angular/documentation/
+/shardis-frontend/documentation/
 
 ### shardis-web ###
 /shardis-web/build/

@@ -7,7 +7,7 @@ apply {
 
 dependencies {
   compile(project(":shardis-common"))
-  compile(project(":shardis-angular"))
+  compile(project(":shardis-frontend"))
 }
 
 tasks.withType<Jar> {
