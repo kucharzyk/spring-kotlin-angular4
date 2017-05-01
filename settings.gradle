@@ -8,6 +8,7 @@ def configureGradleScriptKotlinOn(ProjectDescriptor project) {
 }
 
 include 'shardis-web'
+include 'shardis-angular'
 include 'shardis-common'
 
 configureGradleScriptKotlinOn rootProject
