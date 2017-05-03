@@ -93,6 +93,6 @@
     "start": "yarn run server:dev"
   },
   "engines": {
-    "node": ">= 7.9.0"
+    "node": ">= 7.10.0"
   }
 }
