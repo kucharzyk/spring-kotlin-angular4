@@ -43,7 +43,7 @@
     "zone.js": "0.8.9"
   },
   "devDependencies": {
-    "@angular/cli": "1.0.1",
+    "@angular/cli": "1.0.2",
     "@angular/compiler-cli": "4.1.0",
     "@compodoc/compodoc": "1.0.0-beta.8",
     "@types/jasmine": "2.5.47",
