@@ -37,7 +37,7 @@
     "ngrx-store-localstorage": "0.1.6",
     "ngx-webstorage": "1.8.0",
     "reselect": "3.0.0",
-    "rxjs": "5.3.0",
+    "rxjs": "5.3.1",
     "ts-helpers": "1.1.2",
     "web-animations-js": "2.2.5",
     "zone.js": "0.8.9"
