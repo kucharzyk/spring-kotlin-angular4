@@ -5513,9 +5513,9 @@ ts-helpers@1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/ts-helpers/-/ts-helpers-1.1.2.tgz#fc69be9f1f3baed01fb1a0ef8d4cfe748814d835"
 
-ts-node@3.0.3:
-  version "3.0.3"
-  resolved "https://registry.yarnpkg.com/ts-node/-/ts-node-3.0.3.tgz#2ffa0f371915cc8aa13b78ea42b4c0de42aeb0d5"
+ts-node@3.0.4:
+  version "3.0.4"
+  resolved "https://registry.yarnpkg.com/ts-node/-/ts-node-3.0.4.tgz#a1475ebf24fd4e2ee2fba8b1aa1605b977bde506"
   dependencies:
     arrify "^1.0.0"
     chalk "^1.1.1"
