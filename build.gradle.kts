@@ -1,5 +1,3 @@
-import com.moowork.gradle.node.NodeExtension
-import com.moowork.gradle.node.yarn.YarnTask
 import io.spring.gradle.dependencymanagement.dsl.DependencyManagementExtension
 import org.gradle.api.tasks.testing.Test
 import org.gradle.testing.jacoco.tasks.JacocoReport
@@ -10,7 +8,7 @@ import org.jetbrains.kotlin.noarg.gradle.NoArgExtension
 allprojects {
 
   group = "com.shardis"
-  version = "0.1.0"
+  version = "0.1.1-SNAPSHOT"
 
   repositories {
     mavenCentral()
