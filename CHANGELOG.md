@@ -1,3 +1,31 @@
+<a name="0.1.0"></a>
+# [0.1.0](https://github.com/shardis/shardis/compare/v0.0.9...v0.1.0) (2017-05-07)
+
+
+### Features
+
+* **core:** move angular app to separate library ([1bf8233](https://github.com/shardis/shardis/commit/1bf8233))
+* **core:** replace npm by yarn ([43391ba](https://github.com/shardis/shardis/commit/43391ba))
+* **core:** switch to multi project architecture ([66bc63a](https://github.com/shardis/shardis/commit/66bc63a))
+* **core:** update kotlin to 1.1.2 ([83c2d2b](https://github.com/shardis/shardis/commit/83c2d2b))
+* **frontend:** add fix option to linter ([43fc654](https://github.com/shardis/shardis/commit/43fc654))
+* **frontend:** update angular to 4.1.0 ([32ceb7e](https://github.com/shardis/shardis/commit/32ceb7e))
+* **frontend:** update angular to 4.1.1 ([1314634](https://github.com/shardis/shardis/commit/1314634))
+* **frontend:** update angular-cli to 1.0.1 ([9b6045b](https://github.com/shardis/shardis/commit/9b6045b))
+* **frontend:** update angular-cli to 1.0.2 ([54f4553](https://github.com/shardis/shardis/commit/54f4553))
+* **frontend:** update clarity to 0.9.2 ([32272e3](https://github.com/shardis/shardis/commit/32272e3))
+* **frontend:** update clarity to 0.9.3 ([0e67627](https://github.com/shardis/shardis/commit/0e67627))
+* **frontend:** update codelyzer to 3.0.0 and tslint to 5.1.0 ([9b84037](https://github.com/shardis/shardis/commit/9b84037))
+* **frontend:** update compodoc to 1.0.0-beta.8 ([7f8ffe7](https://github.com/shardis/shardis/commit/7f8ffe7))
+* **frontend:** update ng2-webstorage to ngx-webstorage ([31d2ae3](https://github.com/shardis/shardis/commit/31d2ae3))
+* **frontend:** update node to 7.10.0 ([e1c8a81](https://github.com/shardis/shardis/commit/e1c8a81))
+* **frontend:** update typescript to 2.3.1 ([f162c59](https://github.com/shardis/shardis/commit/f162c59))
+* **frontend:** update typescript to 2.3.2 ([ed790bd](https://github.com/shardis/shardis/commit/ed790bd))
+* **frontend:** update yarn to 0.23.3 ([97b5140](https://github.com/shardis/shardis/commit/97b5140))
+* **frontend:** update yarn to 0.23.4 ([fd07ef6](https://github.com/shardis/shardis/commit/fd07ef6))
+
+
+
 <a name="0.0.9"></a>
 ## [0.0.9](https://github.com/shardis/shardis/compare/v0.0.8...v0.0.9) (2017-04-22)
 
