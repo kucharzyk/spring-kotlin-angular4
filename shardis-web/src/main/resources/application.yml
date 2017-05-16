@@ -24,8 +24,6 @@ server:
 spring:
   application:
     name: shardis
-  aop:
-    proxy-target-class: true
   jackson:
     serialization:
       write-dates-as-timestamps: false
