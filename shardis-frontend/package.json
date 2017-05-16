@@ -27,7 +27,7 @@
     "@ngrx/router-store": "1.2.6",
     "@ngrx/store": "2.2.2",
     "@ngrx/store-devtools": "3.2.4",
-    "@webcomponents/custom-elements": "1.0.0-alpha.3",
+    "@webcomponents/custom-elements": "1.0.0-rc.3",
     "clarity-angular": "0.9.4-patch",
     "clarity-icons": "0.9.4-patch",
     "clarity-ui": "0.9.4-patch",
