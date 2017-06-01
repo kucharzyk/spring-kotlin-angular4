@@ -3730,9 +3730,9 @@ ngrx-store-freeze@0.1.9:
   dependencies:
     deep-freeze-strict "^1.1.1"
 
-ngrx-store-localstorage@0.1.7:
-  version "0.1.7"
-  resolved "https://registry.yarnpkg.com/ngrx-store-localstorage/-/ngrx-store-localstorage-0.1.7.tgz#868b7f5e420cf459387f2e9c8f8090c6a02ef223"
+ngrx-store-localstorage@0.1.8:
+  version "0.1.8"
+  resolved "https://registry.yarnpkg.com/ngrx-store-localstorage/-/ngrx-store-localstorage-0.1.8.tgz#21a44ec661c4a47f9137cb5c451a928baa2503ca"
 
 ngx-webstorage@1.8.0:
   version "1.8.0"
