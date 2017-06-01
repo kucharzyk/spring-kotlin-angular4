@@ -1,3 +1,27 @@
+<a name="0.1.1"></a>
+## [0.1.1](https://github.com/shardis/shardis/compare/v0.1.0...v0.1.1) (2017-06-01)
+
+
+### Features
+
+* **frontend:** update angular to 4.1.2 ([12218d4](https://github.com/shardis/shardis/commit/12218d4))
+* **frontend:** update angular to 4.1.3 ([5550830](https://github.com/shardis/shardis/commit/5550830))
+* **frontend:** update angular-cli to 1.0.3 ([d423376](https://github.com/shardis/shardis/commit/d423376))
+* **frontend:** update angular-cli to 1.0.4 ([856cb58](https://github.com/shardis/shardis/commit/856cb58))
+* **frontend:** update angular-cli to 1.0.6 ([430a18e](https://github.com/shardis/shardis/commit/430a18e))
+* **frontend:** update angular-cli to 1.1.0 ([603e011](https://github.com/shardis/shardis/commit/603e011))
+* **frontend:** update clarity to 0.9.4-patch ([cc0a2ed](https://github.com/shardis/shardis/commit/cc0a2ed))
+* **frontend:** update clarity to 0.9.5 ([d9dade4](https://github.com/shardis/shardis/commit/d9dade4))
+* **frontend:** update clarity to 0.9.6 ([d7c9a29](https://github.com/shardis/shardis/commit/d7c9a29))
+* **frontend:** update clarity to 0.9.7 ([3ad78da](https://github.com/shardis/shardis/commit/3ad78da))
+* **frontend:** update ngrx-store-localstorage to 0.1.8 ([05ea2cd](https://github.com/shardis/shardis/commit/05ea2cd))
+* **frontend:** update typescript to 2.3.3 ([dbf4465](https://github.com/shardis/shardis/commit/dbf4465))
+* **frontend:** update typescript to 2.3.4 ([751120b](https://github.com/shardis/shardis/commit/751120b))
+* **frontend:** update yarn to 0.24.4 ([3d3f7e6](https://github.com/shardis/shardis/commit/3d3f7e6))
+* **frontend:** update yarn to 0.24.5 ([c658032](https://github.com/shardis/shardis/commit/c658032))
+
+
+
 <a name="0.1.0"></a>
 # [0.1.0](https://github.com/shardis/shardis/compare/v0.0.9...v0.1.0) (2017-05-07)
 
