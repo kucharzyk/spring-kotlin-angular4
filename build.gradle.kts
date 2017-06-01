@@ -8,7 +8,7 @@ import org.jetbrains.kotlin.noarg.gradle.NoArgExtension
 allprojects {
 
   group = "com.shardis"
-  version = "0.1.1"
+  version = "0.1.2-SNAPSHOT"
 
   repositories {
     mavenCentral()
