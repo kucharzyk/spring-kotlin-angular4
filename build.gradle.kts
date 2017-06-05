@@ -112,7 +112,7 @@ subprojects {
     val kotlinVersion = parent.extra.get("kotlinVersion")
     val jacksonVersion = the<DependencyManagementExtension>().importedProperties["jackson.version"]
     val querydslVersion = the<DependencyManagementExtension>().importedProperties["querydsl.version"]
-    val axonVersion = "3.0.2"
+    val axonVersion = "3.0.5"
     val jjwtVersion = "0.7.0"
     val reflectionsVersion = "0.9.11"
 
