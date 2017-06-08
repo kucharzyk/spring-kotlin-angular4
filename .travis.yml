@@ -1,8 +1,6 @@
 sudo: false
 dist: trusty
 language: java
-node_js:
-  - "7"
 jdk:
   - oraclejdk8
 env:
