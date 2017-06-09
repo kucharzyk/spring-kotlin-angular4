@@ -19,7 +19,7 @@ allprojects {
 buildscript {
 
   val kotlinVersion = "1.1.2"
-  val springBootVersion = "1.5.3.RELEASE"
+  val springBootVersion = "1.5.4.RELEASE"
   val gradleNodePluginVersion = "1.1.1"
   val dependencyManagementVersion = "1.0.3.RELEASE"
 
