@@ -920,6 +920,10 @@ clarity-ui@0.9.8:
   version "0.9.8"
   resolved "https://registry.yarnpkg.com/clarity-ui/-/clarity-ui-0.9.8.tgz#b0302be53870aabb5363e22e4771e661bbd19b01"
 
+classlist.js@1.1.20150312:
+  version "1.1.20150312"
+  resolved "https://registry.yarnpkg.com/classlist.js/-/classlist.js-1.1.20150312.tgz#1d70842f7022f08d9ac086ce69e5b250f2c57789"
+
 clean-css@4.1.x:
   version "4.1.3"
   resolved "https://registry.yarnpkg.com/clean-css/-/clean-css-4.1.3.tgz#07cfe8980edb20d455ddc23aadcf1e04c6e509ce"
@@ -2728,6 +2732,10 @@ inquirer@^3.0.0, inquirer@^3.0.1:
 interpret@^1.0.0:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/interpret/-/interpret-1.0.3.tgz#cbc35c62eeee73f19ab7b10a801511401afc0f90"
+
+intl@1.2.5:
+  version "1.2.5"
+  resolved "https://registry.yarnpkg.com/intl/-/intl-1.2.5.tgz#82244a2190c4e419f8371f5aa34daa3420e2abde"
 
 invariant@^2.2.0:
   version "2.2.2"
