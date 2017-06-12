@@ -59,6 +59,10 @@ describe('MainViewComponent', () => {
   }));
 
   it('should render title in a h1 tag', async(() => {
-    expect(element.querySelector('h1').textContent).toContain('shardis works!');
+    const h1 = element.querySelector('h1');
+    expect(h1).toBeTruthy();
+    if (!!h1) {
+      expect(h1.textContent).toContain('shardis works!');
+    }
   }));
 });

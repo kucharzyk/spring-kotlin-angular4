@@ -12,8 +12,8 @@ import {routerActions} from '@ngrx/router-store';
 
 describe('Effects: Auth', () => {
 
-  let runner: EffectsRunner = null;
-  let authEffects: AuthEffects = null;
+  let runner: EffectsRunner;
+  let authEffects: AuthEffects;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
