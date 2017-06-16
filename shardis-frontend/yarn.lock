@@ -110,6 +110,12 @@
   dependencies:
     tslib "^1.7.1"
 
+"@angular/language-service@4.2.3":
+  version "4.2.3"
+  resolved "https://registry.yarnpkg.com/@angular/language-service/-/language-service-4.2.3.tgz#f31515c53d86b77c89a1ca449cc3c36e5e204200"
+  dependencies:
+    tslib "^1.7.1"
+
 "@angular/platform-browser-dynamic@4.2.3":
   version "4.2.3"
   resolved "https://registry.yarnpkg.com/@angular/platform-browser-dynamic/-/platform-browser-dynamic-4.2.3.tgz#87ce41f5779d31cbc68c71db6bfeba216d135554"
@@ -4880,10 +4886,6 @@ requires-port@1.0.x, requires-port@1.x.x:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/requires-port/-/requires-port-1.0.0.tgz#925d2601d39ac485e091cf0da5c6e694dc3dcaff"
 
-reselect@3.0.1:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/reselect/-/reselect-3.0.1.tgz#efdaa98ea7451324d092b2b2163a6a1d7a9a2147"
-
 resolve@^1.1.6, resolve@^1.1.7, resolve@^1.3.2:
   version "1.3.3"
   resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.3.3.tgz#655907c3469a8680dc2de3a275a8fdd69691f0e5"
@@ -5604,10 +5606,6 @@ trim-off-newlines@^1.0.0:
 trim-right@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/trim-right/-/trim-right-1.0.1.tgz#cb2e1203067e0c8de1f614094b9fe45704ea6003"
-
-ts-helpers@1.1.2:
-  version "1.1.2"
-  resolved "https://registry.yarnpkg.com/ts-helpers/-/ts-helpers-1.1.2.tgz#fc69be9f1f3baed01fb1a0ef8d4cfe748814d835"
 
 ts-node@3.0.6:
   version "3.0.6"
