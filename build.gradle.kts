@@ -20,7 +20,7 @@ buildscript {
 
   val kotlinVersion = "1.1.2"
   val springBootVersion = "1.5.4.RELEASE"
-  val gradleNodePluginVersion = "1.1.1"
+  val gradleNodePluginVersion = "1.2.0"
   val dependencyManagementVersion = "1.0.3.RELEASE"
 
   project.extra.set("kotlinVersion", kotlinVersion)
