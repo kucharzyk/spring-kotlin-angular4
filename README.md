@@ -65,27 +65,30 @@ cd shardis-frontend
 
 ## Changelog
 
-<a name="0.1.1"></a>
-## [0.1.1](https://github.com/shardis/shardis/compare/v0.1.0...v0.1.1) (2017-06-01)
+<a name="0.1.2"></a>
+## [0.1.2](https://github.com/shardis/shardis/compare/v0.1.1...v0.1.2) (2017-06-17)
 
 
 ### Features
 
-* **frontend:** update angular to 4.1.2 ([12218d4](https://github.com/shardis/shardis/commit/12218d4))
-* **frontend:** update angular to 4.1.3 ([5550830](https://github.com/shardis/shardis/commit/5550830))
-* **frontend:** update angular-cli to 1.0.3 ([d423376](https://github.com/shardis/shardis/commit/d423376))
-* **frontend:** update angular-cli to 1.0.4 ([856cb58](https://github.com/shardis/shardis/commit/856cb58))
-* **frontend:** update angular-cli to 1.0.6 ([430a18e](https://github.com/shardis/shardis/commit/430a18e))
-* **frontend:** update angular-cli to 1.1.0 ([603e011](https://github.com/shardis/shardis/commit/603e011))
-* **frontend:** update clarity to 0.9.4-patch ([cc0a2ed](https://github.com/shardis/shardis/commit/cc0a2ed))
-* **frontend:** update clarity to 0.9.5 ([d9dade4](https://github.com/shardis/shardis/commit/d9dade4))
-* **frontend:** update clarity to 0.9.6 ([d7c9a29](https://github.com/shardis/shardis/commit/d7c9a29))
-* **frontend:** update clarity to 0.9.7 ([3ad78da](https://github.com/shardis/shardis/commit/3ad78da))
-* **frontend:** update ngrx-store-localstorage to 0.1.8 ([05ea2cd](https://github.com/shardis/shardis/commit/05ea2cd))
-* **frontend:** update typescript to 2.3.3 ([dbf4465](https://github.com/shardis/shardis/commit/dbf4465))
-* **frontend:** update typescript to 2.3.4 ([751120b](https://github.com/shardis/shardis/commit/751120b))
-* **frontend:** update yarn to 0.24.4 ([3d3f7e6](https://github.com/shardis/shardis/commit/3d3f7e6))
-* **frontend:** update yarn to 0.24.5 ([c658032](https://github.com/shardis/shardis/commit/c658032))
+* **axon:** update axon framework to 3.0.5 ([c4ec75b](https://github.com/shardis/shardis/commit/c4ec75b))
+* **core:** update gradle dependency management plugin to 1.0.3.RELEASE ([1265775](https://github.com/shardis/shardis/commit/1265775))
+* **core:** update gradle node plugin to 1.2.0 ([0181280](https://github.com/shardis/shardis/commit/0181280))
+* **core:** update gradle to 4.0 ([5bbcdf8](https://github.com/shardis/shardis/commit/5bbcdf8))
+* **core:** update spring-boot to 1.5.4.RELEASE ([1780e5e](https://github.com/shardis/shardis/commit/1780e5e))
+* **frontend:** add intl and classlist.js polyfills ([18b1f67](https://github.com/shardis/shardis/commit/18b1f67))
+* **frontend:** add some strict typescript options ([43fc837](https://github.com/shardis/shardis/commit/43fc837))
+* **frontend:** enable strict null check ([8a3a069](https://github.com/shardis/shardis/commit/8a3a069))
+* **frontend:** package.json cleanup ([0da9361](https://github.com/shardis/shardis/commit/0da9361))
+* **frontend:** update angular to 4.2.2 ([74010af](https://github.com/shardis/shardis/commit/74010af))
+* **frontend:** update angular to 4.2.3 ([d5cdd28](https://github.com/shardis/shardis/commit/d5cdd28))
+* **frontend:** update angular-cli to 1.1.1 ([83bf299](https://github.com/shardis/shardis/commit/83bf299))
+* **frontend:** update angular-cli to 1.1.2 ([c9e6966](https://github.com/shardis/shardis/commit/c9e6966))
+* **frontend:** update clarity to 0.9.8 ([c8e4791](https://github.com/shardis/shardis/commit/c8e4791))
+* **frontend:** update clarity to 0.9.9 ([99009c8](https://github.com/shardis/shardis/commit/99009c8))
+* **frontend:** update node to 8.0.0 ([9166afa](https://github.com/shardis/shardis/commit/9166afa))
+* **frontend:** update node to 8.1.0 ([ec3fde7](https://github.com/shardis/shardis/commit/ec3fde7))
+* **frontend:** update node to 8.1.2 ([f2bf23b](https://github.com/shardis/shardis/commit/f2bf23b))
 
 
 [CHANGELOG.md](CHANGELOG.md)

@@ -8,7 +8,7 @@ import org.jetbrains.kotlin.noarg.gradle.NoArgExtension
 allprojects {
 
   group = "com.shardis"
-  version = "0.1.2-SNAPSHOT"
+  version = "0.1.2"
 
   repositories {
     mavenCentral()
@@ -87,7 +87,7 @@ subprojects {
   tasks.withType<JacocoReport> {
     reports.apply {
       html.isEnabled = true
-      html.setDestination(file("${project.buildDir}/jacocoHtml"))
+      html.destination = file("${project.buildDir}/jacocoHtml")
       xml.isEnabled = true
     }
   }
