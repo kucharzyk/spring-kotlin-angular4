@@ -27,9 +27,9 @@ This project is still a work in progress
 
 ## Gradle tasks
 
-### Running Spring Boot app
+### Running Spring Boot webapp
 ```
-./gradlew shardis-web:bootRun 
+./gradlew shardis-webapp:bootRun 
 ```
 
 ### Production build
