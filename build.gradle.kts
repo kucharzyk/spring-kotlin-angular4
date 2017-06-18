@@ -12,6 +12,7 @@ allprojects {
 
   repositories {
     mavenCentral()
+    maven { setUrl("https://repo.spring.io/milestone") }
   }
 
 }
@@ -19,7 +20,7 @@ allprojects {
 buildscript {
 
   val kotlinVersion = "1.1.2"
-  val springBootVersion = "1.5.4.RELEASE"
+  val springBootVersion = "2.0.0.M2"
   val gradleNodePluginVersion = "1.2.0"
   val dependencyManagementVersion = "1.0.3.RELEASE"
 
@@ -29,6 +30,7 @@ buildscript {
   repositories {
     mavenCentral()
     maven { setUrl("https://plugins.gradle.org/m2/") }
+    maven { setUrl("https://repo.spring.io/milestone") }
   }
 
   dependencies {
@@ -71,7 +73,7 @@ subprojects {
   configure<JavaPluginConvention> {
     setSourceCompatibility(1.8)
     setTargetCompatibility(1.8)
-    sourceSets.getByName("main").java.srcDirs("${project.buildDir}/generated/source/kapt/")
+    sourceSets.getByName("main").java.srcDirs("${project.buildDir}/generated/source/kapt/main/")
   }
 
   configure<NoArgExtension> {

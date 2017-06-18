@@ -4,7 +4,6 @@ import com.shardis.ShardisProperties
 import com.shardis.query.domain.JwtToken
 import com.shardis.query.repositories.JwtTokenRepository
 import com.shardis.query.repositories.UserRepository
-import com.shardis.support.extensions.toDate
 import com.shardis.support.security.ShardisUserDetails
 import io.jsonwebtoken.Jwts
 import io.jsonwebtoken.SignatureAlgorithm
@@ -15,7 +14,7 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.core.Authentication
 import org.springframework.security.core.authority.SimpleGrantedAuthority
 import org.springframework.stereotype.Service
-import java.time.ZonedDateTime
+import java.util.*
 import javax.servlet.http.HttpServletRequest
 
 @Service
@@ -37,15 +36,15 @@ open class JwtTokenAuthService(
             .map({ authority -> authority.authority })
             .joinToString(separator = ",")
 
-        val now = ZonedDateTime.now()
-        val validity: ZonedDateTime = if (rememberMe) {
-            now.plusSeconds(shardisProperties.security.tokenValidityInSecondsForRememberMe)
+        val now = Date()
+        val validity: Date = if (rememberMe) {
+            Date(now.time + shardisProperties.security.tokenValidityInSecondsForRememberMe * 1000)
         } else {
-            now.plusSeconds(shardisProperties.security.tokenValidityInSeconds)
+            Date(now.time + shardisProperties.security.tokenValidityInSeconds * 1000)
         }
 
         val userDetails = authentication.principal as ShardisUserDetails
-        val loggedUser = userRepository.findOne(userDetails.userId)
+        val loggedUser = userRepository.findById(userDetails.userId)
 
         val jwtToken = JwtToken(
             active = true,
@@ -53,16 +52,16 @@ open class JwtTokenAuthService(
             invalidated = false,
             invalidationDate = null,
             ipAdress = request.remoteAddr,
-            user = loggedUser
+            user = loggedUser.orElse(null)
         )
 
         jwtTokenRepository.save(jwtToken)
 
         return Jwts.builder()
             .setId(jwtToken.id.toString())
-            .setIssuedAt(now.toDate())
-            .setNotBefore(now.toDate())
-            .setExpiration(validity.toDate())
+            .setIssuedAt(now)
+            .setNotBefore(now)
+            .setExpiration(validity)
             .setIssuer("Shardis")
             .setSubject(authentication.name)
             .claim(USER_ID_FIELD, userDetails.userId)
@@ -91,8 +90,10 @@ open class JwtTokenAuthService(
             val claims = Jwts.parser().setSigningKey(shardisProperties.security.jwtSecret).parseClaimsJws(authToken)
             val tokenId: Long? = claims.body.id?.toLong()
             tokenId?.let {
-                val jwtToken = jwtTokenRepository.findOne(tokenId)
-                return jwtToken.active && !jwtToken.invalidated
+                val jwtToken = jwtTokenRepository.findById(tokenId)
+                if(jwtToken.isPresent) {
+                    return jwtToken.get().active && !jwtToken.get().invalidated
+                }
             }
             return false
         } catch (e: SignatureException) {
