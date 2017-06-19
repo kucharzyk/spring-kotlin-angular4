@@ -1,11 +1,9 @@
 package com.shardis.query.domain
 
-import org.hibernate.envers.Audited
 import java.util.*
 import javax.persistence.*
 
 @Entity
-@Audited
 @Table(name = "jwt_tokens")
 @SequenceGenerator(allocationSize = 1, name = "sequenceIdGenerator", sequenceName = "sequence_jwt_tokens")
 class JwtToken(
@@ -15,4 +13,4 @@ class JwtToken(
     @Column(nullable = false) var active: Boolean = true,
     @Column(nullable = false) var invalidated: Boolean = false,
     @Column(nullable = true) var invalidationDate: Date? = null
-) : AuditedEntity()
+) : BaseEntity()

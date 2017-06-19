@@ -1,10 +1,8 @@
 package com.shardis.query.domain
 
-import org.hibernate.envers.Audited
 import javax.persistence.*
 
 @Entity
-@Audited
 @Table(name = "users")
 @SequenceGenerator(allocationSize = 1, name = "sequenceIdGenerator", sequenceName = "sequence_users")
 class User(
@@ -17,4 +15,4 @@ class User(
     @Column(nullable = false) var expired: Boolean,
     @Column(nullable = false) var locked: Boolean,
     @ManyToMany(fetch = FetchType.LAZY) var roles: MutableSet<Role> = mutableSetOf()
-) : AuditedEntity()
+) : BaseEntity()

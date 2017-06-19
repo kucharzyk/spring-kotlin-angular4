@@ -137,7 +137,6 @@ subprojects {
     compile("org.axonframework:axon-spring-boot-starter:$axonVersion")
 
     compile("org.hibernate:hibernate-java8")
-    compile("org.hibernate:hibernate-envers")
 
     compile("com.querydsl:querydsl-jpa:$querydslVersion")
 
