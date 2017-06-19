@@ -920,19 +920,19 @@ clap@^1.0.9:
   dependencies:
     chalk "^1.1.3"
 
-clarity-angular@0.9.9:
-  version "0.9.9"
-  resolved "https://registry.yarnpkg.com/clarity-angular/-/clarity-angular-0.9.9.tgz#887c9e478f76d5304c03e9b1cf121f26b962f3b7"
+clarity-angular@0.10.0-alpha:
+  version "0.10.0-alpha"
+  resolved "https://registry.yarnpkg.com/clarity-angular/-/clarity-angular-0.10.0-alpha.tgz#ecab100c92228b10e9b8df40c5fc9aa879c6193e"
 
-clarity-icons@0.9.9:
-  version "0.9.9"
-  resolved "https://registry.yarnpkg.com/clarity-icons/-/clarity-icons-0.9.9.tgz#fb3b507031faddc496bfecc13ab0aa9428c85979"
+clarity-icons@0.10.0-alpha:
+  version "0.10.0-alpha"
+  resolved "https://registry.yarnpkg.com/clarity-icons/-/clarity-icons-0.10.0-alpha.tgz#5e534c81143829033b1503be57b70e63136c527b"
   dependencies:
     dompurify "^0.9.0"
 
-clarity-ui@0.9.9:
-  version "0.9.9"
-  resolved "https://registry.yarnpkg.com/clarity-ui/-/clarity-ui-0.9.9.tgz#ed04eb32db5a3b9a8b9143ed352b42dc9f4c0231"
+clarity-ui@0.10.0-alpha:
+  version "0.10.0-alpha"
+  resolved "https://registry.yarnpkg.com/clarity-ui/-/clarity-ui-0.10.0-alpha.tgz#cc12c77af94d527c1b8a3cfa7aee0e152d4261fe"
 
 classlist.js@1.1.20150312:
   version "1.1.20150312"
@@ -2337,18 +2337,7 @@ glob@7.0.x:
     once "^1.3.0"
     path-is-absolute "^1.0.0"
 
-glob@^7.0.0, glob@^7.0.3, glob@^7.0.5, glob@^7.0.6, glob@^7.1.1, glob@~7.1.1:
-  version "7.1.1"
-  resolved "https://registry.yarnpkg.com/glob/-/glob-7.1.1.tgz#805211df04faaf1c63a3600306cdf5ade50b2ec8"
-  dependencies:
-    fs.realpath "^1.0.0"
-    inflight "^1.0.4"
-    inherits "2"
-    minimatch "^3.0.2"
-    once "^1.3.0"
-    path-is-absolute "^1.0.0"
-
-glob@^7.1.2:
+glob@^7.0.0, glob@^7.0.5, glob@^7.0.6, glob@^7.1.1, glob@^7.1.2, glob@~7.1.1:
   version "7.1.2"
   resolved "https://registry.yarnpkg.com/glob/-/glob-7.1.2.tgz#c19c9df9a028702d678612384a6552404c636d15"
   dependencies:
@@ -2356,6 +2345,17 @@ glob@^7.1.2:
     inflight "^1.0.4"
     inherits "2"
     minimatch "^3.0.4"
+    once "^1.3.0"
+    path-is-absolute "^1.0.0"
+
+glob@^7.0.3:
+  version "7.1.1"
+  resolved "https://registry.yarnpkg.com/glob/-/glob-7.1.1.tgz#805211df04faaf1c63a3600306cdf5ade50b2ec8"
+  dependencies:
+    fs.realpath "^1.0.0"
+    inflight "^1.0.4"
+    inherits "2"
+    minimatch "^3.0.2"
     once "^1.3.0"
     path-is-absolute "^1.0.0"
 
@@ -2448,19 +2448,9 @@ handlebars@^1.3.0:
   optionalDependencies:
     uglify-js "~2.3"
 
-handlebars@^4.0.10:
+handlebars@^4.0.10, handlebars@^4.0.2, handlebars@^4.0.3:
   version "4.0.10"
   resolved "https://registry.yarnpkg.com/handlebars/-/handlebars-4.0.10.tgz#3d30c718b09a3d96f23ea4cc1f403c4d3ba9ff4f"
-  dependencies:
-    async "^1.4.0"
-    optimist "^0.6.1"
-    source-map "^0.4.4"
-  optionalDependencies:
-    uglify-js "^2.6"
-
-handlebars@^4.0.2, handlebars@^4.0.3:
-  version "4.0.8"
-  resolved "https://registry.yarnpkg.com/handlebars/-/handlebars-4.0.8.tgz#22b875cd3f0e6cbea30314f144e82bc7a72ff420"
   dependencies:
     async "^1.4.0"
     optimist "^0.6.1"
