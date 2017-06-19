@@ -1,6 +1,6 @@
-package com.shardis.webapp.query.repositories
+package com.shardis.query.repositories
 
-import com.shardis.webapp.query.domain.Role
+import com.shardis.query.domain.Role
 import org.springframework.data.repository.CrudRepository
 import org.springframework.stereotype.Repository
 

@@ -10,5 +10,6 @@ def configureGradleScriptKotlinOn(ProjectDescriptor project) {
 include 'shardis-webapp'
 include 'shardis-frontend'
 include 'shardis-common'
+include 'shardis-query'
 
 configureGradleScriptKotlinOn rootProject

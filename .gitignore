@@ -50,3 +50,6 @@ nbdist/
 
 ### shardis-common ###
 /shardis-common/build/
+
+### shardis-query ###
+/shardis-query/build/

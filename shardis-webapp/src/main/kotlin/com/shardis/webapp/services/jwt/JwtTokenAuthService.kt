@@ -1,9 +1,9 @@
 package com.shardis.webapp.services.jwt
 
 import com.shardis.webapp.ShardisProperties
-import com.shardis.webapp.query.domain.JwtToken
-import com.shardis.webapp.query.repositories.JwtTokenRepository
-import com.shardis.webapp.query.repositories.UserRepository
+import com.shardis.query.domain.JwtToken
+import com.shardis.query.repositories.JwtTokenRepository
+import com.shardis.query.repositories.UserRepository
 import com.shardis.webapp.support.security.ShardisUserDetails
 import io.jsonwebtoken.Jwts
 import io.jsonwebtoken.SignatureAlgorithm

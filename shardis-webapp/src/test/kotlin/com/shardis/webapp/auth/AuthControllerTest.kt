@@ -19,7 +19,7 @@ import org.springframework.web.context.WebApplicationContext
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.MOCK)
 @RunWith(SpringRunner::class)
-class AuthControllerTests {
+class AuthControllerTest {
 
     @Autowired
     private lateinit var context: WebApplicationContext

@@ -7,6 +7,7 @@ apply {
 
 dependencies {
   compile(project(":shardis-common"))
+  compile(project(":shardis-query"))
   compile(project(":shardis-frontend"))
 }
 

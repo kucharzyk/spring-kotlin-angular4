@@ -1,4 +1,4 @@
-package com.shardis.webapp.query.domain
+package com.shardis.query.domain
 
 import java.util.*
 import javax.persistence.*

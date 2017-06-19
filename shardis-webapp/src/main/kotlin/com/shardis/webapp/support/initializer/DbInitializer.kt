@@ -1,11 +1,11 @@
 package com.shardis.webapp.support.initializer
 
-import com.shardis.webapp.query.domain.Permission
-import com.shardis.webapp.query.domain.Role
-import com.shardis.webapp.query.domain.User
-import com.shardis.webapp.query.repositories.PermissionRepository
-import com.shardis.webapp.query.repositories.RoleRepository
-import com.shardis.webapp.query.repositories.UserRepository
+import com.shardis.query.domain.Permission
+import com.shardis.query.domain.Role
+import com.shardis.query.domain.User
+import com.shardis.query.repositories.PermissionRepository
+import com.shardis.query.repositories.RoleRepository
+import com.shardis.query.repositories.UserRepository
 import org.slf4j.LoggerFactory
 import org.springframework.security.crypto.password.PasswordEncoder
 import org.springframework.stereotype.Component

@@ -1,8 +1,8 @@
 package com.shardis.webapp.services.security
 
-import com.shardis.webapp.query.domain.Role
-import com.shardis.webapp.query.domain.User
-import com.shardis.webapp.query.repositories.UserRepository
+import com.shardis.query.domain.Role
+import com.shardis.query.domain.User
+import com.shardis.query.repositories.UserRepository
 import com.shardis.webapp.support.security.ShardisUserDetails
 import org.springframework.security.core.GrantedAuthority
 import org.springframework.security.core.userdetails.UserDetails
