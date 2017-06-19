@@ -1,4 +1,4 @@
-package com.shardis.webapp
+package com.shardis.core.config.properties.support
 
 import org.springframework.boot.context.properties.ConfigurationProperties
 import org.springframework.stereotype.Component

@@ -1,5 +1,6 @@
 package com.shardis.webapp
 
+import com.shardis.core.config.properties.support.ShardisProperties
 import org.junit.After
 import org.junit.Assert.*
 import org.junit.Before

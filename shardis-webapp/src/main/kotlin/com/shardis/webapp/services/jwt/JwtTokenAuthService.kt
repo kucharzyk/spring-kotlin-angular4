@@ -1,6 +1,6 @@
 package com.shardis.webapp.services.jwt
 
-import com.shardis.webapp.ShardisProperties
+import com.shardis.core.config.properties.support.ShardisProperties
 import com.shardis.query.domain.JwtToken
 import com.shardis.query.repositories.JwtTokenRepository
 import com.shardis.query.repositories.UserRepository

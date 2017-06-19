@@ -48,8 +48,8 @@ nbdist/
 ### shardis-webapp ###
 /shardis-webapp/build/
 
-### shardis-common ###
-/shardis-common/build/
+### shardis-core ###
+/shardis-core/build/
 
 ### shardis-query ###
 /shardis-query/build/

@@ -1,6 +1,6 @@
 package com.shardis.webapp.config
 
-import com.shardis.webapp.ShardisProperties
+import com.shardis.core.config.properties.support.ShardisProperties
 import com.shardis.webapp.services.jwt.JwtTokenAuthService
 import com.shardis.webapp.services.security.ShardisUserDetailsService
 import com.shardis.webapp.support.security.filters.JwtAuthenticationTokenFilter

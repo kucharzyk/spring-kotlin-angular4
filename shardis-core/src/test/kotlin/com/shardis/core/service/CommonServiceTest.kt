@@ -1,4 +1,4 @@
-package com.shardis.common
+package com.shardis.core.service
 
 import org.junit.Test
 import org.junit.runner.RunWith

@@ -1,6 +1,6 @@
 package com.shardis.webapp.support.security.filters
 
-import com.shardis.webapp.ShardisProperties
+import com.shardis.core.config.properties.support.ShardisProperties
 import com.shardis.webapp.services.jwt.JwtTokenAuthService
 import io.jsonwebtoken.ExpiredJwtException
 import org.slf4j.Logger

@@ -1,6 +1,6 @@
 package com.shardis.webapp.auth
 
-import com.shardis.webapp.ShardisProperties
+import com.shardis.core.config.properties.support.ShardisProperties
 import org.junit.Assert
 import org.junit.Before
 import org.junit.Test

@@ -1,14 +1,14 @@
-package com.shardis.webapp.config
+package com.shardis.core.config.resources
 
-import com.shardis.webapp.support.view.resolvers.PushStateResourceResolver
+import com.shardis.core.config.resources.support.PushStateResourceResolver
 import org.springframework.context.annotation.Configuration
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer
 
 import java.util.concurrent.TimeUnit
 
 @Configuration
-open class ViewConfig : WebMvcConfigurerAdapter() {
+open class ViewConfig : WebMvcConfigurer {
 
     override fun addResourceHandlers(registry: ResourceHandlerRegistry) {
         registry

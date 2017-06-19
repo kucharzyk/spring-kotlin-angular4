@@ -1,4 +1,4 @@
-package com.shardis.webapp.support.view.resolvers
+package com.shardis.core.config.resources.support
 
 import org.springframework.core.io.ClassPathResource
 import org.springframework.core.io.Resource

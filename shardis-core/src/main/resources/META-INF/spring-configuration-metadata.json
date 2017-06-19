@@ -1,0 +1,55 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "com.shardis.core.config.properties.support.ShardisProperties",
+      "name": "shardis",
+      "type": "com.shardis.core.config.properties.support.ShardisProperties"
+    },
+    {
+      "sourceType": "com.shardis.core.config.properties.support.ShardisProperties",
+      "name": "shardis.security",
+      "sourceMethod": "getSecurity()",
+      "type": "com.shardis.core.config.properties.support.ShardisProperties$Security"
+    }
+  ],
+  "properties": [
+    {
+      "sourceType": "com.shardis.core.config.properties.support.ShardisProperties$Security",
+      "name": "shardis.security.header",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.shardis.core.config.properties.support.ShardisProperties$Security",
+      "name": "shardis.security.jwt-secret",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.shardis.core.config.properties.support.ShardisProperties$Security",
+      "name": "shardis.security.parameter",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.shardis.core.config.properties.support.ShardisProperties$Security",
+      "name": "shardis.security.password-secret",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.shardis.core.config.properties.support.ShardisProperties$Security",
+      "defaultValue": 0,
+      "name": "shardis.security.token-validity-in-seconds",
+      "type": "java.lang.Long"
+    },
+    {
+      "sourceType": "com.shardis.core.config.properties.support.ShardisProperties$Security",
+      "defaultValue": 0,
+      "name": "shardis.security.token-validity-in-seconds-for-remember-me",
+      "type": "java.lang.Long"
+    },
+    {
+      "sourceType": "com.shardis.core.config.properties.support.ShardisProperties",
+      "name": "shardis.version",
+      "type": "java.lang.String"
+    }
+  ]
+}

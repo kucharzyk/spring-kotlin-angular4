@@ -25,7 +25,7 @@ class SchemaExporterTest {
             listOf("org.axonframework.eventsourcing.eventstore.jpa",
                 "org.axonframework.eventhandling.saga.repository.jpa",
                 "org.axonframework.eventhandling.tokenstore.jpa",
-                "com.shardis.common",
+                "com.shardis.core",
                 "com.shardis.query",
                 "com.shardis.webapp"),
             env.getProperty("spring.jpa.hibernate.naming.implicit-strategy"),
