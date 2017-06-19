@@ -1,5 +1,6 @@
 import io.spring.gradle.dependencymanagement.dsl.DependencyManagementExtension
 import org.gradle.api.tasks.testing.Test
+import org.gradle.api.tasks.testing.logging.TestExceptionFormat
 import org.gradle.testing.jacoco.tasks.JacocoReport
 import org.jetbrains.kotlin.allopen.gradle.AllOpenExtension
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
@@ -96,9 +97,8 @@ subprojects {
 
 
   tasks.withType<Test> {
-    testLogging.apply {
-      events("passed", "skipped", "failed", "standardOut", "standardError")
-    }
+      testLogging.showStandardStreams = true
+      testLogging.exceptionFormat = TestExceptionFormat.FULL
   }
 
 
@@ -137,6 +137,8 @@ subprojects {
     compile("org.axonframework:axon-spring-boot-starter:$axonVersion")
 
     compile("org.hibernate:hibernate-java8")
+
+    compile("com.google.guava:guava")
 
     compile("com.querydsl:querydsl-jpa:$querydslVersion")
 
