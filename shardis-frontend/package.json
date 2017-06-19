@@ -63,7 +63,7 @@
     "ts-node": "3.0.6",
     "tslint": "5.4.3",
     "typescript": "2.3.4",
-    "yarn": "0.24.5"
+    "yarn": "0.24.6"
   },
   "scripts": {
     "clean": "yarn cache clean && rimraf coverage src/main/resources/static/*",
