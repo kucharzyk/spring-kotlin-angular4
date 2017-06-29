@@ -214,9 +214,9 @@
   version "2.5.53"
   resolved "https://registry.yarnpkg.com/@types/jasmine/-/jasmine-2.5.53.tgz#4e0cefad09df5ec48c8dd40433512f84b1568d61"
 
-"@types/node@8.0.4":
-  version "8.0.4"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-8.0.4.tgz#d0ca03fa4a3d7ab66c1f4e78a0fd06e30e46a7a9"
+"@types/node@8.0.6":
+  version "8.0.6"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-8.0.6.tgz#ed2c3e011cb51ccd3cf874989130f1b9ffe06069"
 
 "@types/node@^6.0.46":
   version "6.0.73"
@@ -5627,10 +5627,6 @@ type-is@~1.6.15:
 typescript@2.3.4, "typescript@>=2.0.0 <2.4.0":
   version "2.3.4"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-2.3.4.tgz#3d38321828231e434f287514959c37a82b629f42"
-
-typescript@2.4.1:
-  version "2.4.1"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-2.4.1.tgz#c3ccb16ddaa0b2314de031e7e6fee89e5ba346bc"
 
 uglify-js@3.0.x:
   version "3.0.9"
