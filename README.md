@@ -65,30 +65,29 @@ cd shardis-frontend
 
 ## Changelog
 
-<a name="0.1.2"></a>
-## [0.1.2](https://github.com/shardis/shardis/compare/v0.1.1...v0.1.2) (2017-06-17)
+<a name="0.1.3"></a>
+## [0.1.3](https://github.com/shardis/shardis/compare/v0.1.2...v0.1.3) (2017-06-29)
 
 
 ### Features
 
-* **axon:** update axon framework to 3.0.5 ([c4ec75b](https://github.com/shardis/shardis/commit/c4ec75b))
-* **core:** update gradle dependency management plugin to 1.0.3.RELEASE ([1265775](https://github.com/shardis/shardis/commit/1265775))
-* **core:** update gradle node plugin to 1.2.0 ([0181280](https://github.com/shardis/shardis/commit/0181280))
-* **core:** update gradle to 4.0 ([5bbcdf8](https://github.com/shardis/shardis/commit/5bbcdf8))
-* **core:** update spring-boot to 1.5.4.RELEASE ([1780e5e](https://github.com/shardis/shardis/commit/1780e5e))
-* **frontend:** add intl and classlist.js polyfills ([18b1f67](https://github.com/shardis/shardis/commit/18b1f67))
-* **frontend:** add some strict typescript options ([43fc837](https://github.com/shardis/shardis/commit/43fc837))
-* **frontend:** enable strict null check ([8a3a069](https://github.com/shardis/shardis/commit/8a3a069))
-* **frontend:** package.json cleanup ([0da9361](https://github.com/shardis/shardis/commit/0da9361))
-* **frontend:** update angular to 4.2.2 ([74010af](https://github.com/shardis/shardis/commit/74010af))
-* **frontend:** update angular to 4.2.3 ([d5cdd28](https://github.com/shardis/shardis/commit/d5cdd28))
-* **frontend:** update angular-cli to 1.1.1 ([83bf299](https://github.com/shardis/shardis/commit/83bf299))
-* **frontend:** update angular-cli to 1.1.2 ([c9e6966](https://github.com/shardis/shardis/commit/c9e6966))
-* **frontend:** update clarity to 0.9.8 ([c8e4791](https://github.com/shardis/shardis/commit/c8e4791))
-* **frontend:** update clarity to 0.9.9 ([99009c8](https://github.com/shardis/shardis/commit/99009c8))
-* **frontend:** update node to 8.0.0 ([9166afa](https://github.com/shardis/shardis/commit/9166afa))
-* **frontend:** update node to 8.1.0 ([ec3fde7](https://github.com/shardis/shardis/commit/ec3fde7))
-* **frontend:** update node to 8.1.2 ([f2bf23b](https://github.com/shardis/shardis/commit/f2bf23b))
+* **core:** extract query domain to saparate library ([96d190d](https://github.com/shardis/shardis/commit/96d190d))
+* **core:** remove hibernate-enverse ([28594cd](https://github.com/shardis/shardis/commit/28594cd))
+* **core:** update kotlin to 1.1.2-5 ([7fd5233](https://github.com/shardis/shardis/commit/7fd5233))
+* **core:** update kotlin to 1.1.3 ([5568b1d](https://github.com/shardis/shardis/commit/5568b1d))
+* **core:** update spring boot to 2.0.0.M2 ([35dc176](https://github.com/shardis/shardis/commit/35dc176))
+* **frontend:** update angular to 4.2.4 ([6d946d2](https://github.com/shardis/shardis/commit/6d946d2))
+* **frontend:** update angular-cli to 1.1.3 ([926e4a0](https://github.com/shardis/shardis/commit/926e4a0))
+* **frontend:** update clarity to 0.10.0-alpha ([2fe21a2](https://github.com/shardis/shardis/commit/2fe21a2))
+* **frontend:** update clarity to 0.10.0-alpha.2 ([7d4f5c3](https://github.com/shardis/shardis/commit/7d4f5c3))
+* **frontend:** update node to 8.1.3 ([f09f5df](https://github.com/shardis/shardis/commit/f09f5df))
+* **frontend:** update typescript to 2.4.1 ([e8c0e36](https://github.com/shardis/shardis/commit/e8c0e36))
+* **frontend:** update yarn to 0.24.6 ([d79c6ee](https://github.com/shardis/shardis/commit/d79c6ee))
+
+
+### Reverts
+
+* feat(frontend): update typescript to 2.4.1 ([76b3f9a](https://github.com/shardis/shardis/commit/76b3f9a))
 
 
 [CHANGELOG.md](CHANGELOG.md)
