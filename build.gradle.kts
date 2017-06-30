@@ -24,6 +24,7 @@ buildscript {
   val springBootVersion = "2.0.0.M2"
   val gradleNodePluginVersion = "1.2.0"
   val dependencyManagementVersion = "1.0.3.RELEASE"
+  val uptodatePluginVersion = "1.6.3"
 
   project.extra.set("kotlinVersion", kotlinVersion)
   project.extra.set("springBootVersion", springBootVersion)
@@ -35,6 +36,7 @@ buildscript {
   }
 
   dependencies {
+    classpath("com.ofg:uptodate-gradle-plugin:$uptodatePluginVersion")
     classpath("io.spring.gradle:dependency-management-plugin:$dependencyManagementVersion")
     classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion")
     classpath("org.springframework.boot:spring-boot-gradle-plugin:$springBootVersion")
@@ -59,6 +61,7 @@ subprojects {
     plugin("jacoco")
     plugin("idea")
     plugin("eclipse")
+    plugin("com.ofg.uptodate")
   }
 
 
@@ -164,6 +167,7 @@ subprojects {
   }
 
   tasks.getByName("check").finalizedBy("jacocoTestReport")
+  tasks.getByName("test").finalizedBy("uptodate")
 
 }
 
