@@ -1,3 +1,4 @@
+import com.ofg.uptodate.UptodatePluginExtension
 import io.spring.gradle.dependencymanagement.dsl.DependencyManagementExtension
 import org.gradle.api.tasks.testing.Test
 import org.gradle.api.tasks.testing.logging.TestExceptionFormat
@@ -89,6 +90,10 @@ subprojects {
     annotation("org.axonframework.spring.stereotype.Aggregate")
   }
 
+  configure<UptodatePluginExtension> {
+    reportProjectName = true
+    setExcludedVersionPatterns(".*\\.pr\\d*$")
+  }
 
   tasks.withType<JacocoReport> {
     reports.apply {
