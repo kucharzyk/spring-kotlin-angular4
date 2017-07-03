@@ -26,6 +26,7 @@ buildscript {
   val gradleNodePluginVersion = "1.2.0"
   val dependencyManagementVersion = "1.0.3.RELEASE"
   val uptodatePluginVersion = "1.6.3"
+  val gradleDockerPluginVersion = "3.0.8"
 
   project.extra.set("kotlinVersion", kotlinVersion)
   project.extra.set("springBootVersion", springBootVersion)
@@ -38,6 +39,7 @@ buildscript {
 
   dependencies {
     classpath("com.ofg:uptodate-gradle-plugin:$uptodatePluginVersion")
+    classpath("com.bmuschko:gradle-docker-plugin:$gradleDockerPluginVersion")
     classpath("io.spring.gradle:dependency-management-plugin:$dependencyManagementVersion")
     classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion")
     classpath("org.springframework.boot:spring-boot-gradle-plugin:$springBootVersion")
