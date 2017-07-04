@@ -28,9 +28,7 @@ tasks.withType<ProcessResources> {
   }
 }
 
-task<DockerVersion>("dockerVersion") {
-  dependsOn("build")
-}
+task<DockerVersion>("dockerVersion")
 
 task<DockerBuildImage>("buildImage") {
   dependsOn("dockerVersion")
