@@ -174,7 +174,6 @@ subprojects {
   }
 
   tasks.getByName("check").finalizedBy("jacocoTestReport")
-  tasks.getByName("test").finalizedBy("uptodate")
 
 }
 
