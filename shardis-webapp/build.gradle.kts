@@ -39,4 +39,3 @@ task<DockerBuildImage>("buildImage") {
   )
 }
 
-tasks.getByName("build").finalizedBy("buildImage")
