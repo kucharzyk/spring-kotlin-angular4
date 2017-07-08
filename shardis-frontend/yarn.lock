@@ -140,16 +140,16 @@
   dependencies:
     tsickle "^0.21.0"
 
-"@compodoc/compodoc@1.0.0-beta.10":
-  version "1.0.0-beta.10"
-  resolved "https://registry.yarnpkg.com/@compodoc/compodoc/-/compodoc-1.0.0-beta.10.tgz#3d6329811f13babf4a103e8a56cc59625fd29de0"
+"@compodoc/compodoc@1.0.0-beta.11":
+  version "1.0.0-beta.11"
+  resolved "https://registry.yarnpkg.com/@compodoc/compodoc/-/compodoc-1.0.0-beta.11.tgz#01e5d122300bf37216ca67d0f59a9f76a11a369a"
   dependencies:
     "@compodoc/ngd-core" "^2.0.0-alpha.1"
     "@compodoc/ngd-transformer" "^2.0.0-alpha.3"
     cheerio "^1.0.0-rc.1"
     chokidar "^1.7.0"
     colors "^1.1.2"
-    commander "^2.9.0"
+    commander "2.10.0"
     fs-extra "^3.0.1"
     glob "^7.1.2"
     gulp-util "^3.0.8"
@@ -157,11 +157,11 @@
     html-entities "^1.2.1"
     live-server "^1.2.0"
     lodash "^4.17.3"
-    lunr "^1.0.0"
+    lunr "1.0.0"
     marked "^0.3.6"
     os-name "^2.0.1"
     shelljs "^0.7.8"
-    typescript "2.3.4"
+    typescript "2.4.1"
 
 "@compodoc/ngd-core@2.0.0-alpha.1", "@compodoc/ngd-core@^2.0.0-alpha.1":
   version "2.0.0-alpha.1"
@@ -1085,6 +1085,12 @@ combined-stream@^1.0.5, combined-stream@~1.0.5:
   resolved "https://registry.yarnpkg.com/combined-stream/-/combined-stream-1.0.5.tgz#938370a57b4a51dea2c77c15d5c5fdf895164009"
   dependencies:
     delayed-stream "~1.0.0"
+
+commander@2.10.0:
+  version "2.10.0"
+  resolved "https://registry.yarnpkg.com/commander/-/commander-2.10.0.tgz#e1f5d3245de246d1a5ca04702fa1ad1bd7e405fe"
+  dependencies:
+    graceful-readlink ">= 1.0.0"
 
 commander@2.9.x, commander@^2.9.0, commander@~2.9.0:
   version "2.9.0"
@@ -3529,7 +3535,7 @@ lru-cache@^4.0.1:
     pseudomap "^1.0.1"
     yallist "^2.0.0"
 
-lunr@^1.0.0:
+lunr@1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/lunr/-/lunr-1.0.0.tgz#5c9276c92c91ac35a9241b5018d46723d92e2f5f"
 
@@ -5684,6 +5690,10 @@ type-is@~1.6.15:
 typescript@2.3.4, "typescript@>=2.0.0 <2.4.0":
   version "2.3.4"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-2.3.4.tgz#3d38321828231e434f287514959c37a82b629f42"
+
+typescript@2.4.1:
+  version "2.4.1"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-2.4.1.tgz#c3ccb16ddaa0b2314de031e7e6fee89e5ba346bc"
 
 uglify-js@3.0.x:
   version "3.0.9"
