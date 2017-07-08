@@ -31,7 +31,7 @@ tasks.withType<ProcessResources> {
 task<DockerVersion>("dockerVersion")
 
 task<DockerBuildImage>("buildImage") {
-  dependsOn("dockerVersion")
+  dependsOn("build","dockerVersion")
   inputDir = file("${project.projectDir}/")
   tags = setOf(
     "shardis/shardis-webapp:latest",

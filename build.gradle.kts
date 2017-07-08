@@ -26,7 +26,7 @@ buildscript {
   val gradleNodePluginVersion = "1.2.0"
   val dependencyManagementVersion = "1.0.3.RELEASE"
   val uptodatePluginVersion = "1.6.3"
-  val gradleDockerPluginVersion = "3.0.8"
+  val gradleDockerPluginVersion = "3.0.12"
 
   project.extra.set("kotlinVersion", kotlinVersion)
   project.extra.set("springBootVersion", springBootVersion)
