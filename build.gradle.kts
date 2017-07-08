@@ -20,50 +20,54 @@ allprojects {
 }
 
 buildscript {
-
-  val kotlinVersion = "1.1.3-2"
   val springBootVersion = "2.0.0.M2"
-  val gradleNodePluginVersion = "1.2.0"
-  val dependencyManagementVersion = "1.0.3.RELEASE"
-  val uptodatePluginVersion = "1.6.3"
-  val gradleDockerPluginVersion = "3.0.12"
 
-  project.extra.set("kotlinVersion", kotlinVersion)
   project.extra.set("springBootVersion", springBootVersion)
 
   repositories {
     mavenCentral()
-    maven { setUrl("https://plugins.gradle.org/m2/") }
     maven { setUrl("https://repo.spring.io/milestone") }
   }
 
   dependencies {
-    classpath("com.ofg:uptodate-gradle-plugin:$uptodatePluginVersion")
-    classpath("com.bmuschko:gradle-docker-plugin:$gradleDockerPluginVersion")
-    classpath("io.spring.gradle:dependency-management-plugin:$dependencyManagementVersion")
-    classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion")
     classpath("org.springframework.boot:spring-boot-gradle-plugin:$springBootVersion")
-    classpath("com.moowork.gradle:gradle-node-plugin:$gradleNodePluginVersion")
-    classpath("org.jetbrains.kotlin:kotlin-noarg:$kotlinVersion")
-    classpath("org.jetbrains.kotlin:kotlin-allopen:$kotlinVersion")
   }
 
+}
+
+plugins {
+  val kotlinVersion = "1.1.3-2"
+  val gradleNodePluginVersion = "1.2.0"
+  val dependencyManagementVersion = "1.0.3.RELEASE"
+  val uptodatePluginVersion = "1.6.3"
+  val gradleDockerPluginVersion = "3.0.8"
+
+  id("io.spring.dependency-management") version dependencyManagementVersion
+  id("org.jetbrains.kotlin.jvm") version kotlinVersion
+  id("org.jetbrains.kotlin.plugin.spring") version kotlinVersion
+  id("org.jetbrains.kotlin.plugin.allopen") version kotlinVersion
+  id("org.jetbrains.kotlin.plugin.noarg") version kotlinVersion
+  id("org.jetbrains.kotlin.plugin.jpa") version kotlinVersion
+  id("org.jetbrains.kotlin.kapt") version kotlinVersion
+  id("com.moowork.node") version gradleNodePluginVersion
+  id("com.bmuschko.docker-remote-api") version gradleDockerPluginVersion
+  id("com.ofg.uptodate") version uptodatePluginVersion
 }
 
 subprojects {
 
   apply {
-    plugin("io.spring.dependency-management")
-    plugin("java")
-    plugin("kotlin")
-    plugin("kotlin-kapt")
-    plugin("kotlin-allopen")
-    plugin("kotlin-spring")
-    plugin("kotlin-noarg")
-    plugin("kotlin-jpa")
-    plugin("jacoco")
     plugin("idea")
     plugin("eclipse")
+    plugin("java")
+    plugin("jacoco")
+    plugin("io.spring.dependency-management")
+    plugin("org.jetbrains.kotlin.jvm")
+    plugin("org.jetbrains.kotlin.kapt")
+    plugin("org.jetbrains.kotlin.plugin.allopen")
+    plugin("org.jetbrains.kotlin.plugin.spring")
+    plugin("org.jetbrains.kotlin.plugin.noarg")
+    plugin("org.jetbrains.kotlin.plugin.jpa")
     plugin("com.ofg.uptodate")
   }
 
@@ -111,7 +115,6 @@ subprojects {
       testLogging.exceptionFormat = TestExceptionFormat.FULL
   }
 
-
   configure<DependencyManagementExtension> {
     imports {
       val springBootVersion = parent.extra.get("springBootVersion")
@@ -120,19 +123,16 @@ subprojects {
   }
 
   dependencies {
-
-    val kotlinVersion = parent.extra.get("kotlinVersion")
     val jacksonVersion = the<DependencyManagementExtension>().importedProperties["jackson.version"]
     val querydslVersion = the<DependencyManagementExtension>().importedProperties["querydsl.version"]
     val axonVersion = "3.0.5"
     val jjwtVersion = "0.7.0"
     val reflectionsVersion = "0.9.11"
 
-
     configurations.compile.exclude(group = "org.springframework.boot", module = "spring-boot-starter-tomcat")
 
-    compile("org.jetbrains.kotlin:kotlin-stdlib-jre8:$kotlinVersion")
-    compile("org.jetbrains.kotlin:kotlin-reflect:$kotlinVersion")
+    compile("org.jetbrains.kotlin:kotlin-stdlib-jre8")
+    compile("org.jetbrains.kotlin:kotlin-reflect:")
 
     compile("org.springframework.boot:spring-boot-devtools")
     compile("org.springframework.boot:spring-boot-starter-actuator")
@@ -165,8 +165,8 @@ subprojects {
     runtime("com.h2database:h2")
     runtime("org.postgresql:postgresql")
 
-    testCompile("org.jetbrains.kotlin:kotlin-test:$kotlinVersion")
-    testCompile("org.jetbrains.kotlin:kotlin-test-junit:$kotlinVersion")
+    testCompile("org.jetbrains.kotlin:kotlin-test")
+    testCompile("org.jetbrains.kotlin:kotlin-test-junit")
     testCompile("org.springframework.boot:spring-boot-starter-test")
     testCompile("org.springframework.security:spring-security-test")
     testCompile("org.reflections:reflections:$reflectionsVersion")
