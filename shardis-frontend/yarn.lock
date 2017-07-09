@@ -140,9 +140,9 @@
   dependencies:
     tsickle "^0.21.0"
 
-"@compodoc/compodoc@1.0.0-beta.11":
-  version "1.0.0-beta.11"
-  resolved "https://registry.yarnpkg.com/@compodoc/compodoc/-/compodoc-1.0.0-beta.11.tgz#01e5d122300bf37216ca67d0f59a9f76a11a369a"
+"@compodoc/compodoc@1.0.0-beta.12":
+  version "1.0.0-beta.12"
+  resolved "https://registry.yarnpkg.com/@compodoc/compodoc/-/compodoc-1.0.0-beta.12.tgz#9304a62a5f8e18c0fe521932693f2694c0be5bde"
   dependencies:
     "@compodoc/ngd-core" "^2.0.0-alpha.1"
     "@compodoc/ngd-transformer" "^2.0.0-alpha.3"
@@ -155,6 +155,7 @@
     gulp-util "^3.0.8"
     handlebars "^4.0.10"
     html-entities "^1.2.1"
+    json5 "^0.5.1"
     live-server "^1.2.0"
     lodash "^4.17.3"
     lunr "1.0.0"
