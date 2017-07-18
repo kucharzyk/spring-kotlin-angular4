@@ -13,7 +13,7 @@ export class LoginComponent implements OnInit {
 
   username = 'admin';
   password = 'xxxxxx';
-  authError$: Observable<string>;
+  authError$: Observable<string | undefined>;
 
   constructor(private store: Store<RootState>) {
     this.authError$ = store.select(s => s.auth.error);
